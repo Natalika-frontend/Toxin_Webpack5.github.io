@@ -2,9 +2,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
-const {
-    allowedNodeEnvironmentFlags
-} = require('process');
 
 
 let mode = 'development';
@@ -38,6 +35,9 @@ module.exports = {
             patterns: [{
                 from: path.resolve(__dirname, 'src/assets/images'),
                 to: path.resolve(__dirname, 'dist/images')
+            }, {
+                from: path.resolve(__dirname, 'src/favicon.ico'),
+                to: path.resolve(__dirname, 'dist')
             }]
         }),
     ],
@@ -81,7 +81,7 @@ module.exports = {
             {
                 test: /\.pug/,
                 loader: 'pug-loader',
-                exclude: /(node_modules|bower-components)/,
+                exclude: /node_modules/,
             },
             {
                 test: /\.m?js&/,

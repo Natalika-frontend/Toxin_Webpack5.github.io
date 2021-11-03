@@ -50,7 +50,7 @@
     border: none;
 }
 
-.search__guests {
+.search-guests {
     position: absolute;
     left: 292px;
     top: 29px;
@@ -91,7 +91,7 @@
     @extend %bold;
 }
 
-.material-icons {
+.material-icons-search-form {
     position: absolute;
     left: 286px;
     top: 8px;
@@ -106,17 +106,13 @@
     color: $darc_shade_50;
     @import './__border/__border';
     @import '../form_elements/__text-field/__text-field';
-}
-
-.registration-form {
     &__inputs {
         text-transform: uppercase;
-        @import '../form_elements/__gender/_gender';
     }
-}
-
-.label__text {
-    text-transform: none;
+    @import '../form_elements/__gender/__gender';
+    &__title {
+        padding-bottom: 10px;
+    }
 }
 
 ::-webkit-input-placeholder {
