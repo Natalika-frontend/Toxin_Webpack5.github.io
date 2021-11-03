@@ -1,0 +1,66 @@
+&__selection {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 14px;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    border: 1px solid $darc_shade_25;
+}
+
+.registration-form__selection label:before {
+    border-radius: 10px;
+}
+
+//input[type=radio]:checked {
+//    +label:before {
+//        content: "\2022";
+//        border: 1px solid $purpl;
+//        color: $purpl;
+//        font-size: 60px;
+//        text-align: center;
+//        line-height: 18px;
+//    }
+//}
+.input[type=radio]:checked {
+    //&:checked {
+    //    color: $darc_shade_75;
+    //}
+    transition: 0.2s all linear;
+    outline: $purpl;
+    margin-right: 5px;
+    position: relative;
+    //top: 4px;
+    &label:before {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 10px;
+        width: 12px;
+        height: 12px;
+        border: 1px solid $purpl;
+    }
+}
+
+.label__text {
+    padding: 5px 10px;
+}

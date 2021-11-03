@@ -1,0 +1,44 @@
+.wrapper
+  .container
+  .cards
+    .search-form.search-form__border
+      .search-form__title
+        h1 Найдём номера под ваши пожелания
+      .search-inputs
+        .search-inputs__coming
+          h3 прибытие
+          input.search-form__date-dropdown(type="date" placeholder="дд.мм.гг")
+          span.material-icons-outlined.search__coming expand_more
+        .search-inputs__departure
+          h3 выезд
+          input.search-form__date-dropdown(type="date" placeholder="дд.мм.гг")
+          span.material-icons-outlined.search__departure expand_more
+        .search-inputs__guests
+          h3 гости
+          input.search-form__guests(type="text" placeholder="Сколько гостей")
+          span.material-icons-outlined.search__guests expand_more
+      button.search-form__btn подобрать номер
+        span.material-icons arrow_forward
+    .registration-form.registration-form__border
+      .registration-form__title
+        h1 Регистрация аккаунта
+      .registration-form__inputs
+        .registration-input__user-name
+          input.registration-form__text-field(type="text" placeholder="Имя")
+        .registration-input__user-surname
+          input.registration-form__text-field(type="text" placeholder="Фамилия")
+        .registration-form__selection
+          input.registration-form__selection-gender(type='radio' name='radio' value='Male' checked)#gender1
+          label.gender-label(for='gender1')
+            p.label__text Мужчина
+          input.registration-form__selection-gender(type='radio' name='radio' value='Female')#gender2
+          label.gender-label(for='gender2')
+            p.label__text Женщина
+        .registration-input__date-of-birth
+          h3 дата рождения
+          input.registration-form__date-of-birth(type="date" placeholder="дд.мм.гггг")
+        .registration-input__email
+          h3 данные для входа в сервис
+          input.registration-form__email.registration-form__text-field(type="email" placeholder="Email")
+        .registration-input__password
+          input.registration-form__password.registration-form__text-field(type="password" placeholder="Пароль")

@@ -1,0 +1,142 @@
+.cards {
+    position: relative;
+    float: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.search-form {
+    position: relative;
+    @import './__border/__border';
+    left: 200px;
+    top: 30px;
+}
+
+.search-form__title {
+    padding-bottom: 21px;
+}
+
+.search-inputs {
+    text-transform: uppercase;
+    &__coming {
+        position: relative;
+    }
+    &__departure {
+        position: relative;
+        top: -64px;
+        left: 170px;
+    }
+    &__guests {
+        position: relative;
+        top: -45px;
+    }
+}
+
+.search__coming {
+    position: absolute;
+    left: 115px;
+    top: 30px;
+    background: transparent;
+    border: none;
+}
+
+.search__departure {
+    position: absolute;
+    top: 29px;
+    left: 115px;
+    background: transparent;
+    border: none;
+}
+
+.search__guests {
+    position: absolute;
+    left: 292px;
+    top: 29px;
+    background: transparent;
+    border: none;
+}
+
+.search-form {
+    &__departure {
+        width: 150px;
+        height: 44px;
+        margin-top: 5.44px;
+        border: 1px solid $darc_shade_25;
+        border-radius: 4px;
+    }
+    @import '../form_elements/__date-dropdown/_date-dropdown';
+}
+
+.search-form__guests {
+    width: 320px;
+    height: 44px;
+    margin-top: 5.44px;
+    border: 1px solid $darc_shade_25;
+    border-radius: 4px;
+}
+
+.search-form__btn {
+    position: relative;
+    top: -14px;
+    background-color: $purpl;
+    color: #fff;
+    text-transform: uppercase;
+    width: 320px;
+    height: 44px;
+    border: 1px solid $purpl;
+    border-radius: 22px;
+    font-size: 12px;
+    @extend %bold;
+}
+
+.material-icons {
+    position: absolute;
+    left: 286px;
+    top: 8px;
+    color: #fff;
+    background: transparent;
+}
+
+.registration-form {
+    position: relative;
+    left: 200px;
+    top: 70px;
+    color: $darc_shade_50;
+    @import './__border/__border';
+    @import '../form_elements/__text-field/__text-field';
+}
+
+.registration-form {
+    &__inputs {
+        text-transform: uppercase;
+        @import '../form_elements/__gender/_gender';
+    }
+}
+
+.label__text {
+    text-transform: none;
+}
+
+::-webkit-input-placeholder {
+    color: $darc_shade_75;
+}
+
+::-moz-placeholder {
+    color: $darc_shade_75;
+}
+
+
+/* Firefox 19+ */
+
+:-moz-placeholder {
+    color: $darc_shade_75;
+}
+
+
+/* Firefox 18- */
+
+:-ms-input-placeholder {
+    color: $darc_shade_75;
+}
