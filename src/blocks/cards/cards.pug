@@ -35,10 +35,21 @@
           label.gender-label(for='gender2')
             p.label__text Женщина
         .registration-input__date-of-birth
-          h3 дата рождения
-          input.registration-form__date-of-birth(type="date" placeholder="дд.мм.гггг")
+          h3.registration-input__title дата рождения
+          input.registration-form__date-of-birth.registration-form__text-field(type="date" placeholder="дд.мм.гггг")
         .registration-input__email
-          h3 данные для входа в сервис
+          h3.registration-input__title данные для входа в сервис
           input.registration-form__email.registration-form__text-field(type="email" placeholder="Email")
         .registration-input__password
           input.registration-form__password.registration-form__text-field(type="password" placeholder="Пароль")
+        .registration-input__special-offer
+          label.switch
+            input(type='checkbox')
+            span.slider.round
+              p.registration-input__offer-text Получать&nbspспецпредложения
+        button.registration-form__btn перейти к оплате
+          span.material-icons.material-icons-search-form arrow_forward
+        .registration-form__to-come-in
+          p.to-come-in__text Уже есть аккаунт на Toxin
+          .registration-form__to-come-in-btn
+            button.to-come-in__btn

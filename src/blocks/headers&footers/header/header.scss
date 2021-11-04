@@ -11,7 +11,7 @@ body {
 }
 
 .logo {
-    margin-right: 251px;
+    margin-right: 240px;
 }
 
 .menu {
@@ -19,7 +19,7 @@ body {
         display: flex;
     }
     &__list-item {
-        padding-left: 20px;
+        padding-left: 22px;
     }
     &__list-link {
         color: $darc_shade_50;
@@ -54,29 +54,17 @@ body {
 }
 
 .header__btn-to-come-in {
-    border-style: solid;
-    border-radius: 22px;
-    min-width: 87px;
-    border-color: $purpl;
-    color: $purpl;
-    background-color: #ffffff;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    padding: 7px 18px 7px 20px;
+    @extend %btn_size_2;
+    @extend %btn_white;
 }
 
 .header__btn-register {
+    margin-right: -18px;
     margin-left: 20px;
-    min-width: 157px;
-    border: none;
-    border-radius: 22px;
-    color: #ffffff;
-    background-color: $purpl;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    padding: 9px 21px 9px 21px;
+    @extend %btn_size_1;
+    @extend %btn_colored;
+    width: 196px;
+    height: auto;
 }
 
 .material-icons-outlined {
