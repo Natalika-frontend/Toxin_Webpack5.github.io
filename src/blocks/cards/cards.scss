@@ -112,7 +112,7 @@
         @extend %btn_colored;
     }
     &__to-come-in {
-        text-transform: none;
+        margin-top: 40px;
     }
 }
 
@@ -133,6 +133,23 @@
         position: relative;
         left: 50px;
         bottom: 2px;
+    }
+}
+
+.to-come-in {
+    display: flex;
+    justify-content: space-between;
+    &__text {
+        color: #000;
+    }
+    &__btn {
+        position: relative;
+        bottom: 9px;
+        left: 4px;
+        @extend %btn_size_2;
+        @extend %btn_white;
+        width: 100px;
+        height: 45px;
     }
 }
 
