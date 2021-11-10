@@ -1,0 +1,50 @@
+.reservation-form {
+  position: relative;
+  left: 625px;
+  bottom: 1015px;
+  @import '../../form_elements/__border/_border';
+  @import '../../form_elements/__date-dropdown/_date-dropdown';
+  @import '../../form_elements/__dropdown/_dropdown';
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    position: relative;
+    @extend %btn_size_1;
+    @extend %btn_colored;
+  }
+
+  &--btn .material-icon-reservation {
+    position: absolute;
+    left: 120px;
+    top: 30px;
+  }
+}
+
+
+.reservation__coming,
+.reservation__departure {
+  position: absolute;
+  left: 120px;
+  top: 30px;
+}
+
+.reservation-materal-icon {
+  position: absolute;
+  left: 290px;
+  top: 33px;
+}
+
+.reservation-form {
+  &__departure {
+    width: 150px;
+    height: 44px;
+    margin-top: 5.44px;
+    border: 1px solid $darc_shade_25;
+    border-radius: 4px;
+  }
+}

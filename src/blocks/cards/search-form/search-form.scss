@@ -1,0 +1,80 @@
+.search-form {
+  position: relative;
+  @import '../../form_elements/__border/__border';
+  left: 200px;
+  top: 30px;
+}
+
+.search-form__title {
+  padding-bottom: 21px;
+}
+
+.search-inputs,
+.reservation-inputs {
+  text-transform: uppercase;
+
+  &__coming {
+    position: relative;
+  }
+
+  &__departure {
+    position: relative;
+    top: -64px;
+    left: 170px;
+  }
+
+  &__dropdown {
+    position: relative;
+    top: -45px;
+		text-transform: none;
+  }
+}
+
+.search__coming,
+.search__departure {
+  position: absolute;
+  left: 38%;
+  top: 45%;
+  color: $darc_shade_50;
+}
+
+.search-materal-icon {
+  position: absolute;
+  left: 90%;
+  top: 35%;
+  color: $darc_shade_50;
+  background: transparent;
+  border: none;
+}
+
+.search-form,
+.reservation-form {
+  &__departure {
+    width: 150px;
+    height: 44px;
+    margin-top: 5.44px;
+    border: 1px solid $darc_shade_25;
+    border-radius: 4px;
+  }
+
+  @import '../../form_elements/__date-dropdown/_date-dropdown';
+}
+
+.search-form {
+  @import '../../form_elements/__dropdown/_dropdown';
+}
+
+.search-form__btn {
+  position: relative;
+  top: -14px;
+  @extend %btn_size_1;
+  @extend %btn_colored;
+}
+
+.material-icons-search-form {
+  position: absolute;
+  right: 9px;
+  top: 11px;
+  color: #fff;
+  background: transparent;
+}

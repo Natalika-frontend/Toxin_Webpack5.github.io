@@ -4,4 +4,14 @@
     margin-top: 5.44px;
     border: 1px solid $darc_shade_25;
     border-radius: 4px;
+		&:hover, &:focus {
+			border: 1px solid $darc_shade_50;
+		}
 }
+
+
+// стили для placeholder при фокусе в разных браузерах
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder {color: transparent}
+:focus:-moz-placeholder {color: transparent}
+:focus:-ms-input-placeholder {color: transparent}

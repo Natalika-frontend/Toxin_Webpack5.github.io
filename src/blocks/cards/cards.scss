@@ -1,176 +1,32 @@
 .cards {
-    position: relative;
-    float: none;
+  position: relative;
+  float: none;
 }
 
 ::-webkit-calendar-picker-indicator {
-    opacity: 0;
+  opacity: 0;
 }
 
-.search-form {
-    position: relative;
-    @import '../form_elements/__border/__border';
-    left: 200px;
-    top: 30px;
-}
+@import './search-form/search-form';
 
-.search-form__title {
-    padding-bottom: 21px;
-}
+@import './registration-form/registration-form';
 
-.search-inputs {
-    text-transform: uppercase;
-    &__coming {
-        position: relative;
-    }
-    &__departure {
-        position: relative;
-        top: -64px;
-        left: 170px;
-    }
-    &__guests {
-        position: relative;
-        top: -45px;
-    }
-}
+@import './reservation-form/reservation-form';
 
-.search__coming {
-    position: absolute;
-    left: 115px;
-    top: 30px;
-    background: transparent;
-    border: none;
-}
-
-.search__departure {
-    position: absolute;
-    top: 29px;
-    left: 115px;
-    background: transparent;
-    border: none;
-}
-
-.search-guests {
-    position: absolute;
-    left: 292px;
-    top: 29px;
-    background: transparent;
-    border: none;
-}
-
-.search-form {
-    &__departure {
-        width: 150px;
-        height: 44px;
-        margin-top: 5.44px;
-        border: 1px solid $darc_shade_25;
-        border-radius: 4px;
-    }
-    @import '../form_elements/__date-dropdown/_date-dropdown';
-}
-
-.search-form__guests {
-    width: 320px;
-    height: 44px;
-    margin-top: 5.44px;
-    border: 1px solid $darc_shade_25;
-    border-radius: 4px;
-}
-
-.search-form__btn {
-    position: relative;
-    top: -14px;
-    @extend %btn_size_1;
-    @extend %btn_colored;
-}
-
-.material-icons-search-form {
-    position: absolute;
-    right: 9px;
-    top: 11px;
-    color: #fff;
-    background: transparent;
-}
-
-.registration-form {
-    position: relative;
-    left: 200px;
-    top: 70px;
-    color: $darc_shade_50;
-    @import '../form_elements/__border/__border';
-    @import '../form_elements/__text-field/__text-field';
-    &__inputs {
-        text-transform: uppercase;
-    }
-    @import '../form_elements/__gender/__gender';
-    &__title {
-        Margin-bottom: 20px;
-    }
-    &__btn {
-        position: relative;
-        @extend %btn_size_1;
-        @extend %btn_colored;
-    }
-    &__to-come-in {
-        margin-top: 40px;
-    }
-}
-
-.registration-input {
-    &__title {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    &__email {
-        margin-top: 10px;
-    }
-    &__special-offer {
-        @import '../form_elements/__special-offer/_special-offer';
-        margin-bottom: 16px;
-    }
-    &__offer-text {
-        display: inline;
-        position: relative;
-        left: 50px;
-        bottom: 2px;
-    }
-}
-
-.to-come-in {
-    display: flex;
-    justify-content: space-between;
-    &__text {
-        color: #000;
-    }
-    &__btn {
-        position: relative;
-        bottom: 9px;
-        left: 4px;
-        @extend %btn_size_2;
-        @extend %btn_white;
-        width: 100px;
-        height: 45px;
-    }
-}
-
-::-webkit-input-placeholder {
+  ::-webkit-input-placeholder {
     color: $darc_shade_75;
-}
+  }
 
-::-moz-placeholder {
+  ::-moz-placeholder {
     color: $darc_shade_75;
-}
+  }
 
-
-/* Firefox 19+ */
-
-:-moz-placeholder {
+  /* Firefox 19+ */
+  :-moz-placeholder {
     color: $darc_shade_75;
-}
+  }
 
-
-/* Firefox 18- */
-
-:-ms-input-placeholder {
+  /* Firefox 18- */
+  :-ms-input-placeholder {
     color: $darc_shade_75;
-}
+  }
