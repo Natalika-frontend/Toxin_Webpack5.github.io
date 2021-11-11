@@ -6,22 +6,73 @@
   @import '../../form_elements/__date-dropdown/_date-dropdown';
   @import '../../form_elements/__dropdown/_dropdown';
 
-  &__title {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-  }
-
   &__btn {
     position: relative;
     @extend %btn_size_1;
     @extend %btn_colored;
   }
 
-  &--btn .material-icon-reservation {
+  &__btn .material-icon-reservation {
     position: absolute;
-    left: 120px;
-    top: 30px;
+    left: 90%;
+    top: 23%;
+  }
+}
+
+.reservation-form-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__type-room {
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+    align-items: center;
+
+    &--color {
+      color: $purpl;
+      text-transform: uppercase;
+    }
+  }
+
+  &__type-room h3 {
+    margin-top: 3px;
+  }
+
+  &__type-room h1 {
+    margin-left: 5px;
+    margin-right: 8px;
+  }
+
+  &__cost-room {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 18px;
+    color: $darc_shade_50;
+    margin-top: 5px;
+
+    & .rub {
+      font-weight: 700;
+      line-height: 5px;
+      width: 0.4em;
+      border-bottom: 1px solid $darc_shade_50;
+      display: inline-block;
+    }
+
+    & h3 {
+      color: $darc_shade_50;
+
+      & span {
+        margin-left: 10px;
+      }
+    }
+
+    & p {
+      font-size: 12px;
+      margin-left: 10px;
+    }
   }
 }
 
@@ -29,14 +80,14 @@
 .reservation__coming,
 .reservation__departure {
   position: absolute;
-  left: 120px;
+  left: 36%;
   top: 30px;
 }
 
 .reservation-materal-icon {
   position: absolute;
-  left: 290px;
-  top: 33px;
+  left: 90%;
+  top: 45%;
 }
 
 .reservation-form {
@@ -46,5 +97,55 @@
     margin-top: 5.44px;
     border: 1px solid $darc_shade_25;
     border-radius: 4px;
+  }
+}
+
+.reservation-form-price {
+  margin-top: -28px;
+
+  &__room-rate,
+  &__service-charge,
+  &__additional,
+  &__additional-serv,
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__additional {
+    margin-bottom: 0;
+  }
+
+  &__additional-serv {
+    margin-bottom: 28px;
+  }
+
+  &__total {
+    margin-bottom: 20px;
+  }
+
+  &__total h2 span{
+    padding-right: 2px;
+  }
+
+  &__service-info {
+    display: block;
+    background: transparent;
+    color: rgba(31, 32, 65, 0.25);
+    border: none;
+    position: absolute;
+    top: 57%;
+    left: 65%;
+  }
+
+  &__service-infos {
+    display: block;
+    background: transparent;
+    color: rgba(31, 32, 65, 0.25);
+    border: none;
+    position: absolute;
+    top: 64%;
+    left: 65%;
   }
 }

@@ -26,7 +26,6 @@
   &__dropdown {
     position: relative;
     top: -45px;
-		text-transform: none;
   }
 }
 
@@ -41,7 +40,7 @@
 .search-materal-icon {
   position: absolute;
   left: 90%;
-  top: 35%;
+  top: 50%;
   color: $darc_shade_50;
   background: transparent;
   border: none;

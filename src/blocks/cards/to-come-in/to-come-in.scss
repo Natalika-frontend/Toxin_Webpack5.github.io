@@ -1,0 +1,35 @@
+.to-come-in-form {
+  position: relative;
+  left: 625px;
+  bottom: 975px;
+  @import '../../form_elements/__border/_border';
+  @import '../../form_elements/__text-field/_text-field';
+  & h1 {
+    margin-bottom: 20px;
+  }
+
+  &__inputs {
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    @extend %btn_size_1;
+    @extend %btn_colored;
+  }
+
+  &__to-come-in {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+		margin-bottom: -8px;
+  }
+}
+.to-come-in__btn{
+	margin-right: 4px;
+}
+
+.material-icons-to-come-in {
+  position: absolute;
+  left: 83%;
+  top: 60%;
+}
