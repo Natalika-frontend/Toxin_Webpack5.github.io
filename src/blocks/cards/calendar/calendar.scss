@@ -14,10 +14,11 @@
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-		margin-top: 20px;
+    margin-top: 20px;
 
     & h3 {
       color: $purpl;
+      cursor: pointer;
     }
   }
 }
@@ -88,16 +89,37 @@
   height: 21px;
 }
 
+.days div:hover:not(.active) {
+  background: $grad;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+	transition: background-color 0.2s;
+}
+
 /* Выделите "текущий" день */
 .days .active {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	width: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 40px;
   height: 40px;
   background: $green_grad;
   border-radius: 25px;
-	margin: 0;
-  color: white !important
+  margin: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
 }
