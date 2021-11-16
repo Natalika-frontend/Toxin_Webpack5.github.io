@@ -2,21 +2,27 @@
 @import '../../blocks/headers&footers/footer/footer';
 
 .main {
-  background-image: url('./assets/images/Main.jpg');
+  background-image: $backMain;
+  background-size: 1534px auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main.reg {
+  background-image: $backReg;
   background-size: 1534px auto;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .description {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 747px;
-	padding-right: 121px;
+  display: block;
+  position: relative;
+  top: 747px;
+  right: 122px;
 
   & p {
     line-height: 24px;
-    //display: inline-block;
     text-align: right;
   }
 }

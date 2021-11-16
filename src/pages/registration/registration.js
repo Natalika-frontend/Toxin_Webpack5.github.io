@@ -1,36 +1,43 @@
-const setListener=(element,type,handler) => {
-	if(element) {
-		return;
-	}
-	element.addEventListener(type,handler);
-	return () => {
-		element.removeEventListener(type,handler);
-	};
-};
+//const setListener=(element,type,handler) => {
+//	if(element) {
+//		return;
+//	}
+//	element.addEventListener(type,handler);
+//	return () => {
+//		element.removeEventListener(type,handler);
+//	};
+//};
 
 const modals=() => {
-	function bindModal(trigger,modal,close) {
-		setListener(trigger,'click',(e) => {
+	function bindModal(trigger,modalReg,modalSearch,modalImg) {
+		trigger.addEventListener('click',(e) => {
 			if(e.target) {
 				e.preventDefault();
 			}
 
-			modal.style.display="block";
+			modalReg.style.display="block";
+			modalSearch.style.display="none";
+			modalImg.addClassList=".reg";
 			document.body.style.overflow="hidden";
 		});
 
-		setListener(modal,'click',(e) => {
-			if(e.target===modal) {
-				modal.style.display="none";
+		modalReg.addEventListener('click',(e) => {
+			if(e.target===modalReg) {
+				modalReg.style.display="none";
+				modalSearch.style.display="block";
+				modalImg.addClassList=".main";
 				document.body.style.overflow="";
 			}
 		});
 	}
 
 	const callBtnRegister=document.querySelector('.header__btn-register'),
-		modalRegister=document.querySelector('.registration-form');
+		modalRegister=document.querySelector('.registration-form'),
+		modalSearch=document.querySelector('.search-form'),
+		modalImage=document.querySelector('.main');
 
-	bindModal(callBtnRegister,modalRegister);
+	bindModal(callBtnRegister,modalRegister,modalSearch,modalImage);
+	console.log(modalImage);
 };
 
 export default modals;

@@ -1,3 +1,3 @@
 import './index.scss';
-import * as $ from "jquery";
-import './assets/js/main';
+//import * as $ from "jquery";
+//import './assets/js/main';

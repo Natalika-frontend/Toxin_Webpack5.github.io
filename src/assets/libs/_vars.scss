@@ -9,8 +9,13 @@ $purpl_shade_50: rgba(188, 156, 255, 0.5);
 $green: #6FCF97;
 $green_grad:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 $grad: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
 // жирный шрифт
 %bold {
-    font-family: Montserrat, sans-serif;
-    font-weight: 700;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
 }
+
+// картинки
+$backMain: url('./assets/images/main.png');
+$backReg: url('./assets/images/reg.png');

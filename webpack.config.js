@@ -13,6 +13,10 @@ console.log(mode + ' mode');
 
 module.exports={
 	mode: mode,
+	entry: {
+		index: './src/index.js',
+		main: './src/assets/js/main.js'
+	},
 	output: {
 		filename: '[name].[contenthash].js',
 		assetModuleFilename: 'assets/fonts/[hash][ext][query]',
