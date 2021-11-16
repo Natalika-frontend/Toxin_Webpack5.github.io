@@ -1,33 +1,34 @@
 .registration-form.registration-form__border
-      .registration-form__title
-        h1 Регистрация аккаунта
-      .registration-form__inputs
-        .registration-input__user-name
-          input.registration-form__text-field(type="text" placeholder="Имя")
-        .registration-input__user-surname
-          input.registration-form__text-field(type="text" placeholder="Фамилия")
-        .registration-form__selection
-          input.registration-form__selection-gender(type='radio' name='radio' value='Male' checked)#gender1
-          label.gender-label(for='gender1')
-            p.label__text Мужчина
-          input.registration-form__selection-gender(type='radio' name='radio' value='Female')#gender2
-          label.gender-label(for='gender2')
-            p.label__text Женщина
-        .registration-input__date-of-birth
-          h3.registration-input__title дата рождения
-          input.registration-form__date-of-birth.registration-form__text-field(type="date" placeholder="дд.мм.гггг")
-        .registration-input__email
-          h3.registration-input__title данные для входа в сервис
-          input.registration-form__email.registration-form__text-field(type="email" placeholder="Email")
-        .registration-input__password
-          input.registration-form__password.registration-form__text-field(type="password" placeholder="Пароль")
-        .registration-input__special-offer
-          label.switch
-            input(type='checkbox')
-            span.slider.round
-              p.registration-input__offer-text Получать&nbspспецпредложения
-        button.registration-form__btn перейти к оплате
-          span.material-icons.material-icons-search-form arrow_forward
-      .registration-form__to-come-in.to-come-in
-        p.to-come-in__text Уже есть аккаунт на Toxin
-        button.to-come-in__btn Войти
+  .registration-form__title
+    h1 Регистрация аккаунта
+  .registration-form__inputs
+    .registration-input__user-name
+      input.registration-form__text-field(type='text', placeholder='Имя')
+    .registration-input__user-surname
+      input.registration-form__text-field(type='text', placeholder='Фамилия')
+    .registration-form__selection
+      input.registration-form__selection-gender#gender1(type='radio', name='radio', value='Male', checked)
+      label.gender-label(for='gender1')
+        p.label__text Мужчина
+      input.registration-form__selection-gender#gender2(type='radio', name='radio', value='Female')
+      label.gender-label(for='gender2')
+        p.label__text Женщина
+    .registration-input__date-of-birth
+      h3.registration-input__title дата рождения
+      input.registration-form__date-of-birth.registration-form__text-field(type='date', placeholder='дд.мм.гггг')
+    .registration-input__email
+      h3.registration-input__title данные для входа в сервис
+      input.registration-form__email.registration-form__text-field(type='email', placeholder='Email')
+    .registration-input__password
+      input.registration-form__password.registration-form__text-field(type='password', placeholder='Пароль')
+    .registration-input__special-offer
+      label.switch
+        input(type='checkbox')
+        span.slider.round
+          p.registration-input__offer-text Получать спецпредложения
+    button.registration-form__btn
+      | перейти к оплате
+      span.material-icons.material-icons-search-form arrow_forward
+  .registration-form__to-come-in.to-come-in
+    p.to-come-in__text Уже есть аккаунт на Toxin
+    button.to-come-in__btn Войти

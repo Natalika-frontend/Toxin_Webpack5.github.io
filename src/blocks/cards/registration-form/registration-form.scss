@@ -1,7 +1,5 @@
 .registration-form {
-  position: relative;
-  left: 200px;
-  top: 70px;
+  display: none;
   color: $darc_shade_50;
   @import '../../form_elements/__border/_border';
   @import '../../form_elements/__text-field/__text-field';
@@ -25,6 +23,10 @@
   &__to-come-in {
     margin-top: 40px;
   }
+
+  float: left;
+  margin-left: 13px;
+  margin-top: 5px;
 }
 
 .registration-input {
@@ -66,6 +68,6 @@
     @extend %btn_white;
     width: 100px;
     height: 45px;
-		cursor: pointer;
+    cursor: pointer;
   }
 }

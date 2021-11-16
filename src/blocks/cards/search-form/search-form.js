@@ -1,6 +1,6 @@
-document.querySelector('.start-date').addEventListener('onclick',showCalendar);
+//document.querySelector('.start-date').addEventListener('onclick',showCalendar);
 
-function showCalendar() {
-	document.querySelector('.calendar');
+//function showCalendar() {
+//	document.querySelector('.calendar');
 
-}
+//}
