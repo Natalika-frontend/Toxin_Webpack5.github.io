@@ -1,3 +1,9 @@
 import './index.scss';
-import $ from "jquery";
-import calendar from './blocks/cards/calendar/calendar';
+//import $ from "jquery";
+import './blocks/cards/calendar/calendar';
+import './blocks/cards/search-form/search-form';
+
+// модальное окно регистрации
+const $={};
+import './blocks/cards/registration-form/registration-form';
+import './pages/registration/registration';

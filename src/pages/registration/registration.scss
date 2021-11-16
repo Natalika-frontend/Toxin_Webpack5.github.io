@@ -1,0 +1,22 @@
+@import '../../blocks/headers&footers/header/header';
+@import '../../blocks/headers&footers/footer/footer';
+
+.main {
+  background-image: url('./assets/images/Main.jpg');
+  background-size: 1534px auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.description {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 317px;
+	padding-right: 121px;
+
+  & p {
+    line-height: 24px;
+    //display: inline-block;
+    text-align: right;
+  }
+}

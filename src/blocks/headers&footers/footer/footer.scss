@@ -4,7 +4,7 @@
         display: flex;
         justify-content: space-between;
         text-align: left;
-        padding: 85px 0 60px;
+        padding: 85px 171px 60px 78px;
         margin: 0 auto;
     }
     &__info {
@@ -42,8 +42,7 @@
     &__copyright {
         display: flex;
         justify-content: space-between;
-        text-align: left;
-        padding: 8px 1px 26px;
+        padding: 9px 174px 26px 78px;
     }
     &__input {
         border: 1px solid $darc_shade_25;

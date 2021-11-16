@@ -1,0 +1,1 @@
+const registrationForm = $.registration()
