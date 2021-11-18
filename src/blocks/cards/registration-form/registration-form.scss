@@ -1,9 +1,5 @@
 .registration-form {
-  display: none;
-  position: fixed;
-  top: 88px;
-  left: 770px;
-  color: $darc_shade_50;
+	color: $darc_shade_50;
   @import '../../form_elements/__border/_border';
   @import '../../form_elements/__text-field/__text-field';
 
@@ -21,11 +17,12 @@
     position: relative;
     @extend %btn_size_1;
     @extend %btn_colored;
+    margin-bottom: 40px;
   }
 
   &__to-come-in {
-    margin-top: 40px;
-  }
+		margin-bottom: 3px;
+	}
 }
 
 .registration-input {
@@ -40,7 +37,7 @@
 
   &__special-offer {
     @import '../../form_elements/__special-offer/_special-offer';
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
   &__offer-text {
@@ -61,8 +58,8 @@
 
   &__btn {
     position: relative;
-    bottom: 9px;
-    left: 4px;
+    bottom: 12px;
+		left: 4px;
     @extend %btn_size_2;
     @extend %btn_white;
     width: 100px;

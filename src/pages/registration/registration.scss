@@ -2,27 +2,16 @@
 @import '../../blocks/headers&footers/footer/footer';
 
 .main {
-  background-image: $backMain;
-  background-size: 1534px auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.main.reg {
   background-image: $backReg;
-  background-size: 1534px auto;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.description {
-  display: block;
-  position: relative;
-  top: 747px;
-  right: 122px;
-
-  & p {
-    line-height: 24px;
-    text-align: right;
-  }
+.registration-form-container {
+  display: flex;
+  justify-content: center;
+	padding-top: 4px;
+	padding-right: 4px;
+	margin-bottom: 3px;
 }

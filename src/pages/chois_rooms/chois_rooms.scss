@@ -1,0 +1,21 @@
+@import '../../blocks/headers&footers/header/header';
+@import '../../blocks/headers&footers/footer/footer';
+
+.main {
+  background-image: $backMain;
+  background-size: 1534px auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.description {
+  display: block;
+  position: relative;
+  top: 747px;
+  right: 122px;
+
+  & p {
+    line-height: 24px;
+    text-align: right;
+  }
+}

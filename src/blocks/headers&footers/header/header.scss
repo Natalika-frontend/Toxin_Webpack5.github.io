@@ -1,69 +1,76 @@
 body {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .header {
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-				padding: 0 148px 0 121px;
-    }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 148px 0 121px;
+  }
 }
 
 .logo {
-    margin-right: 240px;
+  margin-right: 240px;
 }
 
 .menu {
-    &__list {
-        display: flex;
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    padding-left: 22px;
+  }
+
+  &__list-link {
+    color: $darc_shade_50;
+
+    &_drop-down {
+      position: relative;
+      padding-right: 20px;
     }
-    &__list-item {
-        padding-left: 22px;
-    }
-    &__list-link {
-        color: $darc_shade_50;
-        &--drop-down {
-            position: relative;
-            padding-right: 20px;
-        }
-        &--actual {
-            @extend %bold;
-            color: $darc_shade_75;
-        }
-    }
+
+  }
+}
+
+.active {
+  @extend %bold;
+  color: $darc_shade_75;
 }
 
 .header__drop-down {
-    position: absolute;
-    background-color: transparent;
-    &__drop-down-servises {
-        left: 50px;
-        top: -3px;
-        margin-right: 20px;
-    }
-    &__drop-down-agreements {
-        left: 90px;
-        top: -2px;
-        margin-right: 20px;
-    }
+  position: absolute;
+  background-color: transparent;
+
+  &__drop-down-servises {
+    left: 50px;
+    top: -3px;
+    margin-right: 20px;
+  }
+
+  &__drop-down-agreements {
+    left: 90px;
+    top: -2px;
+    margin-right: 20px;
+  }
 }
 
 .header__btn {
-    @extend %bold;
+  @extend %bold;
 }
 
 .header__btn-to-come-in {
-    @extend %btn_size_2;
-    @extend %btn_white;
+  @extend %btn_size_2;
+  @extend %btn_white;
 }
 
 .header__btn-register {
-    margin-right: -18px;
-    margin-left: 20px;
-    @extend %btn_size_1;
-    @extend %btn_colored;
-    width: 196px;
-    height: auto;
+  margin-right: -18px;
+  margin-left: 20px;
+  @extend %btn_size_1;
+  @extend %btn_colored;
+  width: 196px;
+  height: auto;
 }

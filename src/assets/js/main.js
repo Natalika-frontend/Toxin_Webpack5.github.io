@@ -1,9 +1,5 @@
-// import './blocks/cards/calendar/calendar';
-// import './blocks/cards/search-form/search-form';
-
-import modals from '../../pages/registration/registration';
-// import './pages/registration/registration';
+import active from "../../blocks/headers&footers/header/header";
 
 window.addEventListener('DOMContentLoaded',() => {
-	modals();
+	active();
 });
