@@ -61,12 +61,12 @@ body {
   @extend %bold;
 }
 
-.header__btn-to-come-in {
+.header__btn-login {
   @extend %btn_size_2;
   @extend %btn_white;
 }
 
-.header__btn-register {
+.header__btn-registration {
   margin-right: -18px;
   margin-left: 20px;
   @extend %btn_size_1;
