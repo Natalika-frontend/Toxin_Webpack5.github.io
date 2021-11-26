@@ -1,6 +1,7 @@
-import * as MyFn from "../../blocks/headers&footers/header/header";
+//import * as MyFn from "../../blocks/headers&footers/header/header";
 
-window.addEventListener('DOMContentLoaded',() => {
-	MyFn.active();
-	MyFn.pages();
-});
+//window.addEventListener('DOMContentLoaded',() => {
+//	MyFn.active();
+//});
+
+import '../../blocks/headers&footers/header/header';

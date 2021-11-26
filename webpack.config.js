@@ -1,7 +1,8 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const path = require('path');
+const path=require('path');
+const webpack=require('webpack');
 
 
 let mode = 'development';
@@ -43,6 +44,10 @@ module.exports={
 				from: path.resolve(__dirname,'src/favicon.ico'),
 				to: path.resolve(__dirname,'dist')
 			}]
+		}),
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery'
 		}),
 	],
 	module: {

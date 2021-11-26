@@ -13,21 +13,31 @@ export function active() {
 }
 
 // кнопка регистрации
-export function pages() {
-	const buttonReg=document.querySelector('.header__btn-registration');
-	const choisRoom=document.querySelector('.main-chois');
-	const registration=document.querySelector('.main-registration');
-	const login=document.querySelector('.header__btn-login');
+$('.header__btn-registration').click(function() {
+	$('.main__chois').hide(1000,function() {
+		$('.main__registration').show(1000);
+	});
+	$('.main__login').hide(1000,function() {
+		$('.main__registration').show(1000);
+	});
+});
 
-	function showPage(trigger,pageOpen,pageClose) {
-		trigger.addEventListener('click',(e) => {
-			if(e.target) {
-				e.preventDefault();
-			}
-			pageOpen.style.display='block';
-			pageClose.style.display='none';
-		});
-	}
+// кнопка войти
+$('.header__btn-login').click(function() {
+	$('.main__chois').hide(1000,function() {
+		$('.main__login').show(1000);
+	});
+	$('.main__registration').hide(1000,function() {
+		$('.main__login').show(1000);
+	});
+});
 
-	showPage(buttonReg,registration,choisRoom);
-}
+// клик на логотипе
+$('.logo').click(function() {
+	$('.main__login').hide(1000,function() {
+		$('.main__chois').show(1000);
+	});
+	$('.main__registration').hide(1000,function() {
+		$('.main__chois').show(1000);
+	});
+});

@@ -1,12 +1,12 @@
-.main__registration {
-	display: none;
+.main__login {
+  display: none;
   background-image: $backReg;
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.registration-form-container {
+.login-form-container {
   display: flex;
   justify-content: center;
   padding-top: 4px;
@@ -14,7 +14,7 @@
   margin-bottom: 3px;
 }
 
-.header-btn__registration {
+.header-btn__login {
   -moz-appearance: button;
   -ms-appearance: button;
   -o-appearance: button;
