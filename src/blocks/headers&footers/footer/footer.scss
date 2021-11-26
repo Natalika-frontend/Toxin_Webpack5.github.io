@@ -17,6 +17,7 @@
     }
     &__menu-item {
         padding-bottom: 20px;
+				cursor: pointer;
     }
     &__menu-item--title {
         font-size: 12px;
@@ -71,6 +72,7 @@ input {
 
 .footer__input-groupe {
     position: relative;
+		cursor: pointer;
 }
 
 .material-icons-footer {
@@ -83,12 +85,12 @@ input {
 
 ::-webkit-input-placeholder {
     color: $darc_shade_25;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 ::-moz-placeholder {
     color: $darc_shade_25;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 
@@ -96,7 +98,7 @@ input {
 
 :-moz-placeholder {
     color: $darc_shade_25;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 
