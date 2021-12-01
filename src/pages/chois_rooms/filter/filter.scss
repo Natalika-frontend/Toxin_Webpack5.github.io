@@ -1,0 +1,99 @@
+.main-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+aside {
+  max-width: 295px;
+  color: $darc_shade_50;
+}
+
+.filter {
+  display: block;
+  position: relative;
+  left: 120px;
+  @import '../../../blocks/form_elements/__text-field/__text-field';
+
+  &__form-guests {
+    margin-bottom: 10px;
+  }
+
+  &__text-field {
+    width: 268px;
+    margin-bottom: 20px;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.filter-price-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 14.63px;
+  margin-bottom: 9px;
+}
+
+.filter-slider {
+  width: 100%;
+
+  &__range {
+    -webkit-appearance: none;
+    width: 266px;
+    height: 6px;
+    border-radius: 5px;
+    background: #FFF;
+    border: 1px solid $darc_shade_25;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 14px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #FFFFFF;
+      border-radius: 50%;
+      background: $green_grad;
+      cursor: pointer;
+    }
+  }
+}
+
+.filter-price-day {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.filter-dates {
+  position: absolute;
+  top: 31px;
+  left: 234px;
+}
+
+.filter-guests {
+  position: absolute;
+  top: 114px;
+  left: 234px;
+}
+
+.filter-house-rules {
+	margin-top: 30px;
+}
+
+.rooms {
+  display: block;
+  position: relative;
+  right: 435px;
+}

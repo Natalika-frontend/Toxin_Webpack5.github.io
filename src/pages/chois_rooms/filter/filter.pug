@@ -1,0 +1,49 @@
+.main-filter
+	aside.filter
+		h3 даты пребывания в отеле
+		form.filter__form-dates
+			input.filter__text-field(type="text")
+			span.material-icons-outlined.filter-dates expand_more
+		h3 гости
+		form.filter__form-guests
+			input.filter__text-field(type="text")
+			span.material-icons-outlined.filter-guests expand_more
+		.filter-price-range
+			h3 диапазон цены
+			p.filter-price 5000p-10000p
+		.filter-slider
+			input(type="range" min="1" max="15000" step="1000").filter-slider__range
+			p.filter-price-day Стоимость за сутки пребывания в номере
+		form.filter-house-rules
+			h3 правила дома
+			label
+				input(type="checkbox")
+				|Можно курить
+			br
+			label
+				input(type="checkbox")
+				|Можно с питомцами
+			br
+			label
+				input(type="checkbox")
+				|Можно пригласить гостей (до 10 человек)
+		h3 доступность
+		form
+			label
+				input(type="checkbox")
+				p
+					b Широкий коридор
+				p Ширина коридоров в номере не менее 91 см.
+			label
+				input(type="checkbox")
+				p
+					b Помощник для инвалидов
+				p На 1 этаже вас встретит специалист  и проводит до номера.
+		h3 удобства номера
+		input.filter__text-field(type="dropdown")
+		span.material-icons-outlined.filter-facilities expand_more
+		h3 дополнительные удобства
+		span.material-icons-outlined.filter-additional expand_more
+	.rooms
+		h1 Номера, которые мы для вас подобрали
+		include ../../../blocks/cards/rooms/rooms

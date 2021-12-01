@@ -1,5 +1,6 @@
 import './index.scss';
 import $ from 'jquery';
-window.jQuery=$;
-window.$=$;
-//import './assets/js/main';
+//import 'jquery-ui';
+//import 'jstree'
+//console.log($.fn.jstree)   //check new plugin function
+//window.$ = window.jQuery = $;

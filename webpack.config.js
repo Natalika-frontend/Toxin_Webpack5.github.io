@@ -29,6 +29,12 @@ module.exports={
 			chunks: 'all',
 		},
 	},
+	resolve:{
+		alias: {
+		'jquery': 'jquery/src/jquery',
+		'jquery-ui': 'jquery-ui/ui',
+	},
+},
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
@@ -47,7 +53,9 @@ module.exports={
 		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
-			jQuery: 'jquery'
+			jQuery: 'jquery',
+			'window.jQuery': 'jquery',
+			'window.$': 'jquery'
 		}),
 	],
 	module: {
