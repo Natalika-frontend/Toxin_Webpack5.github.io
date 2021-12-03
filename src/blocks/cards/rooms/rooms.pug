@@ -1,6 +1,25 @@
-form.room
-	.room-img(src="#", alt="room")
-	span
-	.room-description
-		p №888 люкс 9990р в сутки
-		div звезды 145 отзывов
+.rooms-slider__items.items-rooms
+  .items-rooms__column
+    .item-room  
+      a(href="").item-room__image
+        img(src="./images/rooms/room1.png" alt="Номер отеля")
+      .item-room__body
+        a(href="").item-room__title 
+          h2 №888
+        a(href="").item-room__subtitle люкс
+        .item-room__price.rub 9 990
+        .item-room__price-period в сутки
+      .item-room__footer.footer-item
+        .rating
+          .rating__body
+            .rating__active
+            .rating__items 
+              input(type="radio" value="1" name="rating").rating__item
+              input(type="radio" value="2" name="rating").rating__item
+              input(type="radio" value="3" name="rating").rating__item
+              input(type="radio" value="4" name="rating").rating__item
+              input(type="radio" value="5" name="rating").rating__item
+          .rating__value 3.6
+        .footer-item__number 145
+        .footer-item__reviews Отзывов
+        //- !Подумать над оформлением звезд

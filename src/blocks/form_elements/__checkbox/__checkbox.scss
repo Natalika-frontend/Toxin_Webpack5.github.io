@@ -1,0 +1,86 @@
+// миксин для чекбоксов
+
+.label {
+  position: relative;
+  top: 12px;
+  left: 1px;
+  cursor: pointer;
+
+  // для инпута с типом чекбокс
+  &>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    // для чекбокса в состоянии чеккед
+    &:checked+span::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      border-image: $grad;
+      border-image-slice: 1;
+      transform: rotate(45deg);
+      display: block;
+      width: 6px;
+      height: 8px;
+      transition: .2s;
+      opacity: 1;
+    }
+  }
+
+  // для рамки
+  &>span {
+    display: inline-flex;
+    user-select: none;
+    margin-bottom: 5px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $darc_shade_25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+
+    // создание в лейбле своих стилей
+    &::before {
+      content: '';
+    }
+  }
+}
+
+.label>input:not(:disabled):active+span::before {
+  background-image: $grad;
+  border: 1px solid #000;
+  border-image-slice: 1;
+  border-color: $purpl;
+}
+
+.text {
+  position: absolute;
+  padding: 0 0 0 28px;
+  width: 300px;
+  line-height: 18px;
+}
+
+.option {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.title {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 14px;
+  position: absolute;
+  top: 24px;
+  left: 20px;
+}

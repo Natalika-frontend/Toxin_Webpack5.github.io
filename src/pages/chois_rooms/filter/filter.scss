@@ -1,27 +1,54 @@
-.main-filter {
+._container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
 }
 
 aside {
-  max-width: 295px;
+  position: relative;
   color: $darc_shade_50;
 }
 
 .filter {
-  display: block;
-  position: relative;
-  left: 120px;
-  @import '../../../blocks/form_elements/__text-field/__text-field';
+  @import "../../../blocks/form_elements/__text-field/__text-field";
+  &__side {
+    flex: 0 0 270px;
+  }
 
   &__form-guests {
     margin-bottom: 10px;
   }
 
   &__text-field {
-    width: 268px;
+    width: 266px;
     margin-bottom: 20px;
+  }
+  &__dates {
+    position: absolute;
+    top: 31px;
+    left: 233px;
+  }
+
+  &__guests {
+    position: absolute;
+    top: 114px;
+    left: 233px;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    padding: 0px 0px 0px 56px;
+  }
+}
+
+.filter-price {
+  padding-right: 4px;
+
+  & .thousand {
+    padding-right: 4px;
+  }
+
+  & .hyphen {
+    padding-right: 3px;
+    padding-left: 2px;
   }
 }
 
@@ -46,12 +73,12 @@ h3 {
     width: 266px;
     height: 6px;
     border-radius: 5px;
-    background: #FFF;
+    background: #fff;
     border: 1px solid $darc_shade_25;
     outline: none;
     opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
     margin-bottom: 14px;
 
     &:hover {
@@ -63,7 +90,7 @@ h3 {
       appearance: none;
       width: 16px;
       height: 16px;
-      border: 2px solid #FFFFFF;
+      border: 2px solid #ffffff;
       border-radius: 50%;
       background: $green_grad;
       cursor: pointer;
@@ -76,24 +103,64 @@ h3 {
   line-height: 14px;
 }
 
-.filter-dates {
-  position: absolute;
-  top: 31px;
-  left: 234px;
-}
-
-.filter-guests {
-  position: absolute;
-  top: 114px;
-  left: 234px;
-}
+@import "../../../blocks/form_elements/__checkbox/_checkbox";
 
 .filter-house-rules {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
-.rooms {
-  display: block;
+b {
+  color: $darc_shade_75;
+}
+
+.additional {
+  margin-top: 48px;
+}
+
+.additional-room {
+  margin-top: 63px;
+}
+
+.filter-additional {
   position: relative;
-  right: 435px;
+  top: 7px;
+  left: -35px;
+}
+
+.filter-facilities {
+  position: relative;
+  top: -24px;
+  left: 233px;
+}
+
+.facilities {
+  margin-top: 10px;
+}
+
+@import "../../../blocks/cards/rooms/rooms.scss";
+
+.filter__content {
+  // .filter__content__rooms
+}
+
+.filter__rooms {
+}
+
+.rooms-slider {
+  // .rooms-slider__header
+  &__header {
+    display: flex;
+    margin: 0px 0px 20px 0px;
+  }
+  // .rooms-slider__title
+  &__title {
+    flex: 1 1 auto;
+  }
+  // .rooms-slider__items
+  &__items {
+    width: 270px;
+    height: 257px;
+    box-shadow: 0px 10px 20px $darc_shade_5;
+    border-radius: 4px;
+  }
 }

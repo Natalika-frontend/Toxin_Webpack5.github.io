@@ -4,11 +4,12 @@ $darc_shade_75: rgba(31, 32, 65, 0.75);
 $darc_shade_50: rgba(31, 32, 65, 0.5);
 $darc_shade_25: rgba(31, 32, 65, 0.25);
 $darc_shade_5: rgba(31, 32, 65, 0.05);
-$purpl: #BC9CFF;
+$purpl: #bc9cff;
 $purpl_shade_50: rgba(188, 156, 255, 0.5);
-$green: #6FCF97;
-$green_grad:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-$grad: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$green: #6fcf97;
+$green_grad: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+$grad: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$primary_gradient: linear-gradient(#bc9cff 100%, #8ba4f9 100%);
 
 // жирный шрифт
 %bold {
@@ -17,5 +18,5 @@ $grad: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
 // картинки
-$backMain: url('./assets/images/main.png');
-$backReg: url('./assets/images/reg.png');
+$backMain: url("./assets/images/main.png");
+$backReg: url("./assets/images/reg.png");

@@ -3,17 +3,53 @@ body {
 }
 
 .header {
+  margin-bottom: 15px;
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 148px 0 121px;
+    padding-right: 16px;
+  }
+
+  &__drop-down {
+    position: absolute;
+    background-color: transparent;
+  }
+
+  &__drop-down-servises {
+    left: 50px;
+    top: -3px;
+    margin-right: 20px;
+  }
+
+  &__drop-down-agreements {
+    left: 90px;
+    top: -2px;
+    margin-right: 20px;
+  }
+
+  &__btn {
+    @extend %bold;
+  }
+
+  &__btn-login {
+    @extend %btn_size_2;
+    @extend %btn_white;
+  }
+
+  &__btn-registration {
+    margin-right: -18px;
+    margin-left: 20px;
+    @extend %btn_size_1;
+    @extend %btn_colored;
+    width: 196px;
+    height: auto;
   }
 }
 
 .logo {
   margin-right: 240px;
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .menu {
@@ -32,46 +68,10 @@ body {
       position: relative;
       padding-right: 20px;
     }
-
   }
 }
 
 .active {
   @extend %bold;
   color: $darc_shade_75;
-}
-
-.header__drop-down {
-  position: absolute;
-  background-color: transparent;
-
-  &__drop-down-servises {
-    left: 50px;
-    top: -3px;
-    margin-right: 20px;
-  }
-
-  &__drop-down-agreements {
-    left: 90px;
-    top: -2px;
-    margin-right: 20px;
-  }
-}
-
-.header__btn {
-  @extend %bold;
-}
-
-.header__btn-login {
-  @extend %btn_size_2;
-  @extend %btn_white;
-}
-
-.header__btn-registration {
-  margin-right: -18px;
-  margin-left: 20px;
-  @extend %btn_size_1;
-  @extend %btn_colored;
-  width: 196px;
-  height: auto;
 }
