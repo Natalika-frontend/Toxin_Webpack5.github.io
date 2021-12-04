@@ -5,6 +5,12 @@
   }
 }
 
+.numer-sign {
+  font-size: 16px;
+  padding-right: 3px;
+  padding-left: 1px;
+}
+
 .item-room {
   position: relative;
   // .item-room__image
@@ -28,6 +34,11 @@
     margin: 21px 16px 22px 18px;
   }
 
+  // .item-room__title
+  &__title {
+    margin: 0px 5px 0px 0px;
+  }
+
   // .item-room__subtitle
   &__subtitle {
     text-transform: uppercase;
@@ -35,11 +46,12 @@
     line-height: 15px;
     color: $purpl;
     @extend %bold;
+    padding-bottom: 2px;
   }
 
   // .item-room__price
   &__price {
-    margin-left: 23px;
+    margin-left: 20px;
     @extend %bold;
   }
 
@@ -47,6 +59,8 @@
   &__price-period {
     font-size: 12px;
     line-height: 18px;
+    padding-bottom: 1px;
+    padding-right: 1px;
   }
 }
 
@@ -68,6 +82,12 @@
   align-items: flex-end;
   font-size: 25px;
   line-height: 0.75;
+  transition: opacity 0.3s ease 0s;
+
+  &.rating_sending {
+    opacity: 0.2;
+  }
+
   // .rating__body
   &__body {
     position: relative;
@@ -99,6 +119,7 @@
       left: 0;
       background: $primary_gradient;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       // !Подумать над оформлением звезд
     }
@@ -125,4 +146,9 @@
   &__value {
     display: none;
   }
+}
+
+.rating.rating_set .raiting__active,
+.rating.rating_set .raiting__item {
+  cursor: pointer;
 }
