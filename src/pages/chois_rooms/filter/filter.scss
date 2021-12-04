@@ -65,42 +65,76 @@ h3 {
   margin-bottom: 9px;
 }
 
-.filter-slider {
+.price-filter {
   width: 100%;
-
-  &__range {
-    -webkit-appearance: none;
+  .noUi-base {
+    top: 10px;
     width: 266px;
     height: 6px;
     border-radius: 5px;
     background: #fff;
     border: 1px solid $darc_shade_25;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
-    margin-bottom: 14px;
+  }
 
-    &:hover {
-      opacity: 1;
-    }
+  .noUi-connects {
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 16px;
-      height: 16px;
-      border: 2px solid #ffffff;
-      border-radius: 50%;
-      background: $green_grad;
-      cursor: pointer;
-    }
+  .noUi-connect {
+    will-change: transform;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d;
+    transform-origin: 0 0;
+    transform-style: flat;
+    background-image: $green_grad;
+  }
+
+  .noUi-base,
+  .noUi-connects {
+    position: relative;
+    z-index: 1;
+  }
+
+  .noUi-origin {
+    will-change: transform;
+    position: absolute;
+    width: 96%;
+    height: 100%;
+    z-index: 1;
+    top: -6px;
+    left: 250px;
+    transform-origin: 0 0;
+    transform-style: flat;
+  }
+
+  .noUi-handle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: $green_grad;
+    cursor: pointer;
+  }
+  &:hover {
+    opacity: 1;
   }
 }
 
 .filter-price-day {
   font-size: 12px;
   line-height: 14px;
+  padding-top: 24px;
 }
 
 @import "../../../blocks/form_elements/__checkbox/_checkbox";
@@ -150,16 +184,11 @@ b {
 }
 
 .rooms-slider {
-  // .rooms-slider__title
-  &__title {
-    flex: 1 1 auto;
-  }
-  // .rooms-slider__items
-  &__items {
-  }
+  flex: 1 1 auto;
 }
 
 .items-rooms {
+  display: flex;
   color: $darc_shade_50;
   // .items-rooms__column
   &__column {

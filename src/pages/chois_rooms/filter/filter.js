@@ -1,58 +1,26 @@
-//var $range=$(".filter-slider"),
-//	$inputFrom=$(".js-input-from"),
-//	$inputTo=$(".js-input-to"),
-//	instance,
-//	min=0,
-//	max=15000,
-//	from=0,
-//	to=0;
+import noUiSlider from 'nouislider';
+import marginSlider from 'nouislider';
 
-//$range.ionRangeSlider({
-//	skin: "round",
-//	type: "double",
-//	min: min,
-//	max: max,
-//	from: 5000,
-//	to: 10000,
-//	onStart: updateInputs,
-//	onChange: updateInputs
-//});
-//instance=$range.data("ionRangeSlider");
+var priceSlider = document.querySelector('.price-filter');
 
-//function updateInputs(data) {
-//	from=data.from;
-//	to=data.to;
+noUiSlider.create(priceSlider, {
+  start: [30, 64],
+  step: 2,
+  connect: true,
+  range: {
+    'min': 0,
+    'max': 100
+  }
+});
 
-//	$inputFrom.prop("value",from);
-//	$inputTo.prop("value",to);
-//}
+// показывает и меняет цену номера
+// var marginMin = document.getElementById('slider-margin-value-min'),
+//   marginMax = document.getElementById('slider-margin-value-max');
 
-//$inputFrom.on("input",function() {
-//	var val=$(this).prop("value");
-
-//	// validate
-//	if(val<min) {
-//		val=min;
-//	} else if(val>to) {
-//		val=to;
-//	}
-
-//	instance.update({
-//		from: val
-//	});
-//});
-
-//$inputTo.on("input",function() {
-//	var val=$(this).prop("value");
-
-//	// validate
-//	if(val<from) {
-//		val=from;
-//	} else if(val>max) {
-//		val=max;
-//	}
-
-//	instance.update({
-//		to: val
-//	});
-//});
+// marginSlider.noUiSlider.on('update', function (values, handle) {
+//   if (handle) {
+//     marginMax.innerHTML = values[handle];
+//   } else {
+//     marginMin.innerHTML = values[handle];
+//   }
+// });

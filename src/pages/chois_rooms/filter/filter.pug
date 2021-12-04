@@ -10,9 +10,8 @@ aside.filter__side
   .filter-price-range
     h3 диапазон цены
     p.filter-price.rub 5 000 - 10 000
-  .filter-slider
-    input(type="range" min="1" max="15000" step="1000").filter-slider__range
-    p.filter-price-day Стоимость за сутки пребывания в номере
+  .price-filter
+  p.filter-price-day Стоимость за сутки пребывания в номере
   form.filter-house-rules
     h3 правила дома
     label.label
@@ -66,18 +65,17 @@ aside.filter__side
   .filter__content-header
     h1 Номера, которые мы для вас подобрали
   .filter__rooms.rooms-slider
-    .rooms-slider__title
-      .rooms-slider__items.items-rooms
-        .items-rooms__column
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-          include ../../../blocks/cards/rooms/rooms
-    .products-slider__item._swiper
+    .rooms-slider__item._swiper 
+      .products-slider__slide
+        .rooms-slider__items.items-rooms
+          .items-rooms__column
+            include ../../../blocks/cards/rooms/rooms
+            include ../../../blocks/cards/rooms/rooms
+            include ../../../blocks/cards/rooms/rooms
+            include ../../../blocks/cards/rooms/rooms
+            include ../../../blocks/cards/rooms/rooms
+            include ../../../blocks/cards/rooms/rooms
+            include ../../../blocks/cards/rooms/rooms
+            include ../../../blocks/cards/rooms/rooms
+            include ../../../blocks/cards/rooms/rooms
+        .products-slider__item._swiper
