@@ -129,6 +129,18 @@ h3 {
   &:hover {
     opacity: 1;
   }
+
+  .noUi-tooltip {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: -7px;
+    font-size: 12px;
+    color: $darc_shade_25;
+  }
+  .noUi-active .noUi-tooltip {
+    display: block;
+  }
 }
 
 .filter-price-day {
@@ -137,7 +149,7 @@ h3 {
   padding-top: 24px;
 }
 
-@import "../../../blocks/form_elements/__checkbox/_checkbox";
+@import "../../../blocks/form_elements/__checkbox/__checkbox";
 
 .filter-house-rules {
   margin-top: 30px;

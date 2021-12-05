@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const { basename } = require('path');
 
 
 let mode = 'development';
@@ -30,10 +31,15 @@ module.exports = {
     },
   },
   resolve: {
+    extensions: ['.ts', '.js', '*'],
+    modules: [ path.resolve(__dirname, "js"), "node_modules"],
     alias: {
       'jquery': 'jquery/src/jquery',
       'jquery-ui': 'jquery-ui/ui',
     },
+  },
+  stats: {
+    children: true,
   },
   plugins: [
     new MiniCssExtractPlugin({

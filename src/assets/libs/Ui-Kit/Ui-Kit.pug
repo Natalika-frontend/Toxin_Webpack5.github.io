@@ -1,0 +1,61 @@
+//- Буду делать комментарий к каждому миксину
+
+//- цветовая палитра
+
+//- миксин для добавления блока цвета с названием
+mixin uicolors(meaning, num)
+  div(class="dark-shade"+meaning)
+  div(class="dark-shade"+num)
+    h1 Dark Shade #{meaning}%
+    p #1F2041
+
+//- миксин для Text Field только для Ui Kit
+mixin textFieldUi(title, condition)
+  .text-field__title
+    h3=title 
+    p=condition 
+  block 
+
+
+
+//- миксин для Text Field
+mixin textField(type, placehoder, className)
+  input(type=""+type, placehoder=""+placehoder, class=""+className)
+
+.colors
+  +uicolors(100,1)
+  +uicolors(75,2)
+  +uicolors(50,3)
+  +uicolors(25,4)
+  +uicolors(5,6)
+
+  .purple
+  .purple__text 
+    h1 Purple 
+    p #bc9cff
+
+  .green
+  .green__text 
+    h1 Green 
+    p #6fcf97
+
+  .fonts
+    .h1 H1
+      p This one is the sub-section or
+        br 
+        | widget title
+    .h2 H2 
+      p Next one is the item title inside 
+        br
+        | widgets
+    .h3 H3 
+      p This is a label or CTA text 
+    p.paragraph Body 
+      p.span This is the body text which is used for most
+        br
+        | of the design, like paragraphs, lists, etc.
+.formElements
+  .default
+    +textFieldUi('text field', 'default')
+      input(type="text" placeholder="Email")
+

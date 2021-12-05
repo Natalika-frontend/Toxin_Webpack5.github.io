@@ -4,7 +4,7 @@
 //   MyFn.initRatings();
 // });
 
-
-import '../../blocks/headers&footers/header/header';
+import '../libs/wNumb.min';
 import '../../pages/chois_rooms/filter/filter';
+import '../../blocks/headers&footers/header/header';
 import '../../blocks/cards/rooms/rooms';

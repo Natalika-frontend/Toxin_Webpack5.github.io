@@ -9,28 +9,28 @@ aside.filter__side
     span.material-icons-outlined.filter__guests expand_more
   .filter-price-range
     h3 диапазон цены
-    p.filter-price.rub 5 000 - 10 000
+    p.filter-price.rub 
+      span.value-price-min 5 000
+      | - 
+      span.value-price-max 10 000
   .price-filter
   p.filter-price-day Стоимость за сутки пребывания в номере
   form.filter-house-rules
     h3 правила дома
-    label.label
+    label.filter-house-rules__chackbox.checkbox
       input(type="checkbox" checked)
       span
-        p.text Можно курить
+      span.text Можно курить
       br
-    label.label
+    label.filter-house-rules__chackbox.checkbox
       input(type="checkbox")
       span
-        p.text Можно с питомцами
+      span.text Можно с питомцами
       br
-    label.label
+    label.filter-house-rules__chackbox.checkbox
       input(type="checkbox")
       span
-        p.text
-          | Можно пригласить гостей
-          br
-          | (до 10 человек)
+      span.text Можно пригласить гостей (до 10 человек)
   form.additional
     h3 доступность
     label.label.option

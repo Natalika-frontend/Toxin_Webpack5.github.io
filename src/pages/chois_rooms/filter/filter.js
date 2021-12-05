@@ -1,21 +1,28 @@
-import noUiSlider from 'nouislider';
 import marginSlider from 'nouislider';
+import noUiSlider from 'nouislider';
+import wNumb from '../../../assets/libs/wNumb.min';
+
 
 var priceSlider = document.querySelector('.price-filter');
 
 noUiSlider.create(priceSlider, {
-  start: [30, 64],
-  step: 2,
+  start: [5000, 10000],
+  step: 100,
   connect: true,
+  tooltips: [true, true],
   range: {
     'min': 0,
-    'max': 100
-  }
+    'max': 16000
+  },
+  format: wNumb({
+    decimals: 0,
+    thousand: ' '
+  })
 });
 
 // показывает и меняет цену номера
-// var marginMin = document.getElementById('slider-margin-value-min'),
-//   marginMax = document.getElementById('slider-margin-value-max');
+// var marginMin = document.querySelector('.value-price-min'),
+//   marginMax = document.querySelector('.value-price-max');
 
 // marginSlider.noUiSlider.on('update', function (values, handle) {
 //   if (handle) {
@@ -24,3 +31,5 @@ noUiSlider.create(priceSlider, {
 //     marginMin.innerHTML = values[handle];
 //   }
 // });
+
+// ! Придумать, как найти метод on из 27 строки
