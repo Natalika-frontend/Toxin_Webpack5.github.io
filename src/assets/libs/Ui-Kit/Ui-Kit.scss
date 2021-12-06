@@ -8,10 +8,15 @@
   left: 533px;
   top: $top;
   margin: 8px 0px 0px 0px;
+  h1 {
+    font-size: 19px;
+    line-height: 28px;
+  }
   p {
     font-size: 19px;
     font-weight: 400;
-    line-height: 27.79px;
+    line-height: 28px;
+    color: $base100;
   }
 }
 
@@ -40,11 +45,89 @@
   :-ms-input-placeholder {
     color: $color;
   }
+  input [placeholder] {
+    text-overflow: ellipsis;
+  }
+  input::-moz-placeholder {
+    text-overflow: ellipsis;
+  }
+  input:-moz-placeholder {
+    text-overflow: ellipsis;
+  }
+  input:-ms-placeholder {
+    text-overflow: ellipsis;
+  }
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.colors {
-  position: relative;
-  bottom: 785px;
+// миксин для плейсхолдера в фокусе
+@mixin focusPlaceholder {
+  :focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  :focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  :focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  :focus:-ms-input-placeholder {
+    color: transparent;
+  }
+  ::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  ::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :focus::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :focus::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :focus:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :focus:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
+
+// миксин для рамки инпутов
+@mixin inputBorder($color) {
+  border: 1px solid $color;
+  border-radius: 4px;
+  width: 100%;
+  height: 44px;
+  display: block;
+}
+
+// миксин для рамки инпутов при наведении и в фокусе
+@mixin inputBorderHoverFocus {
+  &:hover,
+  :focus {
+    border: 1px solid $base50;
+    transition: 0.3s ease;
+  }
 }
 
 h1 {
@@ -53,176 +136,436 @@ h1 {
   line-height: 27.79px;
 }
 
-p {
-  font-family: Montserrat;
+body {
+  position: relative;
 }
 
-.dark-shade100 {
-  @include darcShadeNum(123px, $base100);
-}
-.dark-shade1 {
-  @include darkShade(123px);
-}
+.colors {
+  position: relative;
+  top: -90px;
+  .dark-shade100 {
+    @include darcShadeNum(123px, $base100);
+  }
+  .dark-shade1 {
+    @include darkShade(123px);
+  }
 
-.dark-shade75 {
-  @include darcShadeNum(213px, $base75);
-}
-.dark-shade2 {
-  @include darkShade(213px);
-}
+  .dark-shade75 {
+    @include darcShadeNum(213px, $base75);
+  }
+  .dark-shade2 {
+    @include darkShade(213px);
+  }
 
-.dark-shade50 {
-  @include darcShadeNum(303px, $base50);
-}
-.dark-shade3 {
-  @include darkShade(303px);
-}
+  .dark-shade50 {
+    @include darcShadeNum(303px, $base50);
+  }
+  .dark-shade3 {
+    @include darkShade(303px);
+  }
 
-.dark-shade25 {
-  @include darcShadeNum(393px, $base25);
-}
-.dark-shade4 {
-  @include darkShade(393px);
-}
+  .dark-shade25 {
+    @include darcShadeNum(393px, $base25);
+  }
+  .dark-shade4 {
+    @include darkShade(393px);
+  }
 
-.dark-shade5 {
-  @include darcShadeNum(483px, $base5);
-}
-.dark-shade6 {
-  @include darkShade(483px);
-}
+  .dark-shade5 {
+    @include darcShadeNum(483px, $base5);
+  }
+  .dark-shade6 {
+    @include darkShade(483px);
+  }
 
-.fonts {
-  position: absolute;
-  top: 123px;
-  left: 1129px;
-  width: 500px;
-}
+  .fonts {
+    position: absolute;
+    top: 123px;
+    left: 1129px;
+    width: 500px;
+  }
 
-.h1 {
-  font-size: 24px;
-  line-height: 29px;
-  color: $base25;
-  p {
-    font-weight: bold;
+  .h1 {
     font-size: 24px;
     line-height: 29px;
-    color: $base100;
-    margin-left: 57px;
-    position: absolute;
-    top: 0px;
+    color: $base25;
+    p {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: $base100;
+      margin-left: 57px;
+      position: absolute;
+      top: 0px;
+    }
   }
-}
 
-.h2 {
-  margin-top: 81px;
-  margin-left: 1px;
-  font-size: 19px;
-  line-height: 23px;
-  color: $base25;
-  p {
-    font-weight: bold;
+  .h2 {
+    margin-top: 81px;
+    margin-left: 1px;
     font-size: 19px;
     line-height: 23px;
-    color: $base100;
-    margin-left: 57px;
-    position: absolute;
-    top: 110px;
+    color: $base25;
+    p {
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 23px;
+      color: $base100;
+      margin-left: 57px;
+      position: absolute;
+      top: 110px;
+    }
   }
-}
 
-.h3 {
-  margin-top: 75px;
-  margin-left: 11px;
-  font-size: 12px;
-  line-height: 15px;
-  color: $base25;
-  p {
-    font-weight: bold;
+  .h3 {
+    margin-top: 75px;
+    margin-left: 11px;
     font-size: 12px;
     line-height: 15px;
-    color: $base100;
-    margin-left: 47px;
+    color: $base25;
+    p {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      color: $base100;
+      margin-left: 47px;
+      position: absolute;
+      top: 208px;
+      text-transform: uppercase;
+    }
+  }
+
+  .paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $base25;
+    left: -9px;
     position: absolute;
-    top: 208px;
-    text-transform: uppercase;
+    top: 270px;
   }
-}
 
-.paragraph {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: $base25;
-  left: -9px;
-  position: absolute;
-  top: 270px;
-}
-
-p.span {
-  font-size: 14px;
-  line-height: 24px;
-  color: $base75;
-  margin-left: 58px;
-  position: absolute;
-  top: 270px;
-}
-
-.purple {
-  position: absolute;
-  left: 424px;
-  top: 573px;
-  width: 70px;
-  height: 70px;
-  background-color: $purple;
-  border-radius: 6px;
-}
-.purple__text {
-  width: 185px;
-  position: absolute;
-  left: 533px;
-  top: 573px;
-  margin: 8px 0px 0px 0px;
-  p {
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 27.79px;
-    text-transform: uppercase;
+  p.span {
+    font-size: 14px;
+    line-height: 24px;
+    color: $base75;
+    margin-left: 58px;
+    position: absolute;
+    top: 270px;
   }
-}
 
-.green {
-  position: absolute;
-  left: 425px;
-  top: 663px;
-  width: 70px;
-  height: 70px;
-  background-color: $green;
-  border-radius: 6px;
-}
-.green__text {
-  width: 185px;
-  position: absolute;
-  left: 533px;
-  top: 663px;
-  margin: 8px 0px 0px 0px;
-  p {
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 27.79px;
-    text-transform: uppercase;
+  .purple {
+    position: absolute;
+    left: 424px;
+    top: 573px;
+    width: 70px;
+    height: 70px;
+    background-color: $purple;
+    border-radius: 6px;
+  }
+  .purple__text {
+    width: 185px;
+    position: absolute;
+    left: 533px;
+    top: 573px;
+    margin: 8px 0px 0px 0px;
+    h1 {
+      font-size: 19px;
+      line-height: 28px;
+    }
+    p {
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 27.79px;
+      text-transform: uppercase;
+      color: $base100;
+    }
+  }
+
+  .green {
+    position: absolute;
+    left: 425px;
+    top: 663px;
+    width: 70px;
+    height: 70px;
+    background-color: $green;
+    border-radius: 6px;
+  }
+  .green__text {
+    width: 185px;
+    position: absolute;
+    left: 533px;
+    top: 663px;
+    margin: 8px 0px 0px 0px;
+    h1 {
+      font-size: 19px;
+      line-height: 28px;
+    }
+    p {
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 27.79px;
+      text-transform: uppercase;
+      color: $base100;
+    }
   }
 }
 
 .formElements {
   width: 100%;
   position: relative;
-}
+  top: 690px;
+  .default {
+    position: absolute;
+    left: 430px;
+    width: 320px;
+    input {
+      @include placeholder($base25);
+      @include inputBorder($base25);
+      text-overflow: ellipsis;
+    }
+    .text-field__title {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      text-align: center;
+      p {
+        font-size: 12px;
+        margin-top: -6px;
+        margin-bottom: 5px;
+        color: $base50;
+      }
+      h3 {
+        padding-left: 1px;
+      }
+    }
+  }
 
-.default {
-  position: absolute;
-  left: 430px;
-  input {
-    @include placeholder($base25);
+  .hover-focus {
+    position: absolute;
+    left: 431px;
+    width: 320px;
+    top: 81px;
+    input {
+      @include placeholder($base75);
+      @include inputBorder($base75);
+      color: $base75;
+      text-overflow: ellipsis;
+      padding-left: 14px;
+    }
+    .text-field__title {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      align-items: center;
+      margin-bottom: 2px;
+      p {
+        font-size: 12px;
+        color: $base50;
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    left: 430px;
+    width: 321px;
+    top: 174px;
+    input {
+      @include placeholder($base75);
+      @include inputBorder($base75);
+      color: $base75;
+      text-overflow: ellipsis;
+      padding-left: 14px;
+    }
+    .text-field__title {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: -6px;
+      margin-bottom: 5px;
+      p {
+        font-size: 12px;
+        margin-top: 6px;
+        color: $base50;
+      }
+      h3 {
+        padding-left: 1px;
+      }
+    }
+    span {
+      position: absolute;
+      top: 24px;
+      left: 287px;
+      color: $base50;
+    }
+  }
+
+  .masked-text-field {
+    position: absolute;
+    left: 430px;
+    width: 321px;
+    top: 261px;
+    input {
+      @include placeholder($base25);
+      @include inputBorder($base25);
+      color: $base25;
+      text-overflow: ellipsis;
+      padding-left: 14px;
+      text-transform: uppercase;
+    }
+    .text-field__title {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: -6px;
+      margin-bottom: 5px;
+      p {
+        font-size: 12px;
+        margin-top: 6px;
+        color: $base50;
+      }
+      h3 {
+        padding-left: 1px;
+      }
+    }
+  }
+
+  .date-dropdown {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 365px;
+    left: 432px;
+    width: 318px;
+    .without-date,
+    .with-date {
+      width: 148px;
+      text-transform: uppercase;
+      .text-field__title {
+        margin-top: -6px;
+        margin-bottom: 5px;
+      }
+      input {
+        @include placeholder($base75);
+        @include inputBorder($base25);
+        @include focusPlaceholder;
+        @include inputBorderHoverFocus;
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        display: inline-block;
+        :-webkit-calendar-picker-indicator {
+          position: absolute;
+          top: 43px;
+          left: 116px;
+          margin-left: auto;
+        }
+      }
+      input::-webkit-datetime-edit {
+        color: $base75;
+        min-width: 140px;
+      }
+    }
+    .without-date {
+      margin-right: 22px;
+      .__start {
+        position: absolute;
+        top: 25px;
+        left: 115px;
+        color: $base50;
+      }
+    }
+    .with-date {
+      position: relative;
+      & > .__end {
+        position: absolute;
+        top: 25px;
+        left: 115px;
+        color: $base50;
+      }
+    }
+  }
+  .filter-date-dropdown {
+    position: absolute;
+    left: 430px;
+    width: 267px;
+    top: 470px;
+    input {
+      @include placeholder($base75);
+      @include inputBorder($base25);
+      @include focusPlaceholder;
+      @include inputBorderHoverFocus;
+      color: $base75;
+      text-overflow: ellipsis;
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+    }
+    .text-field__title {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: -6px;
+      margin-bottom: 5px;
+      p {
+        font-size: 12px;
+        margin-top: 6px;
+        color: $base50;
+      }
+      h3 {
+        padding-left: 1px;
+      }
+    }
+    span {
+      position: absolute;
+      top: 25px;
+      left: 233px;
+      color: $base50;
+    }
+  }
+
+  .subscription-text-field {
+    position: absolute;
+    left: 430px;
+    width: 267px;
+    top: 575px;
+    input {
+      @include placeholder($base75);
+      @include inputBorder($base25);
+      @include focusPlaceholder;
+      @include inputBorderHoverFocus;
+      color: $base75;
+      text-overflow: ellipsis;
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+    }
+    .text-field__title {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: -6px;
+      margin-bottom: 5px;
+      p {
+        font-size: 12px;
+        margin-top: 6px;
+        color: $base50;
+      }
+      h3 {
+        padding-left: 1px;
+      }
+    }
+    span {
+      position: absolute;
+      top: 24px;
+      left: 233px;
+      color: $purple;
+    }
   }
 }

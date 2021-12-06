@@ -8,25 +8,25 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: $darc_shade_75;
+  color: $base100;
 }
 
 h1 {
-  color: $darc_shade_100;
+  color: $base100;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
 }
 
 h2 {
-  color: $darc_shade_100;
+  color: $base100;
   font-weight: 700;
   font-size: 19px;
   line-height: 23px;
 }
 
 h3 {
-  color: $darc_shade_100;
+  color: $base100;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -54,4 +54,17 @@ h3 {
 
 .rub:after {
   content: "₽";
+}
+
+.unstyled {
+  -webkit-appearance: none;
+}
+
+// скрытие значка календаря в хроме
+input[type="date" i]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  -webkit-appearance: none;
+}
+input:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
