@@ -1,0 +1,25 @@
+//- цветовая палитра
+
+//- миксин для добавления блока цвета с названием только для Ui Kit
+mixin uicolors(meaning, num)
+  div(class="dark-shade"+meaning)
+  div(class="dark-shade"+num)
+    h1 Dark Shade #{meaning}%
+    p #1F2041
+
+.colors
+  +uicolors(100,1)
+  +uicolors(75,2)
+  +uicolors(50,3)
+  +uicolors(25,4)
+  +uicolors(5,6)
+
+  .purple
+  .purple__text 
+    h1 Purple 
+    p #bc9cff
+
+  .green
+  .green__text 
+    h1 Green 
+    p #6fcf97

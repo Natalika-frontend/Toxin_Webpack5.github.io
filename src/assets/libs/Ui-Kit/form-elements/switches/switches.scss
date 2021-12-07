@@ -1,0 +1,78 @@
+.switch-box {
+  position: relative;
+  top: 474px;
+  left: 873px;
+  width: 270px;
+
+  .checkbox-buttons {
+    position: absolute;
+    left: 4px;
+    width: 230px;
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    &__checkbox {
+      display: block;
+      margin: 0px 0px 7px 0px;
+      line-height: 18px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  .checkbox {
+    position: relative;
+    // .checkbox__input
+    & > .checkbox__input {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+      visibility: hidden;
+      &:checked + .checkbox__text::before {
+        border: 1px solid $purple;
+      }
+      &:checked + .checkbox__text::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 7px;
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        border-image: $primaryGradient;
+        border-image-slice: 1;
+        transform: rotate(45deg);
+        display: block;
+        width: 6px;
+        height: 8px;
+        transition: 0.2s;
+        opacity: 1;
+      }
+    }
+    & > .checkbox__text {
+      display: inline-flex;
+      user-select: none;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid $base25;
+        border-radius: 4px;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        cursor: pointer;
+      }
+      & > .checkbox__input:checked + .checkbox__text::before {
+        border-color: $purple;
+        border-radius: 4px;
+        background-color: #fff;
+      }
+    }
+  }
+}

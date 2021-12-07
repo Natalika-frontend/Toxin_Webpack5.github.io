@@ -1,0 +1,74 @@
+.fonts {
+  position: relative;
+  top: 34px;
+  left: 1130px;
+  width: 500px;
+  .h1 {
+    font-size: 24px;
+    line-height: 29px;
+    color: $base25;
+    p {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: $base100;
+      margin-left: 57px;
+      position: absolute;
+      top: 0px;
+    }
+  }
+
+  .h2 {
+    margin-top: 81px;
+    margin-left: 1px;
+    font-size: 19px;
+    line-height: 23px;
+    color: $base25;
+    p {
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 23px;
+      color: $base100;
+      margin-left: 57px;
+      position: absolute;
+      top: 110px;
+    }
+  }
+
+  .h3 {
+    margin-top: 75px;
+    margin-left: 11px;
+    font-size: 12px;
+    line-height: 15px;
+    color: $base25;
+    p {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      color: $base100;
+      margin-left: 47px;
+      position: absolute;
+      top: 208px;
+      text-transform: uppercase;
+    }
+  }
+
+  .paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $base25;
+    left: -9px;
+    position: absolute;
+    top: 270px;
+  }
+
+  p.span {
+    font-size: 14px;
+    line-height: 24px;
+    color: $base75;
+    margin-left: 58px;
+    position: absolute;
+    top: 270px;
+  }
+}

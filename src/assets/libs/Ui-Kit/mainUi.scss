@@ -1,0 +1,15 @@
+// Буду делать комментарий к каждому миксину или переменной
+@import "colors_types/colors/colors.scss";
+@import "colors_types/types/types.scss";
+@import "form-elements/text-fields/text-fields.scss";
+@import "form-elements/switches/switches.scss";
+
+h1 {
+  font-size: 19px;
+  font-style: bold;
+  line-height: 27.79px;
+}
+
+body {
+  position: relative;
+}
