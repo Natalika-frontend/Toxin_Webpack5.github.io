@@ -1,17 +1,8 @@
 .switch-box 
   .checkbox-buttons
     h3 checkbox buttons
-    label.checkbox-buttons__checkbox.checkbox
-      input(type="checkbox" value="1").checkbox__input
-      span.checkbox__text
-        span Можно курить
-      br
-    label.checkbox-buttons__checkbox.checkbox
-      input(type="checkbox" value="2" checked).checkbox__input
-      span.checkbox__text
-        span Можно с питомцами
-      br
-    label.checkbox-buttons__checkbox.checkbox
-      input(type="checkbox" value="3" checked).checkbox__input
-      span.checkbox__text
-        span Можно пригласить гостей (до 10 человек)
+    include checkboxes/checkboxes.pug
+  .radio-buttons
+    .radio-buttons__title 
+      h3 radio buttons
+    include radio-buttons/radio-buttons.pug
