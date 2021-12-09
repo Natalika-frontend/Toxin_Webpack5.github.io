@@ -24,4 +24,15 @@
     }
     @import "radio-buttons/radio-buttons.scss";
   }
+
+  .toggle-buttons { 
+    position: absolute;
+    top: 262px;
+    left: 3px;
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    @import "toggle-buttons/toggle-buttons.scss";
+  }
 }

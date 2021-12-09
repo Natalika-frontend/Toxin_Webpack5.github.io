@@ -1,8 +1,4 @@
-// import * as MyFn from "../../blocks/cards/rooms/rooms";
-
-// window.addEventListener('DOMContentLoaded', () => {
-//   MyFn.initRatings();
-// });
+"use strict"
 
 // import '../libs/wNumb.min';
 // import '../../pages/chois_rooms/filter/filter';
