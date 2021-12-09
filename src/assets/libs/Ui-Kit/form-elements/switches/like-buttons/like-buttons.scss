@@ -1,0 +1,45 @@
+.feedback-visitors {
+  display: flex;
+  .likes-button {
+    padding-right: 11px;
+    display: inline-flex;
+    position: relative;
+    .likes-btn {
+      min-width: 40px;
+      height: 20px;
+      border-radius: 10px;
+      font-size: 10px;
+      line-height: 12px;
+      border: 1px solid $base25;
+      color: $base25;
+      background-color: #fff;
+      padding: 0px 8px 1px 18px;
+      &_liked {
+        min-width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        font-size: 10px;
+        line-height: 12px;
+        border: 1px solid $purple;
+        color: $purple;
+        .like {
+          background: $primaryGradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    .like {
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      font-size: 10px;
+      line-height: 9px;
+    }
+    .counter {
+      position: absolute;
+      top: 4px;
+      left: 21px;
+    }
+  }
+}

@@ -97,7 +97,6 @@
   }
 }
 
-
 .text-fields-box {
   width: 100%;
   position: relative;
@@ -137,8 +136,10 @@
       @include placeholder($base75);
       @include inputBorder($base75);
       color: $base75;
+      letter-spacing: -0.17px;
       text-overflow: ellipsis;
       padding-left: 14px;
+      padding-bottom: 3px;
     }
     .text-field__title {
       display: flex;
