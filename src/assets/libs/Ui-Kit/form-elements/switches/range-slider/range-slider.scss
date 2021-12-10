@@ -1,0 +1,97 @@
+.range-slider {
+  position: relative;
+  top: 0;
+  left: 396px;
+  text-transform: uppercase;
+  width: 265px;
+  .filter-price-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 14.63px;
+    margin-bottom: 13px;
+    p {
+      display: flex;
+      justify-content: space-between;
+      width: 101px;
+    }
+  }
+
+  .price-filter {
+    width: 100%;
+    .noUi-base {
+      top: 10px;
+      width: 266px;
+      height: 6px;
+      border-radius: 5px;
+      background: #fff;
+      border: 1px solid $base25;
+    }
+
+    .noUi-connects {
+      border-radius: 3px;
+      overflow: hidden;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .noUi-connect {
+      will-change: transform;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      -ms-transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+      -webkit-transform-style: preserve-3d;
+      transform-origin: 0 0;
+      transform-style: flat;
+      background-image: $secondaryGradient;
+    }
+
+    .noUi-base,
+    .noUi-connects {
+      position: relative;
+      z-index: 1;
+    }
+
+    .noUi-origin {
+      will-change: transform;
+      position: absolute;
+      width: 96%;
+      height: 100%;
+      z-index: 1;
+      top: -6px;
+      left: 250px;
+      transform-origin: 0 0;
+      transform-style: flat;
+    }
+
+    .noUi-handle {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      background: $secondaryGradient;
+      cursor: pointer;
+    }
+    &:hover {
+      opacity: 1;
+    }
+
+    .noUi-tooltip {
+      display: none;
+      position: absolute;
+      top: -20px;
+      left: -7px;
+      font-size: 12px;
+      color: $base25;
+    }
+    .noUi-active .noUi-tooltip {
+      display: block;
+    }
+  }
+}
