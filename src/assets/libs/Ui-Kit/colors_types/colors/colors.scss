@@ -10,6 +10,35 @@ $purple: #bc9cff;
 $green: #6fcf97;
 $secondaryGradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 $primaryGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$purple50: rgba(188, 156, 255, 0.5);
+$background: #fff;
+
+// миксин для сиреневого градиента
+@mixin primary-gradient {
+  background: -webkit-linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+  background: -moz-linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+  background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+}
+
+// миксин для сиреневого градиента border-image
+@mixin primary-gradient-img {
+  background-image: -webkit-linear-gradient(180deg, rgb(188, 156, 255), rgb(139, 164, 249) 100%);
+  background-image: -moz-linear-gradient(180deg, rgb(188, 156, 255), rgb(139, 164, 249) 100%);
+  background-image: linear-gradient(180deg, rgb(188, 156, 255), rgb(139, 164, 249) 100%);
+}
+
+// миксин для прозрачного сиреневого градиента
+@mixin primary-gradient-opacity05 {
+  background: -webkit-linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+  background: -moz-linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+
+// миксин для прозрачности::after
+
+@mixin opacity {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
 
 // миксин для блока с цветом
 @mixin darcShadeNum($top, $base) {
@@ -79,7 +108,6 @@ $primaryGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     @include darkShade(483px);
   }
 
-  
   .purple {
     position: absolute;
     left: 424px;

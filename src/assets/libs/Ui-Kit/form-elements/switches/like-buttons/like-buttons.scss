@@ -23,7 +23,7 @@
         border: 1px solid $purple;
         color: $purple;
         .like {
-          background: $primaryGradient;
+          @include primary-gradient;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }

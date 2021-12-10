@@ -43,7 +43,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: $primaryGradient;
+        @include primary-gradient;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;

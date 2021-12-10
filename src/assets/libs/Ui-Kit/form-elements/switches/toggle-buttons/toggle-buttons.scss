@@ -39,7 +39,7 @@
         background-color: #fff;
       }
       &::after {
-        background: $primaryGradient;
+        @include primary-gradient;
         left: 25px;
       }
     }

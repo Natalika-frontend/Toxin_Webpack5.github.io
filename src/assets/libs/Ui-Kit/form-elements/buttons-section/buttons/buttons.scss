@@ -1,0 +1,64 @@
+.regular-button_painted {
+  .btn {
+    @include button_painted {
+      width: 99px;
+      height: 44px;
+      padding-right: 5px;
+      padding-bottom: 1px;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    margin-left: 1px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.regular-button_painted-hover {
+  position: absolute;
+  top: 31px;
+  left: 118px;
+  .btn {
+    @include button_painted {
+      width: 99px;
+      height: 44px;
+      padding-right: 5px;
+      padding-bottom: 1px;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    opacity: 0.5;
+    margin-left: 1px;
+  }
+}
+
+.regular-button_unpainted {
+  position: absolute;
+  top: 105px;
+  .btn {
+    @include button_unpainted {
+      width: 99px;
+      height: 44px;
+      padding-right: 1px;
+      padding-bottom: 1px;
+      text-decoration: none;
+    }
+  }
+}
+
+.regular-button_unpainted-hover {
+  position: absolute;
+  top: 105px;
+  left: 118px;
+  .btn {
+    @include button_unpainted {
+      width: 99px;
+      height: 44px;
+      padding-right: 5px;
+      padding-bottom: 1px;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+  }
+}

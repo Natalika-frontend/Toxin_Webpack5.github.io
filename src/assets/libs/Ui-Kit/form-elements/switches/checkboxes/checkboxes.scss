@@ -23,18 +23,28 @@
     &:checked + .checkbox__text::after {
       content: "";
       position: absolute;
-      top: 6px;
+      top: 5px;
       left: 7px;
-      border-bottom: 2px solid #fff;
-      border-right: 2px solid #fff;
-      border-image: $primaryGradient;
-      border-image-slice: 1;
+      border-bottom: 2px solid $purple;
+      border-right: 2px solid $purple;
+      background: transparent;
       transform: rotate(45deg);
       display: block;
       width: 6px;
       height: 8px;
       transition: 0.2s;
       opacity: 1;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        @include primary-gradient-opacity05;
+        border-radius: 22px;
+        z-index: -1;
+      }
     }
   }
   & > .checkbox__text {

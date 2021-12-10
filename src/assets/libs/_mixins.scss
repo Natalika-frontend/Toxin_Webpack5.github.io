@@ -15,41 +15,4 @@
   padding: 7px 0;
 }
 
-// цветовое оформление
-%btn_colored {
-  background: $grad;
-  color: #fff;
-  text-transform: uppercase;
-  border-radius: 22px;
-  border: none;
-  cursor: pointer;
-  @extend %bold;
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
-%btn_white {
-  border-style: solid;
-  border-radius: 22px;
-  border-color: $purpl;
-  color: $purpl;
-  background-color: transparent;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-
-  &:hover {
-    border-color: $purpl_shade_50;
-  }
-}

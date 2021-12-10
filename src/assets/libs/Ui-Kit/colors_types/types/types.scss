@@ -1,3 +1,5 @@
+// типы шрифтов для Ui-kit
+
 .fonts {
   position: relative;
   top: 34px;
@@ -70,5 +72,61 @@
     margin-left: 58px;
     position: absolute;
     top: 270px;
+  }
+}
+
+// цветовое оформление кнопок
+@mixin button_painted {
+  display: flex;
+  @include primary-gradient;
+  color: $background;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  @content;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@mixin button_unpainted {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 2px solid $purple;
+  border-radius: 22px;
+  color: $purple;
+  z-index: 1;
+  background: $background;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  @content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include primary-gradient;
+    border-radius: inherit;
+    background: $background;
+    z-index: -1;
+  }
+  &:hover {
+    opacity: 0.5;
   }
 }

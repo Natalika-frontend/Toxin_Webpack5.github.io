@@ -33,7 +33,7 @@
     height: 12px;
     left: 4px;
     top: 6px;
-    background: $primaryGradient;
+    @include primary-gradient;
     border-radius: 50%;
     transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;

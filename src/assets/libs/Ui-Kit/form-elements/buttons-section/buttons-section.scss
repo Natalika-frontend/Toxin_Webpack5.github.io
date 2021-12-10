@@ -1,0 +1,17 @@
+.buttons-section {
+  position: relative;
+  top: 469px;
+  left: 1259px;
+  width: 350px;
+  @import "range-slider/range-slider.scss";
+  .buttons {
+    position: absolute;
+    top: 93px;
+    left: 10px;
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    @import "buttons/buttons.scss";
+  }
+}
