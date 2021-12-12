@@ -5,7 +5,7 @@
   width: 350px;
   @import "range-slider/range-slider.scss";
   .buttons {
-    position: absolute;
+    position: relative;
     top: 93px;
     left: 10px;
     &__title {
@@ -13,5 +13,11 @@
       margin-bottom: 16px;
     }
     @import "buttons/buttons.scss";
+  }
+  .pagination {
+    position: relative;
+    top: 328px;
+    left: 11px;
+    @import "pagination/pagination.scss";
   }
 }

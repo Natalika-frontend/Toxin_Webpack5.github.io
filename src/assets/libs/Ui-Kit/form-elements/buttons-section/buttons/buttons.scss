@@ -62,3 +62,52 @@
     }
   }
 }
+
+.regular-button_unborder {
+  position: absolute;
+  top: 177px;
+  left: -6px;
+  .btn {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    border: none;
+    background-color: $background;
+    color: $purple;
+  }
+}
+
+.regular-button_unborder-hover {
+  position: absolute;
+  top: 177px;
+  left: 76px;
+  .btn {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    border: none;
+    background-color: $background;
+    color: $base50;
+  }
+}
+
+.regular-button_action {
+  position: absolute;
+  top: 225px;
+  .btn {
+    @include button_painted {
+      width: 320px;
+      height: 44px;
+      justify-content: center;
+      text-align: center;
+    }
+    .button-action {
+      position: absolute;
+      left: 286px;
+      top: 11px;
+      font-size: 22px;
+    }
+  }
+}

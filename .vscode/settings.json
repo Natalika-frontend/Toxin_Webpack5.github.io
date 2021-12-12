@@ -1,0 +1,6 @@
+{
+  "jumpToAliasFile.alias": {
+    "jquery": "jquery/src/jquery",
+    "jquery-ui": "jquery-ui/ui"
+  }
+}
