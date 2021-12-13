@@ -85,8 +85,10 @@
           background: $background;
           border-radius: 50%;
           color: $base50;
+          cursor: pointer;
           &:disabled {
             opacity: 0.5;
+            cursor: default;
           }
         }
       }
@@ -143,7 +145,8 @@
         text-align: right;
         text-transform: uppercase;
         color: $purple;
-        margin: 12px 0px 9px 0px;
+        margin: 13px 0px 9px 0px;
+        cursor: pointer;
       }
       li {
         display: flex;
@@ -163,8 +166,10 @@
           background: $background;
           border-radius: 50%;
           color: $base50;
+          cursor: pointer;
           &:disabled {
             opacity: 0.5;
+            cursor: default;
           }
         }
       }
@@ -221,7 +226,8 @@
         text-align: right;
         text-transform: uppercase;
         color: $purple;
-        margin: 12px 0px 9px 0px;
+        margin: 13px 0px 9px 7px;
+        cursor: pointer;
       }
       li {
         display: flex;
@@ -241,8 +247,10 @@
           background: $background;
           border-radius: 50%;
           color: $base50;
+          cursor: pointer;
           &:disabled {
             opacity: 0.5;
+            cursor: default;
           }
         }
       }

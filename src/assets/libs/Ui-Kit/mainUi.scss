@@ -5,6 +5,7 @@
 @import "form-elements/switches/switches.scss";
 @import "form-elements/buttons-section/buttons-section.scss";
 @import "form-elements/dropdown/dropduwn.scss";
+@import "form-elements/room-details/room-details";
 
 h1 {
   font-size: 19px;
@@ -14,4 +15,8 @@ h1 {
 
 body {
   position: relative;
+}
+
+h3 {
+  text-transform: uppercase;
 }

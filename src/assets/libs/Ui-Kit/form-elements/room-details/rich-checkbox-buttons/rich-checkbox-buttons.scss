@@ -1,0 +1,29 @@
+.rich-checkbox-buttons {
+  position: absolute;
+  top: 6px;
+  left: 447px;
+  width: 255px;
+  &__title {
+    margin-bottom: 16px;
+  }
+  .checkbox-rich {
+    @import "../../switches/checkboxes/checkboxes.scss";
+    &__checkbox {
+      &:first-child {
+        padding-right: 37px;
+      }
+    }
+    .subtitle {
+      font-weight: bold;
+      color: $base75;
+      margin-bottom: 5px;
+      .paragpaph {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $base50;
+        margin-top: 7px;
+      }
+    }
+  }
+}
