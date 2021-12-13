@@ -12,6 +12,7 @@ $secondaryGradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 $primaryGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 $purple50: rgba(188, 156, 255, 0.5);
 $background: #fff;
+$lightText: #fff;
 
 // миксин для сиреневого градиента
 @mixin primary-gradient {

@@ -1,0 +1,82 @@
+.dropdown
+  .dropdown-default
+    .dropdown-default__title
+      h3 dropdown
+      p default
+    +textField('text', '2 спальни, 2 кровати...', 'dropdown-default__example')
+      span.material-icons-outlined.dropdown-default_spoller expand_more
+  .dropdown-expanded
+    .dropdown-expanded__title
+      h3 dropdown
+      p expanded
+    .additional-rooms
+      +textField('text', '2 спальни, 2 кровати...', 'dropdown-expanded__example')
+        span.material-icons-outlined.dropdown-expanded_spoller expand_more
+      .dropdown-expanded__body
+        ul.dropdown__menu 
+          li спальни
+            .input-values
+              button(type="button").minus -
+              span 2
+              button(type="button").plus +
+          li кровати
+            .input-values
+              button(type="button").minus -
+              span 2
+              button(type="button").plus +
+          li ванные комнаты
+            .input-values
+              button(type="button" disabled).minus -
+              span 0
+              button(type="button").plus +
+  .dropdown-people 
+    .dropdown-expanded__title
+      h3 dropdown
+    .additional-people
+      +textField('text', 'Сколько гостей', 'dropdown-people__example')
+        span.material-icons-outlined.dropdown-people_spoller expand_more
+      .dropdown-people__body
+        ul.dropdown__menu 
+          li взрослые
+            .input-values
+              button(type="button" disabled).minus -
+              span 0
+              button(type="button").plus +
+          li дети
+            .input-values
+              button(type="button" disabled).minus -
+              span 0
+              button(type="button").plus +
+          li младенцы
+            .input-values
+              button(type="button" disabled).minus -
+              span 0
+              button(type="button").plus +
+          .submit-button
+            button(type="submit").submit применить
+  .dropdown-guests 
+    .dropdown-expanded__title
+      h3 dropdown
+    .additional-guests
+      +textField('text', '3 гостя', 'dropdown-guests__example')
+        span.material-icons-outlined.dropdown-guests_spoller expand_more
+      .dropdown-guests__body
+        ul.dropdown__menu 
+          li взрослые
+            .input-values
+              button(type="button" disabled).minus -
+              span 0
+              button(type="button").plus +
+          li дети
+            .input-values
+              button(type="button" disabled).minus -
+              span 0
+              button(type="button").plus +
+          li младенцы
+            .input-values
+              button(type="button" disabled).minus -
+              span 0
+              button(type="button").plus +
+          .submit-button
+            button(type="clear").submit очистить
+            button(type="submit").submit применить

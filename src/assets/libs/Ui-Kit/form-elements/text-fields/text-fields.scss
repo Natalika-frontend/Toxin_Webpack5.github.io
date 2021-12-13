@@ -12,20 +12,24 @@
   :-ms-input-placeholder {
     color: $color;
   }
+
   input [placeholder] {
+    overflow: hidden;
     text-overflow: ellipsis;
   }
   input::-moz-placeholder {
+    overflow: hidden;
     text-overflow: ellipsis;
   }
   input:-moz-placeholder {
+    overflow: hidden;
     text-overflow: ellipsis;
   }
   input:-ms-placeholder {
+    overflow: hidden;
     text-overflow: ellipsis;
   }
-  padding-left: 10px;
-  padding-right: 10px;
+  @content;
 }
 
 // миксин для плейсхолдера в фокусе
@@ -86,6 +90,10 @@
   width: 100%;
   height: 44px;
   display: block;
+  align-items: center;
+  padding-left: 14px;
+  padding-right: 15px;
+  @content;
 }
 
 // миксин для рамки инпутов при наведении и в фокусе
