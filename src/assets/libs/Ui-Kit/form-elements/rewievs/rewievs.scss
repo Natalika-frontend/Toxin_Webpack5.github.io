@@ -1,0 +1,138 @@
+.rewievs {
+  position: relative;
+  top: 1342px;
+  left: 430px;
+  width: 280px;
+  hr {
+    background-color: $base1hr;
+    height: 1px;
+    border: none;
+  }
+  .comfort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 19px;
+    &__icon {
+      font-size: 48px;
+      margin-left: 1px;
+      @include primary-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &__description {
+      color: $base75;
+      margin-right: 24px;
+    }
+    &__title {
+      font-weight: bold;
+      padding-bottom: 3px;
+    }
+  }
+  .convenience {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 19px;
+    margin-top: 21px;
+    &__icon {
+      font-size: 48px;
+      margin-left: 1px;
+      @include primary-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &__description {
+      color: $base75;
+      margin-right: 35px;
+    }
+    &__title {
+      font-weight: bold;
+      padding-bottom: 3px;
+    }
+  }
+  .users-feedback {
+    width: 713px;
+    position: absolute;
+    top: 10px;
+    left: 448px;
+    display: flex;
+    flex-direction: column;
+    color: $base75;
+    &__user {
+      margin-bottom: 10px;
+    }
+    .user {
+      display: flex;
+      justify-content: flex-start;
+      &__avatar {
+        .round {
+          width: 48px;
+          height: 48px;
+          border-radius: 32px;
+          box-sizing: border-box;
+          border: 2px solid $lightText;
+          box-shadow: (0px 10px 20px $base1hr);
+        }
+      }
+      &__information {
+        flex-direction: column;
+        margin-left: 10px;
+      }
+      &__name {
+        font-weight: bold;
+        padding-top: 2px;
+        padding-bottom: 3px;
+      }
+    }
+    &__feedback {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .feedback {
+      &__like {
+        margin-top: 2px;
+        margin-left: 4px;
+        .likes-btn {
+          min-width: 40px;
+          height: 20px;
+          border-radius: 10px;
+          font-size: 10px;
+          line-height: 12px;
+          border: 1px solid $base25;
+          color: $base25;
+          background-color: #fff;
+          padding: 0px 8px 1px 18px;
+          &_liked {
+            display: flex;
+            min-width: 40px;
+            height: 20px;
+            border-radius: 10px;
+            font-size: 10px;
+            line-height: 12px;
+            border: 1px solid $purple;
+            color: $purple;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            .like {
+              @include primary-gradient;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-size: 11px;
+              padding-left: 3px;
+              padding-right: 5px;
+            }
+            .counter {
+              padding: 0;
+            }
+          }
+        }
+      }
+      &__text {
+        margin-left: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}

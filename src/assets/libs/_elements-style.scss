@@ -1,0 +1,104 @@
+// инпуты
+.inputs {
+  border: 1px solid $base25;
+  border-radius: 4px;
+  width: 100%;
+  padding: 13px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+
+  &:hover,
+  :focus {
+    border: 1px solid $base50;
+    transition: 0.3s ease;
+  }
+}
+
+// инпуты с иконкой (дропдауны)
+.inputs-icon {
+  border: 1px solid $base25;
+  border-radius: 4px;
+  width: 100%;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  &:hover,
+  :focus {
+    border: 1px solid $base50;
+    transition: 0.3s ease;
+  }
+}
+
+// сиреневые кнопки
+.button_painted {
+  display: flex;
+  @include primary-gradient;
+  color: $background;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// кнопки с сиреневой обводкой
+.button_unpainted {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 2px solid $purple;
+  border-radius: 22px;
+  color: $purple;
+  z-index: 1;
+  background: $background;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include primary-gradient;
+    border-radius: inherit;
+    background: $background;
+    z-index: -1;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// кнопки сброса и отправки данных формы
+.button {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  border: none;
+  background-color: $background;
+  color: $purple;
+  &:hover {    
+    color: $base50;
+  }
+}

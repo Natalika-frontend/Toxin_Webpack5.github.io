@@ -6,7 +6,8 @@
 @import "form-elements/buttons-section/buttons-section.scss";
 @import "form-elements/dropdown/dropduwn.scss";
 @import "form-elements/room-details/room-details";
-
+@import "form-elements/rewievs/rewievs";
+@import "cards/cards";
 h1 {
   font-size: 19px;
   font-style: bold;
@@ -19,4 +20,18 @@ body {
 
 h3 {
   text-transform: uppercase;
+}
+
+.formElements {
+  position: relative;
+  top: 0;
+  left: -50px;
+  max-width: 1500px;
+}
+
+.cards {
+  position: relative;
+  top: 1451px;
+  left: 404px;
+  max-width: 1451px;
 }

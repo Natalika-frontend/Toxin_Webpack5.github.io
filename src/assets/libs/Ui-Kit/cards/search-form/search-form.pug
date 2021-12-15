@@ -1,0 +1,18 @@
+form(action="#change", name="search-form").search-form.search-form_border
+  .search-form__title
+    h1 Найдём номера под ваши пожелания
+  .search-form__inputs
+    .search-inputs__coming
+      h3 прибытие      
+        input(type="date" placeholder="дд.мм.гг").search-form__date-dropdown.inputs-icon
+        span.material-icons-outlined.search__coming expand_more
+    .search-inputs__departure
+      h3 выезд
+        input(type="date" placeholder="дд.мм.гг").search-form__date-dropdown.inputs-icon
+        span.material-icons-outlined.search__departure expand_more
+    .search-inputs__dropdown
+      h3 гости
+        input(type="text" placeholder="Сколько гостей").search-form__dropdown.inputs-icon
+        span.material-icons-outlined.search-materal-icon expand_more
+  button.search-form__btn подобрать номер
+    span.material-icons.material-icons-search-form arrow_forward

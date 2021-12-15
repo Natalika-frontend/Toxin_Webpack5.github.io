@@ -1,13 +1,10 @@
-@import "./assets/libs/normalize";
-@import "./assets/libs/fonts";
-// @import "./assets/libs/vars";
+// подключение стилей Ui-Kit
 @import "./assets/libs/Ui-Kit/mainUi.scss";
+
+// подключение общих стилей проекта
 @import "./assets/libs/global";
-// @import "./assets/libs/mixins";
-// @import "./blocks/headers&footers/header/header";
-// @import "./pages/chois_rooms/chois_rooms";
-// @import "./pages/chois_rooms/filter/filter";
-// @import "./blocks/cards/cards.scss";
-// @import "./pages/registration/registration";
-// @import "./pages/login/login";
-// @import "./blocks/headers&footers/footer/footer";
+@import "./assets/libs/_elements-style";
+
+// подключение стилей отдельных блоков
+
+// подключение стилей отдельных страниц

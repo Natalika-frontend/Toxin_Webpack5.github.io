@@ -32,7 +32,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js', '*'],
-    modules: [ path.resolve(__dirname, "js"), "node_modules"],
+    modules: [path.resolve(__dirname, "js"), "node_modules"],
     alias: {
       'jquery': 'jquery/src/jquery',
       'jquery-ui': 'jquery-ui/ui',
@@ -49,13 +49,17 @@ module.exports = {
       template: './src/index.pug',
     }),
     new CopyWebpackPlugin({
-      patterns: [{
-        from: path.resolve(__dirname, 'src/assets/images'),
-        to: path.resolve(__dirname, 'dist/images')
-      }, {
-        from: path.resolve(__dirname, 'src/favicon.ico'),
-        to: path.resolve(__dirname, 'dist')
-      }]
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/assets/libs/Ui-Kit/form-elements/rewievs/img'),
+          to: path.resolve(__dirname, 'dist/images/avatar')
+        }, {
+          from: path.resolve(__dirname, 'src/assets/images'),
+          to: path.resolve(__dirname, 'dist/images')
+        }, {
+          from: path.resolve(__dirname, 'src/favicon.ico'),
+          to: path.resolve(__dirname, 'dist')
+        }]
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
