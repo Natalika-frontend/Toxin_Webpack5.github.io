@@ -21,16 +21,34 @@
   border: 1px solid $base25;
   border-radius: 4px;
   width: 100%;
-  padding: 13px;
+  padding: 11px 12px 12px 13px;
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: space-between;
 
   &:hover,
   :focus {
     border: 1px solid $base50;
     transition: 0.3s ease;
+  }
+
+  &__date-dropdown {
+    text-transform: uppercase;
+  }
+
+  &__dropdown {
+    position: relative;
+    &::before {
+      color: transparent;
+      content: "\e5cf";
+      display: block;
+      font-family: $fontFamily;
+      font-size: 22px;
+      position: absolute;
+      top: 12px;
+      right: 6px;
+      color: $base50;
+    }
   }
 }
 
@@ -98,7 +116,7 @@
   border: none;
   background-color: $background;
   color: $purple;
-  &:hover {    
+  &:hover {
     color: $base50;
   }
 }

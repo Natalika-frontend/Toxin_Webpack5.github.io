@@ -5,7 +5,7 @@
 
 // шрифт по умолчанию ==========================================================================
 $fontFamily: "Montserrat";
-$fontSize: rem(14);
+$fontSize: 14px;
 
 // основные цвета
 @import "./Ui-Kit/colors_types/colors/colors.scss";
@@ -104,14 +104,14 @@ h3 {
       padding: 0 rem(math.div($containerPadding, 2));
     }
   }
-}@else{
+} @else {
   // по брейк-поинтам
   [class*="__container"] {
     margin: 0 auto;
     @if ($maxWidthContainer>0) {
       max-width: rem($maxWidthContainer);
       box-sizing: content-box;
-    }@else{
+    } @else {
       @if ($containerPadding>0) {
         padding: 0 rem(math.div($containerPadding, 2));
       }
@@ -147,9 +147,34 @@ h3 {
 
 // скрытие значка календаря в хроме
 input[type="date" i]::-webkit-calendar-picker-indicator {
+  padding: 0;
+  margin: 0;
   opacity: 0;
+  color: transparent;
+  background: none;
+  z-index: 1;
   -webkit-appearance: none;
 }
+
+input[type="date" i]::before {
+  color: transparent;
+  background: none;
+  display: block;
+  font-family: "Material Icons";
+  content: "\e5cf";
+  font-size: 24px;
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  color: $base50;
+}
+
 input:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-calendar-picker-indicator {
   opacity: 0;
+}
+
+input[type="date"] {
+  letter-spacing: -0.04em;
+  position: relative;
+  background-color: inherit;
 }
