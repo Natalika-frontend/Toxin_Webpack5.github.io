@@ -5,13 +5,16 @@ form(action="#change" name="search-form").search-form.search-form_border
     .search-form__item
       label.search-form__label
         h3.search-form__item-title прибытие      
-        input(type="date" placeholder="дд.мм.гг").inputs-icon.inputs-icon__date-dropdown
+        input(type="date" placeholder="дд.мм.гг" min="2019-01-01" max="2100-01-01").inputs-icon.inputs-icon__date-dropdown
     .search-form__item
       label.search-form__label
         h3.search-form__item-title выезд
-        input(type="date" placeholder="дд.мм.гг").inputs-icon.inputs-icon__date-dropdown
+        input(type="date" placeholder="дд.мм.гг" min="2019-01-01" max="2100-01-01").inputs-icon.inputs-icon__date-dropdown
   .search-form__guests
     h3.search-form__guests-title гости
     input(type="text" placeholder="Сколько гостей").inputs-icon.inputs-icon__dropdown
-  button.search-form__btn подобрать номер
-    span.material-icons.material-icons-search-form arrow_forward
+    button.search-form__dropdown-btn
+      span.material-icons-outlined expand_more
+  button.search-form__btn.button_painted 
+    span подобрать номер
+    span.material-icons arrow_forward

@@ -27,6 +27,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  cursor: default;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
