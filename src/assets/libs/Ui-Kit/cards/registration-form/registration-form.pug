@@ -1,0 +1,26 @@
+form(action="#change" name="registration-form").registration-form.form_border
+  .registration-form__title
+    h1 Регистрация аккаунта
+  .registration-form__inputs
+    .registration-form__user-name
+      input(type='text' placeholder='Имя').inputs
+    .registration-form__user-surname
+      input(type='text' placeholder='Фамилия').inputs
+    include ../../form-elements/switches/radio-buttons/radio-buttons.pug
+    .registration-form__date-of-birth
+      h3.registration-form__date-title дата рождения
+      input.registration-form__date-of-birth.inputs._masked(type='date' placeholder='дд.мм.гггг' min="1900-01-01" max="2100-01-01")
+    .registration-form__email
+      h3.registration-form__email-title данные для входа в сервис
+      input.registration-form__email.inputs(type='email' placeholder='Email')
+    .registration-fom__password
+      input.registration-form__password.inputs(type='password' placeholder='Пароль')
+    .registration-form__special-offer
+      include ../../form-elements/switches/toggle-buttons/toggle-buttons.pug
+    button.registration-form__btn.button_painted
+      | перейти к оплате
+      span.material-icons.material-icons-registration-form arrow_forward
+  .registration-form__login.login
+    p.login__text Уже есть аккаунт на Toxin
+    button.login__btn.button_unpainted 
+      span.btn-title Войти

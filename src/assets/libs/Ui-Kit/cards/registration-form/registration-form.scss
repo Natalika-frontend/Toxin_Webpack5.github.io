@@ -1,0 +1,70 @@
+.registration-form {
+  width: 380px;
+  padding: 39px 29px 30px 29px;
+
+  // .registration-form__title
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  &__user-name,
+  &__email,
+  &__password {
+    margin-bottom: 10px;
+  }
+
+  &__user-surname {
+    margin-bottom: 9px;
+  }
+
+  .form__radiobuttons {
+    // TODO поправить классы радиокнопок
+    padding-left: 1px;
+    margin-bottom: 27px;
+  }
+
+  &__date-title,
+  &__email-title {
+    margin-bottom: 5px;
+  }
+
+  &__date-of-birth {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &.inputs {
+      padding: 11px 13px 11px 13px;
+    }
+  }
+
+  &__special-offer {
+    margin-bottom: 26px;
+  }
+
+  &__btn {
+    padding: 9px 11px 11px 94px;
+    width: 320px;
+    margin-bottom: 30px;
+  }
+
+  &__login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .login {
+    &__btn {
+      .btn-title {
+        padding: 11px 18px 12px 19px;
+      }
+    }
+
+    &__text {
+      color: $base100;
+      line-height: 18px;
+      padding-bottom: 2px;
+    }
+  }
+}
+

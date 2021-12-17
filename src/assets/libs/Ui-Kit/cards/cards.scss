@@ -1,7 +1,15 @@
 @import "search-form/search-form";
+@import "registration-form/registration-form";
+@import "reservation-form/reservation-form";
 
 .search-form-box {
   position: absolute;
   top: -15px;
   left: -29px;
+}
+
+.registration-form-box {
+  position: absolute;
+  top: 400px;
+  left: -28px;
 }
