@@ -1,0 +1,41 @@
+form.reservation-form.form_border
+  .reservation-form__title.title
+    .title__type-room
+      span.title_number №
+      h1 888
+      h3.title__type-room_color люкс
+    .title__cost-room
+      span.title__cost-room_num 9 990
+        span.rub
+      span.title__cost-room_time в сутки
+  .reservation-form__dates
+    .reservation-form__item
+      h3.reservation-form__item-title прибытие
+      input.inputs-icon.inputs-icon__date-dropdown(type="date" placeholder="ДД.ММ.ГГГГ" value="2019-08-19" min="2019-01-01" max="2045-01-01")
+    .reservation-form__item
+      h3.reservation-form__item-title выезд
+      input.inputs-icon.inputs-icon__date-dropdown(type="date" placeholder="ДД.ММ.ГГГГ" value="2019-08-23" min="2019-01-01" max="2045-01-01")
+  .reservation-form__guests
+    h3.reservation-form__guests-title гости
+    input.inputs-icon.inputs-icon__dropdown(type="text" placeholder="3 гостя")
+    button.form__dropdown-btn
+      span.material-icons-outlined expand_more
+  .reservation-form__price
+    .reservation-form__room-rate
+      p.rub.reservation-form__room-rate_price 9 990
+      span.reservation-form__room-rate_time х 4 суток
+      p.rub.reservation-form__room-rate_sum 39 960
+    .reservation-form__service-charge
+      p.rub.reservation-form__service-charge_info Сбор за услуги: скидка 
+        span 2 179
+      span.material-icons.reservation-form__service-info info_outline
+      p.rub.reservation-form__service-charge_sum 0
+    .reservation-form__additional
+      p Сбор за дополнительные услуги
+      span.material-icons.reservation-form__service-info info_outline
+      p.rub 300
+    .reservation-form__total
+      h2 Итого
+      span.rub.reservation-form__total_sum 38 081
+  button.reservation-form__btn.button_painted забронировать
+    span.material-icons arrow_forward

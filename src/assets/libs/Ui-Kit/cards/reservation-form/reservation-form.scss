@@ -1,1 +1,138 @@
+.reservation-form {
+  width: 380px;
+  padding: 38px 28px 29px 29px;
 
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+
+    &_number {
+      line-height: 17px;
+      font-weight: bold;
+      padding-bottom: 2px;
+      padding-right: 4px;
+    }
+
+    &__type-room,
+    &__cost-room {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__type-room {
+      align-items: flex-end;
+
+      &_color {
+        color: $purple;
+        text-transform: uppercase;
+        padding-bottom: 2px;
+        padding-left: 8px;
+      }
+    }
+
+    &__cost-room {
+      align-items: flex-end;
+      color: $base50;
+
+      &_num {
+        font-weight: bold;
+        padding-right: 3px;
+        padding-bottom: 1px;
+      }
+
+      &_time {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+
+  &__dates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    width: 150px;
+  }
+
+  &__item-title,
+  &__guests-title {
+    margin-bottom: 5px;
+  }
+
+  &__guests {
+    position: relative;
+    margin-bottom: 21px;
+  }
+
+  &__room-rate,
+  &__service-charge,
+  &__additional,
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__room-rate {
+    margin-bottom: 13px;
+
+    &_price {
+      padding-left: 1px;
+    }
+
+    &_time {
+      padding-right: 145px;
+    }
+
+    &_sum {
+      padding-right: 1px;
+    }
+  }
+
+  &__service-info {
+    width: 24px;
+    padding-right: 66px;
+    color: $base25;
+  }
+
+  &__service-charge {
+    margin-bottom: 13px;
+
+    &_info {
+      padding-bottom: 2px;
+    }
+
+    &_sum {
+      padding: 0px 2px 2px 12px;
+    }
+  }
+
+  &__additional {
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  &__total {
+    margin-bottom: 21px;
+
+    &_sum {
+      font-size: 19px;
+      line-height: 23px;
+      font-weight: bold;
+      padding-right: 1px;
+    }
+  }
+
+  &__btn {
+    width: 320px;
+    padding: 10px 11px 11px 97px;
+  }
+}

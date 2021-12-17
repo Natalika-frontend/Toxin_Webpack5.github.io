@@ -1,7 +1,7 @@
 @import './Ui-Kit/form-elements/switches/radio-buttons/radio-buttons';
 @import './Ui-Kit/form-elements/switches/toggle-buttons/toggle-buttons';
 
-// form_border
+// form_border с тенью
 .form_border {
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -17,15 +17,19 @@
   display: block;
   align-items: center;
   color: $base25;
+
   &::-webkit-input-placeholder {
     color: $base25;
   }
+
   &::-moz-placeholder {
     color: $base25;
   }
+
   &:-moz-placeholder {
     color: $base25;
   }
+
   &:-ms-input-placeholder {
     color: $base25;
   }
@@ -36,42 +40,51 @@
     transition: 0.3s ease;
     color: $base75;
     cursor: auto;
+
     &::-webkit-input-placeholder {
       color: $base75;
     }
-  
+
     &::-moz-placeholder {
       color: $base75;
     }
-  
+
     &:-moz-placeholder {
       color: $base75;
     }
-  
+
     &:-ms-input-placeholder {
       color: $base75;
     }
+
     ::-webkit-input-placeholder {
       transition: opacity 0.3s ease;
     }
+
     ::-moz-placeholder {
       transition: opacity 0.3s ease;
     }
+
     :-moz-placeholder {
       transition: opacity 0.3s ease;
     }
+
     :-ms-input-placeholder {
       transition: opacity 0.3s ease;
     }
+
     :focus::-webkit-input-placeholder {
       transition: opacity 0.3s ease;
     }
+
     :focus::-moz-placeholder {
       transition: opacity 0.3s ease;
     }
+
     :focus:-moz-placeholder {
       transition: opacity 0.3s ease;
     }
+
     :focus:-ms-input-placeholder {
       transition: opacity 0.3s ease;
     }
@@ -94,12 +107,13 @@
   &:hover,
   &:focus {
     border: 1px solid $base50;
-    transition: 0.3s ease;    
+    transition: 0.3s ease;
   }
 
   // дропдауны с датой
   &__date-dropdown {
     text-transform: uppercase;
+
     &::before {
       color: transparent;
       background: none;
@@ -119,8 +133,9 @@
     }
   }
 
+  // дропдауны
   &__dropdown {
-    & + .search-form__dropdown-btn {
+    &+.form__dropdown-btn {
       position: absolute;
       top: 29px;
       right: 4px;
@@ -181,6 +196,7 @@
     background: $background;
     z-index: -1;
   }
+
   &:hover {
     opacity: 0.5;
   }
@@ -195,7 +211,10 @@
   border: none;
   background-color: $background;
   color: $purple;
+
   &:hover {
     color: $base50;
   }
+  
 }
+
