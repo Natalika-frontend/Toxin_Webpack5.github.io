@@ -2,6 +2,7 @@
 @import "registration-form/registration-form";
 @import "reservation-form/reservation-form";
 @import "login-form/login-form";
+@import "calendar/calendar";
 
 // TODO делать маски для инпутов или нет?
 
@@ -27,4 +28,10 @@
   position: absolute;
   top: 538px;
   left: 392px;
+}
+
+.calendar-box {
+  position: absolute;
+  top: -14px;
+  left: 812px;
 }
