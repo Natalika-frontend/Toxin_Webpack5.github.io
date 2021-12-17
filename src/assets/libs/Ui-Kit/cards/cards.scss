@@ -1,6 +1,9 @@
 @import "search-form/search-form";
 @import "registration-form/registration-form";
 @import "reservation-form/reservation-form";
+@import "login-form/login-form";
+
+// TODO делать маски для инпутов или нет?
 
 .search-form-box {
   position: absolute;
@@ -17,5 +20,11 @@
 .reservation-form-box {
   position: absolute;
   top: -13px;
+  left: 392px;
+}
+
+.login-form-box {
+  position: absolute;
+  top: 538px;
   left: 392px;
 }

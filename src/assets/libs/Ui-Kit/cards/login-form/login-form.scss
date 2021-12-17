@@ -1,0 +1,38 @@
+.login-form {
+  width: 380px;
+  padding: 39px 29px 31px 29px;
+
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  &__email {
+    margin-bottom: 10px;
+  }
+
+  &__password {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 320px;
+    padding: 10px 10px 10px 137px;
+    margin-bottom: 30px;
+  }
+
+  &__regispration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__regispration-btn {
+    width: 99px;
+    padding: 12px 0px 13px 0px;
+  }
+
+  &__regispration-text {
+    padding-bottom: 2px;
+    color: $base100;
+  }
+}
