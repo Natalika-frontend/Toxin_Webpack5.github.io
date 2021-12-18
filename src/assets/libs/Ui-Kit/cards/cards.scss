@@ -3,6 +3,7 @@
 @import "reservation-form/reservation-form";
 @import "login-form/login-form";
 @import "calendar/calendar";
+@import "room-cards/room-card";
 
 // TODO делать маски для инпутов или нет?
 
@@ -33,5 +34,17 @@
 .calendar-box {
   position: absolute;
   top: -14px;
+  left: 812px;
+}
+
+.room-card-box_lux {
+  position: absolute;
+  top: 395px;
+  left: 812px;
+}
+
+.room-card-box {
+  position: absolute;
+  top: 692px;
   left: 812px;
 }

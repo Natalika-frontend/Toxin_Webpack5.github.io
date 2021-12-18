@@ -1,0 +1,138 @@
+@import "/node_modules/swiper/swiper";
+@import "/node_modules/swiper/modules/navigation/navigation";
+@import "/node_modules/swiper/modules/pagination/pagination";
+
+.room-card {
+  width: 270px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  padding-bottom: 5px;
+
+  &__image {
+    text-align: center;
+  }
+  &__img {
+    background-size: cover;
+    max-width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  &__slider {
+    margin-bottom: 20px;
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 11px;
+      font-weight: bold;
+      color: $lightText;
+    }
+
+    &:hover,
+    &:focus {
+      .swiper-button-next,
+      .swiper-button-prev {
+        opacity: 1;
+      }
+    }
+
+    .swiper-button-next {
+      right: -2px;
+      top: 78px;
+    }
+    .swiper-button-prev {
+      left: 19px;
+      top: 78px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      opacity: 0;
+    }
+
+    .swiper-pagination {
+      left: 97px;
+      bottom: 11px;
+      .swiper-pagination-bullet {
+        margin: 0 auto;
+        width: 7px;
+        height: 7px;
+        margin-left: 4px;
+        border: 1px solid $lightText;
+        box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+        background: transparent;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $lightText;
+        box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+      }
+    }
+  }
+  &__body {
+    padding: 0px 17px 0px 17px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  &__title {
+    color: $base100;
+    &_no {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 2px;
+      padding-right: 5px;
+    }
+    &_num {
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 23px;
+    }
+    &_lux {
+      color: $purple;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  &__price {
+    align-self: end;
+    color: $base50;
+    &_sum {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &_time {
+      font-size: 12px;
+      line-height: 18px;
+      padding-left: 5px;
+    }
+  }
+  hr {
+    height: 1px;
+    width: 230px;
+    border: none;
+    background-color: $base1hr;
+    margin-bottom: 10px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0px 17px 0px 20px;
+    margin-bottom: 17px;
+    @import "../../form-elements/switches/rate-buttons/rate-buttons";
+  }
+  &__rewievs {
+    color: $base50;
+    &_sum {
+      font-weight: bold;
+    }
+    &_text {
+      padding-left: 4px;
+      letter-spacing: 0.5px;
+    }
+  }
+}

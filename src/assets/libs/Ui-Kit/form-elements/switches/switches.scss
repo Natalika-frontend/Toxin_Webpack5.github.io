@@ -53,6 +53,11 @@
       text-transform: uppercase;
       margin-bottom: 19px;
     }
-    @import "rate-buttons/rate-buttons.scss";
-  }  
+    .rating-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 260px;
+      @import "rate-buttons/rate-buttons.scss";
+    }
+  }
 }

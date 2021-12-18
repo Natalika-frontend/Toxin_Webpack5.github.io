@@ -122,6 +122,11 @@
 
   &__total {
     margin-bottom: 21px;
+    &_line {
+      border-bottom: 1px dashed $base25;
+      width: 55%;
+      margin-bottom: 4px;
+    }
 
     &_sum {
       font-size: 19px;

@@ -36,7 +36,7 @@ module.exports = {
     alias: {
       'jquery': 'jquery/src/jquery',
       'jquery-ui': 'jquery-ui/ui',
-      '@': path.resolve(__dirname, '../'),
+      '@': path.resolve(__dirname, '../../../'),
       '@libs': path.resolve(__dirname, 'src/assets/libs/'),
       '@Ui': path.resolve(__dirname, 'src/assets/libs/Ui-Kit/'),
     },
@@ -53,6 +53,11 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
+
+        {
+          from: path.resolve(__dirname, 'src/assets/libs/Ui-Kit/cards/room-cards/img'),
+          to: path.resolve(__dirname, 'dist/images/rooms')
+        },
         {
           from: path.resolve(__dirname, 'src/assets/libs/Ui-Kit/form-elements/rewievs/img'),
           to: path.resolve(__dirname, 'dist/images/avatar')

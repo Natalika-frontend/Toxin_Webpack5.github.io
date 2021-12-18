@@ -1,0 +1,36 @@
+.room-card
+  .swiper.room-card__slider 
+    .swiper-wrapper 
+      .swiper-slide.room-card__image
+        img(src="./images/rooms/room2.jpg" alt="Номер отеля").room-card__img
+      .swiper-slide.room-card__image
+        img(src="./images/rooms/room1.jpg" alt="Номер отеля").room-card__img
+      .swiper-slide.room-card__image
+        img(src="./images/rooms/room2.jpg" alt="Номер отеля").room-card__img
+      .swiper-slide.room-card__image
+        img(src="./images/rooms/room1.jpg" alt="Номер отеля").room-card__img
+    .swiper-button-prev.material-icons-outlined.room-card__prev
+    .swiper-button-next.material-icons-outlined.room-card__next
+    .swiper-pagination
+  .room-card__body
+    .room-card__title
+      span.room-card__title_no №
+      span.room-card__title_num 840
+    .room-card__price 
+      span.rub.room-card__price_sum 9 900
+      span.room-card__price_time в сутки
+  hr
+  .room-card__footer
+    .room-card__rating.rating.rating_set
+      .rating__body
+        .rating__active
+        .rating__items 
+          input(type="radio" value="1" name="rating").rating__item
+          input(type="radio" value="2" name="rating").rating__item
+          input(type="radio" value="3" name="rating").rating__item
+          input(type="radio" value="4" name="rating").rating__item
+          input(type="radio" value="5" name="rating").rating__item
+      .rating__value 4
+    .room-card__rewievs 
+      span.room-card__rewievs_sum 65
+      span.room-card__rewievs_text Отзывов

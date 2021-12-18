@@ -11,7 +11,6 @@ function initRatings() {
   for (let index = 0; index < ratings.length; index++) {
     const rating = ratings[index];
     initRating(rating);
-    initSecondRating(rating);
   }
 
   // инициализируем первый рейтинг
@@ -20,16 +19,6 @@ function initRatings() {
     setRatingActiveWidth();
 
     if (rating.classList.contains('rating_set')) {
-      setRating(rating);
-    }
-  }
-
-  // инициализируем второй рейтинг
-  function initSecondRating(rating) {
-    initRatingVars(rating);
-    setRatingActiveWidth();
-
-    if (rating.classList.contains('rating_second-set')) {
       setRating(rating);
     }
   }
