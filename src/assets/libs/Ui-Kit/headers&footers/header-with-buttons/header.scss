@@ -1,0 +1,75 @@
+@import "../../../_mixins";
+
+.header {
+  &__main {
+    padding: rem(16) 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu {
+    &__list {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      &-item {
+        padding-left: rem(20);
+      }
+      &-link {
+        text-decoration: none;
+        color: $base50;
+      }
+      ._after::after {
+        content: "\e5cf";
+        font-family: "Material Icons";
+        display: inline-block;
+        position: absolute;
+        top: 1px;
+        font-size: rem(24);
+        color: $base50;
+        padding-left: 1px;
+        cursor: pointer;
+      }
+      ._after {
+        padding-right: rem(26);
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    &__dropdown {
+      position: absolute;
+    }
+    .active {
+      font-weight: bold;
+      color: $base75;
+    }
+  }
+  &__btn {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    &-login {
+      padding: rem(7) rem(20) rem(8) rem(17);
+      margin-left: 45px;
+    }
+    &-registration {
+      padding: rem(9) rem(20) rem(10) rem(19);
+      margin-left: rem(20);
+    }
+  }
+
+  &__account {
+    border-left: 1px solid $base1hr;
+    height: 30px;
+    margin: 0px 20px 0px 45px;
+  }
+  &__user {
+    color: $base50;
+  }
+}

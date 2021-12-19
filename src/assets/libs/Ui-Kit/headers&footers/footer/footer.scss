@@ -1,0 +1,178 @@
+@import "../../../_mixins";
+
+.footer {
+  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+  &__logo {
+    padding-bottom: rem(17);
+    &-text {
+      line-height: rem(24);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+    padding: 85px 0 100px 0;
+    margin: 0 auto;
+  }
+  &__info {
+    max-width: 260px;
+    line-height: 21px;
+    color: $base75;
+    &_small {
+      margin-bottom: 3px;
+    }
+  }
+  &__menu {
+    min-width: 548px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4px;
+    margin: 0px 52px 0px 40px;
+    &-item {
+      cursor: pointer;
+      padding-bottom: 20px;
+      &:first-child {
+        padding-bottom: 21px;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &_title {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $base100;
+      }
+      &_subtitle {
+        padding: 4px 0px 18px 0px;
+      }
+      &_text {
+        padding-bottom: 23px;
+      }
+    }
+  }
+  &__input {
+    &-groupe {
+      position: relative;
+    }
+  }
+  .inputs-icon {
+    padding: 8px 36px 10px 14px;
+    &::-webkit-input-placeholder {
+      color: $base25;
+    }
+
+    &::-moz-placeholder {
+      color: $base25;
+    }
+
+    &:-moz-placeholder {
+      color: $base25;
+    }
+
+    &:-ms-input-placeholder {
+      color: $base25;
+    }
+
+    &:hover,
+    &:focus {
+      &::-webkit-input-placeholder {
+        color: $base75;
+      }
+
+      &::-moz-placeholder {
+        color: $base75;
+      }
+
+      &:-moz-placeholder {
+        color: $base75;
+      }
+
+      &:-ms-input-placeholder {
+        color: $base75;
+      }
+
+      ::-webkit-input-placeholder {
+        transition: opacity 0.3s ease;
+      }
+
+      ::-moz-placeholder {
+        transition: opacity 0.3s ease;
+      }
+
+      :-moz-placeholder {
+        transition: opacity 0.3s ease;
+      }
+
+      :-ms-input-placeholder {
+        transition: opacity 0.3s ease;
+      }
+
+      :focus::-webkit-input-placeholder {
+        transition: opacity 0.3s ease;
+      }
+
+      :focus::-moz-placeholder {
+        transition: opacity 0.3s ease;
+      }
+
+      :focus:-moz-placeholder {
+        transition: opacity 0.3s ease;
+      }
+
+      :focus:-ms-input-placeholder {
+        transition: opacity 0.3s ease;
+      }
+    }
+  }
+  .inputs-icon__dropdown + .form__dropdown-btn {
+    top: 9px;
+    right: 4px;
+    color: $purple;
+  }
+  &__about {
+    position: absolute;
+    left: 200px;
+  }
+
+  &__subscription {
+    max-width: 260px;
+    color: $base75;
+    line-height: 24px;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    &_small {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    min-width: 112px;
+    &-item {
+      padding-right: 1px;
+    }
+  }
+  &_small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 109px 0px;
+  }
+}
+
+// TODO поменять единицы измерения на ремы!!
