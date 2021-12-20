@@ -1,0 +1,59 @@
+@import "../../assets/libs/mixins";
+.home {
+  &__content {
+    flex: 0 0 100%;
+    display: flex;
+  }
+  &__container {
+    display: flex;
+    width: 1190px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &__body {
+    padding: rem(68) 0px 0px 0px;
+  }
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+  &__description {
+    display: flex;
+    align-items: flex-end;
+    &_text {
+      line-height: 24px;
+      max-width: 297px;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .home {
+    display: flex;
+    &__image {
+      position: relative;
+      flex: 0 0 100%;
+      padding: 0 0 58.4% 0;
+      transform: translate(-100%, 0px);
+      z-index: -1;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+    &__body {
+      width: 100%;
+      padding: rem(68) 0px 0px 0px;
+    }
+    &__empty {
+      width: 905px;
+      height: 363px;
+    }
+  }
+}

@@ -1,5 +1,3 @@
-@import "../../../_mixins";
-
 .header {
   &__main {
     padding: rem(16) 0;
@@ -72,4 +70,6 @@
   &__user {
     color: $base50;
   }
+
+  @include adaptiv-font($pc, $mobileSmall, 14);
 }

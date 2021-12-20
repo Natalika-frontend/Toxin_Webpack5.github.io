@@ -16,8 +16,9 @@ console.log(mode + ' mode');
 module.exports = {
   mode: mode,
   entry: {
+    index: './src/index.js',
     main: './src/assets/js/main.js',
-    index: './src/index.js'
+    mainUi: './src/assets/libs/Ui-Kit/mainUi.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -50,10 +51,15 @@ module.exports = {
     }),
     new HTMLWebpackPlugin({
       template: './src/index.pug',
+      inject: 'body',
+      meta: {
+        charset: { charset: 'utf-8' },
+        viewport: 'width=device-width, initial-scale=1.0'
+      },
+      title: 'TOXIN',
     }),
     new CopyWebpackPlugin({
       patterns: [
-
         {
           from: path.resolve(__dirname, 'src/assets/libs/Ui-Kit/cards/room-cards/img'),
           to: path.resolve(__dirname, 'dist/images/rooms')
@@ -121,12 +127,19 @@ module.exports = {
     {
       test: /\.m?js&/,
       exclude: /node_modules/,
-      use: {
+      use: [{
+        loader: 'cache-loader',
+        options: {
+          cacheDirectory: path.resolve(__dirname, 'node_modules/.cache/cache-loader'),
+        },
+
+      },
+      {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env']
         }
-      }
+      }]
     }
     ],
   },

@@ -1,6 +1,8 @@
 .reservation-form {
-  width: 380px;
+  max-width: 380px;
+  display: block;
   padding: 38px 28px 29px 29px;
+  background: $background;
 
   &__title {
     margin-bottom: 21px;

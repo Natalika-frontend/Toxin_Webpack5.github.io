@@ -1,8 +1,10 @@
-.search-form { // TODO дописать атрибуты для отпраки формы?
+.search-form {
+  // TODO дописать атрибуты для отпраки формы?
   width: 380px;
   padding: 40px 28px 30px 30px;
+  background: $background;
 
-  // .search-form__title  
+  // .search-form__title
   &__title {
     margin-bottom: 22px;
   }
@@ -23,7 +25,7 @@
   &__item-title {
     margin-bottom: 5px;
   }
-  
+
   // .search-form__guests
   &__guests {
     position: relative;

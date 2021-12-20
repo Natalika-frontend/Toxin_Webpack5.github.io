@@ -1,4 +1,10 @@
-// Буду делать комментарий к каждому миксину или переменной
+// Подключение общих стилей для корректного отображения Ui-kit
+@import "../global";
+@import "../_mixins";
+@import "../_elements-style";
+@import "../_fonts";
+
+// Подключение стилей Ui-kit
 @import "colors_types/colors/colors.scss";
 @import "colors_types/types/types.scss";
 @import "form-elements/text-fields/text-fields.scss";
