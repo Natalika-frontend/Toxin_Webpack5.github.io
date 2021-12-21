@@ -1,10 +1,11 @@
-@import './Ui-Kit/form-elements/switches/radio-buttons/radio-buttons';
-@import './Ui-Kit/form-elements/switches/toggle-buttons/toggle-buttons';
+@import "./Ui-Kit/form-elements/switches/radio-buttons/radio-buttons";
+@import "./Ui-Kit/form-elements/switches/toggle-buttons/toggle-buttons";
+@import "./mixins";
 
 // form_border с тенью
 .form_border {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px rem(25) rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
@@ -13,10 +14,11 @@
   border: 1px solid $base25;
   border-radius: 4px;
   width: 100%;
-  padding: 13px 13px 11px 13px;
+  padding: rem(13) rem(13) rem(11) rem(13);
   display: block;
   align-items: center;
   color: $base25;
+  @include adaptiveValue("font-size", 14, 8, 1);
 
   &::-webkit-input-placeholder {
     color: $base25;
@@ -96,11 +98,12 @@
   border: 1px solid $base25;
   border-radius: 4px;
   width: 100%;
-  padding: 11px 12px 12px 13px;
+  padding: rem(11) rem(12) rem(12) rem(13);
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: auto;
+  @include adaptiveValue("font-size", 14, 8, 1);
 
   &:hover,
   &:focus {
@@ -118,22 +121,23 @@
       display: flex;
       font-family: "Material Icons";
       content: "\e5cf";
-      font-size: 24px;
+      font-size: rem(24);
       position: absolute;
       top: -3px;
       right: -3px;
       justify-content: center;
       align-items: center;
       color: $base50;
-      width: 50px;
-      height: 50px;
+      width: rem(50);
+      height: rem(50);
       cursor: pointer;
+      @include adaptiveValue("font-size", 24, 12, 1);
     }
   }
 
   // дропдауны
   &__dropdown {
-    &+.form__dropdown-btn {
+    & + .form__dropdown-btn {
       position: absolute;
       top: 29px;
       right: 4px;
@@ -152,12 +156,13 @@
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 15px;
-  border-radius: 22px;
+  font-size: rem(12);
+  line-height: rem(15);
+  border-radius: rem(22);
   border: none;
   cursor: pointer;
   font-weight: bold;
+  @include adaptiveValue("font-size", 12, 8, 1);
 
   &:hover {
     opacity: 0.5;
@@ -177,10 +182,11 @@
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: rem(12);
+  line-height: rem(15);
   font-weight: bold;
   cursor: pointer;
+  @include adaptiveValue("font-size", 12, 8, 1);
 
   &::before {
     content: "";
@@ -203,8 +209,8 @@
 // кнопки сброса и отправки данных формы
 .button {
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: rem(12);
+  line-height: rem(15);
   font-weight: bold;
   border: none;
   background-color: $background;
@@ -213,6 +219,4 @@
   &:hover {
     color: $base50;
   }
-  
 }
-

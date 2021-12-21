@@ -2,9 +2,12 @@ section.home
   .home__content
     .home__container
       .home__body
-        include ../../assets/libs/Ui-Kit/cards/search-form/search-form.pug
+        .home__search-form
+          include ../../assets/libs/Ui-Kit/cards/search-form/search-form.pug
+        .home__calendar 
+          include ../../assets/libs/Ui-Kit/cards/calendar/calendar.pug
         .home__description
           .home__empty
           p.home__description_text Лучшие номера для вашей работы, отдыха и просто вдохновения
   .home__image 
-    img(src="images/landing.jpg" alt="Фоновое изображение")
+    img(src="images/landing.jpg" alt="Фоновое изображение")  

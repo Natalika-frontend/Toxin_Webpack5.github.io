@@ -2,7 +2,7 @@ const date=new Date();
 const year=date.getFullYear(); // получаю год в шапке календаря
 const renderCalendar=() => {
 	date.setDate(1);
-	const monthDays=document.querySelector('.days');
+	const monthDays=document.querySelector('.calendar__days');
 	const lastDay=new Date(date.getFullYear(),date.getMonth()+1,0).getDate(); // корректный последний день месяца
 	const prevLastDay=new Date(date.getFullYear(),date.getMonth(),0).getDate();
 	const firstDayIndex=date.getDay()-1;
@@ -24,7 +24,7 @@ const renderCalendar=() => {
 		"Декабрь",
 	];
 
-	document.querySelector('.date h2').innerHTML=month[date.getMonth()]+" "+year; // Получаем в календарь текущий месяц и год
+	document.querySelector('.calendar__year').innerHTML=month[date.getMonth()]+" "+year; // Получаем в календарь текущий месяц и год
 
 	let days="";
 
@@ -47,12 +47,12 @@ const renderCalendar=() => {
 
 };
 
-document.querySelector('.prev').addEventListener('click',() => {
+document.querySelector('.calendar__prev').addEventListener('click',() => {
 	date.setMonth(date.getMonth()-1);
 	renderCalendar();
 });
 
-document.querySelector('.next').addEventListener('click',() => {
+document.querySelector('.calendar__next').addEventListener('click',() => {
 	date.setMonth(date.getMonth()+1);
 	renderCalendar();
 });

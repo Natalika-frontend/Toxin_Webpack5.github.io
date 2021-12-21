@@ -1,2 +1,0 @@
-(()=>{"use strict";var e=document.querySelector(".menu__list");for(let t=0;t<e.children.length;t++)e.children[t].querySelector(".menu__list-link").classList.remove("active"),e.children[t].querySelector(".menu__list-link").onclick=l;function l(){for(let l=0;l<e.children.length;l++)e.children[l].querySelector(".menu__list-link").classList.remove("active"),this.classList.add("active")}})();
-//# sourceMappingURL=main.69f54cbc9be07973b477.js.map

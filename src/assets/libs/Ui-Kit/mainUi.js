@@ -5,4 +5,4 @@ import './form-elements/switches/rate-buttons/rate-buttons';
 import './form-elements/buttons-section/range-slider/range-slider';
 import './cards/calendar/calendar';
 import './cards/room-cards/room-card';
-import './headers&footers/header-with-buttons/header';
+import './headers_footers/header-with-buttons/header';

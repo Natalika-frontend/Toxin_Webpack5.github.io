@@ -3,10 +3,8 @@
 @import "./assets/libs/_elements-style";
 
 // подключение стилей отдельных блоков
-@import "./assets/libs/Ui-Kit/headers&footers/header-with-buttons/header";
-@import "./assets/libs/Ui-Kit/headers&footers/footer/footer";
-@import "./assets/libs/Ui-Kit/cards/search-form/search-form";
-@import "./assets/libs/Ui-Kit/cards/reservation-form/reservation-form";
+@import "./assets/libs/Ui-Kit/headers_footers/header-with-buttons/header";
+@import "./assets/libs/Ui-Kit/headers_footers/footer/footer";
 
 // подключение стилей отдельных страниц
 @import "./pages/landing-page/landing-page";

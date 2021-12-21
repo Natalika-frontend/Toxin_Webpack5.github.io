@@ -1,0 +1,219 @@
+@import "../../../mixins";
+
+.header {
+  z-index: 50;
+  &__logo {
+    overflow: hidden;
+    position: relative;
+    flex: 0 0 rem(105);
+    z-index: 3;
+    img {
+      display: block;
+      max-width: 100%;
+      @include adaptiveValue("width", 105, 50, 1);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(70);
+    @include adaptiveValue("height", 70, 34, 1);
+    background-color: $background;
+    z-index: 2;
+  }
+  &__main {
+    padding: rem(16) 0;
+    @include adaptiveValue("padding-top", 16, 5, 1);
+    @include adaptiveValue("padding-bottom", 16, 5, 1);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include adaptiveValue("font-size", 14, 10, 1);
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__burger {
+    display: none;
+  }
+  .menu {
+    &__list {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      &-item {
+        padding-left: rem(20);
+        @include adaptiveValue("padding-left", 20, 2, 1);
+      }
+      &-link {
+        text-decoration: none;
+        color: $base50;
+      }
+      ._after::after {
+        content: "\e5cf";
+        font-family: "Material Icons";
+        display: inline-block;
+        position: absolute;
+        top: 1px;
+        font-size: rem(24);
+        color: $base50;
+        padding-left: 1px;
+        cursor: pointer;
+        @include adaptiveValue("font-size", 24, 12, 1);
+      }
+      ._after {
+        padding-right: rem(26);
+        @include adaptiveValue("padding-right", 26, 10, 1);
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    &__dropdown {
+      position: absolute;
+    }
+    .active {
+      font-weight: bold;
+      color: $base75;
+    }
+  }
+  &__btn {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    &-login {
+      padding: rem(7) rem(20) rem(8) rem(17);
+      @include adaptiveValue("padding-top", 7, 4, 1);
+      @include adaptiveValue("padding-right", 20, 10, 1);
+      @include adaptiveValue("padding-bottom", 8, 5, 1);
+      @include adaptiveValue("padding-left", 17, 10, 1);
+      margin-left: rem(45);
+      @include adaptiveValue("margin-left", 45, 10, 1);
+    }
+    &-registration {
+      padding: rem(9) rem(20) rem(10) rem(19);
+      @include adaptiveValue("padding-top", 9, 6, 1);
+      @include adaptiveValue("padding-right", 20, 10, 1);
+      @include adaptiveValue("padding-bottom", 10, 7, 1);
+      @include adaptiveValue("padding-left", 19, 10, 1);
+      margin-left: rem(20);
+      @include adaptiveValue("margin-left", 20, 5, 1);
+    }
+  }
+
+  &__account {
+    border-left: 1px solid $base1hr;
+    height: rem(30);
+    margin: 0px rem(20) 0px rem(45);
+  }
+  &__user {
+    color: $base50;
+  }
+  @include adaptiveValue("font-size", 14, 8, 1);
+}
+
+@media (max-width: 767px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    &__main {
+      height: 50px;
+      align-items: center;
+      background-color: $background;
+    }
+    &__logo {
+      z-index: 3;
+      flex: 0 0 65px;
+    }
+    &__btn {
+      z-index: 3;
+    }
+    &__burger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      z-index: 3;
+
+      span {
+        background-color: $base50;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+      }
+      &:before,
+      &:after {
+        content: "";
+        background-color: $base50;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+    }
+    &__burger.active:before {
+      transform: rotate(45deg);
+      top: 9px;
+      width: 80%;
+    }
+    &__burger.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+      width: 80%;
+    }
+    &__burger.active span {
+      transform: scale(0);
+    }
+    .menu {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: $background;
+      padding: 60px 10px 10px 35px;
+      transition: all 0.3s ease 0s;
+
+      &__list {
+        display: block;
+        &-item {
+          position: relative;
+          padding: 0px 0px 20px 0px;
+          font-size: 16px;
+          &::after {
+            transform: rotate(-90deg);
+          }
+        }
+        ._after::after {
+          font-size: 20px;
+        }
+      }
+    }
+    .menu.active {
+      top: 0;
+    }
+  }
+  body.lock {
+    overflow: hidden;
+  }
+}

@@ -1,4 +1,7 @@
 @import "../../assets/libs/mixins";
+@import "../../assets/libs/Ui-Kit/cards/search-form/search-form";
+@import "../../assets/libs/Ui-Kit/cards/calendar/calendar";
+
 .home {
   &__content {
     flex: 0 0 100%;
@@ -12,6 +15,12 @@
   }
   &__body {
     padding: rem(68) 0px 0px 0px;
+    position: relative;
+  }
+  &__calendar {
+    position: absolute;
+    top: 260px;
+    left: 51px;
   }
   &__image {
     img {
@@ -27,6 +36,9 @@
       text-align: right;
     }
   }
+  &__search-form {
+    @include adaptiveValue("padding-left", 0, 20, 1);
+  }
 }
 
 @media (min-width: 767px) {
@@ -34,7 +46,7 @@
     display: flex;
     &__image {
       position: relative;
-      flex: 0 0 100%;
+      flex: 0 0 155%;
       padding: 0 0 58.4% 0;
       transform: translate(-100%, 0px);
       z-index: -1;

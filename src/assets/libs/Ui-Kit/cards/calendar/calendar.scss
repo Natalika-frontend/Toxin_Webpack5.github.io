@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $background;
 
   &__buttons {
     display: flex;
@@ -18,22 +19,24 @@
     width: 100%;
   }
 
-  .calendar-materal-icon-back {
+  &__prev {
     position: absolute;
     left: 6%;
     top: 5%;
     color: $purple;
+    cursor: pointer;
   }
 
-  .calendar-materal-icon-forward {
+  &__next {
     position: absolute;
     left: 86%;
     top: 5%;
     color: $purple;
+    cursor: pointer;
   }
 
   /* Заголовок месяца */
-  .month {
+  &__month {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -42,19 +45,15 @@
     text-align: center;
   }
 
-  .month span {
-    cursor: pointer;
-  }
-
   /* Будни (Пн-Вс) */
-  .weekdays {
+  &__weekdays {
     width: 100%;
     padding: 40px 0 9px;
     display: flex;
     align-items: center;
   }
 
-  .weekdays div {
+  &__weekdays div {
     color: $purple;
     font-size: 12px;
     width: calc(320px / 7);
@@ -64,14 +63,14 @@
   }
 
   /* Дни (1-31) */
-  .days {
+  &__days {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .days div {
+  &__days div {
     display: inline-block;
     margin: 10px 9px;
     text-align: center;
@@ -81,7 +80,7 @@
     height: 21px;
   }
 
-  .days div:hover:not(.active) {
+  &__days div:hover:not(.active) {
     background: $primaryGradient;
     width: 40px;
     height: 40px;
@@ -97,7 +96,7 @@
   }
 
   /* Выделите "текущий" день */
-  .days .active {
+  &__days .active {
     display: flex;
     justify-content: center;
     text-align: center;

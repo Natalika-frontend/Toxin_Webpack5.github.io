@@ -1,11 +1,11 @@
 .calendar
   .calendar__wrapper
-    .month
-      span.material-icons-outlined.calendar-materal-icon-back.prev arrow_back
+    .calendar__month
+      span.material-icons-outlined.calendar__prev arrow_back
       .date
-        h2 2021
-      span.material-icons-outlined.calendar-materal-icon-forward.next arrow_forward
-    .weekdays
+        h2.calendar__year
+      span.material-icons-outlined.calendar__next arrow_forward
+    .calendar__weekdays
       div Пн
       div Вт
       div Ср
@@ -13,7 +13,7 @@
       div Пт
       div Сб
       div Вс
-    .days
+    .calendar__days
     .calendar__buttons
       button(type="clear").calendar__btn-clear.button очистить
       button(type="submit").calendar__btn-submit.button применить
