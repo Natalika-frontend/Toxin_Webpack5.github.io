@@ -1,6 +1,5 @@
 @import "./header-with-buttons/header";
 @import "./footer/footer";
-@import "./footer-small/footer-small";
 
 .header-with-buttons-box {
   margin-bottom: 38px;
@@ -10,6 +9,6 @@
   margin-bottom: 54px;
 }
 
-.footer-box {
-  margin-bottom: 50px;
+footer.footer_small {
+  display: flex;
 }

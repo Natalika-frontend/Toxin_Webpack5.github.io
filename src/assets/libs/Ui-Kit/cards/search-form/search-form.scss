@@ -1,19 +1,19 @@
 .search-form {
-  // TODO дописать атрибуты для отпраки формы?
-  width: 380px;
-  padding: 40px 28px 30px 30px;
+  // TODO дописать атрибуты для отправки формы?
+  width: rem(380);
+  padding: rem(40) rem(28) rem(30) rem(30);
   background: $background;
 
   // .search-form__title
   &__title {
-    margin-bottom: 22px;
+    margin-bottom: rem(22);
   }
 
   // .search-form__dates
   &__dates {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: rem(20);
   }
 
   // .search-form__item
@@ -23,24 +23,48 @@
 
   // .search-form__item-title
   &__item-title {
-    margin-bottom: 5px;
+    margin-bottom: rem(5);
   }
 
   // .search-form__guests
   &__guests {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: rem(32);
   }
 
   // .search-form__guests-title
   &__guests-title {
-    margin-bottom: 5px;
+    margin-bottom: rem(5);
   }
 
   // .search-form__btn
   &__btn {
-    padding: 10px 11px 10px 91px;
-    width: 320px;
+    padding: rem(10) rem(11) rem(10) rem(91);
+    width: rem(320);
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-form {
+    h1 {
+      @include adaptiveValue("font-size", 21, 18, 1);
+    }
+    @include adaptiveValue("font-size", 14, 10, 1);
+    @include adaptiveValue("padding-top", 40, 20, 1);
+    @include adaptiveValue("padding-right", 28, 14, 1);
+    @include adaptiveValue("padding-bottom", 30, 15, 1);
+    @include adaptiveValue("padding-left", 30, 15, 1);
+    @include adaptiveValue("width", 380, 285, 1);
+    &__item {
+      @include adaptiveValue("width", 150, 125, 1);
+    }
+    &__btn {
+      @include adaptiveValue("padding-top", 10, 5, 1);
+      @include adaptiveValue("padding-right", 11, 5, 1);
+      @include adaptiveValue("padding-bottom", 10, 5, 1);
+      @include adaptiveValue("padding-left", 91, 46, 1);
+      @include adaptiveValue("width", 320, 256, 1);
+    }
   }
 }

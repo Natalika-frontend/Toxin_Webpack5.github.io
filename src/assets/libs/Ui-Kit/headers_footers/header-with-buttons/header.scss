@@ -20,7 +20,7 @@
     left: 0;
     width: 100%;
     height: rem(70);
-    @include adaptiveValue("height", 70, 34, 1);
+    @include adaptiveValue("height", 70, 50, 1);
     background-color: $background;
     z-index: 2;
   }

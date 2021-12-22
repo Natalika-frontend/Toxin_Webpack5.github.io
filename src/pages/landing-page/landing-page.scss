@@ -17,10 +17,16 @@
     padding: rem(68) 0px 0px 0px;
     position: relative;
   }
+  &__search-form {
+    position: relative;
+    @include adaptiveValue("padding-left", 0, 5, 1);
+  }
   &__calendar {
+    //display: none;
     position: absolute;
-    top: 260px;
-    left: 51px;
+    top: 191px;
+    left: 31px;
+    @include adaptiveValue("padding-left", 0, 5, 1);
   }
   &__image {
     img {
@@ -34,10 +40,13 @@
       line-height: 24px;
       max-width: 297px;
       text-align: right;
+      padding-bottom: rem(0);
     }
   }
-  &__search-form {
-    @include adaptiveValue("padding-left", 0, 20, 1);
+  &__empty {
+    width: rem(905);
+    @include adaptiveValue("width", 835, 0, 1);
+    height: rem(363);
   }
 }
 
@@ -63,9 +72,41 @@
       width: 100%;
       padding: rem(68) 0px 0px 0px;
     }
-    &__empty {
-      width: 905px;
-      height: 363px;
+
+    &__description_text {
+      @include adaptiveValue("padding-bottom", 15, 0, 1);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .home {
+    display: flex;
+    &__image {
+      position: relative;
+      flex: 0 0 380%;
+      padding: 0 0 58.4% 0;
+      transform: translate(-100%, 0px);
+      z-index: -1;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+    &__body {
+      width: 100%;
+      padding: rem(68) 0px 0px 0px;
+    }
+    &__description_text {
+      @include adaptiveValue("padding-bottom", 15, 10, 1);
+    }
+    &__calendar {
+      top: 169px;
+      left: 3px;
     }
   }
 }
