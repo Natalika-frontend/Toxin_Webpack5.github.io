@@ -37,7 +37,7 @@ module.exports = {
     alias: {
       'jquery': 'jquery/src/jquery',
       'jquery-ui': 'jquery-ui/ui',
-      '@': path.resolve(__dirname, '../../../'),
+      '@': path.resolve(__dirname, '**/**'),
       '@libs': path.resolve(__dirname, 'src/assets/libs/'),
       '@Ui': path.resolve(__dirname, 'src/assets/libs/Ui-Kit/'),
     },

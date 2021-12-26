@@ -3,7 +3,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  padding: rem(20) rem(20) rem(19) rem(20);
+  padding: rem(20) rem(19) rem(19) rem(19);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@
   }
 
   /* Заголовок месяца */
-  &__months {
+  &__nav {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -62,52 +62,80 @@
     align-items: center;
   }
 
+  &__week div {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: $base50;
+    cursor: pointer;
+  }
+  // недели
+  &__week {
+    display: flex;
+    width: 100%;
+    // justify-content: space-between;
+    // text-align: center;
+    // align-items: center;
+  }
+
   /* Дни (1-31) */
   &__days {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+    
 
-  &__days div {
-    display: inline-block;
-    margin: 10px 9px;
-    text-align: center;
-    font-size: 12px;
-    color: $base50;
-    width: 21px;
-    height: 21px;
-  }
-
-  &__days div:hover:not(.active) {
-    background: $primaryGradient;
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-
-  /* Выделите "текущий" день */
-  &__days .active {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: $secondaryGradient;
-    border-radius: 25px;
-    margin: 0;
-    color: white;
-    cursor: pointer;
+    // Выделение текущего дня
+    &_active {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background: $secondaryGradient;
+      border-radius: 25px;
+      margin: 0;
+      color: $lightText;
+    }
+    // стили для выбранных дней
+    &_select {
+      position: relative;
+      background: $primaryGradient;
+      width: 40px;
+      height: 40px;
+      border-radius: 25px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: $lightText;
+      transition: background-color 0.2s;
+      &_first::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        left: 50%;
+        background: $primaryGradient25;
+      }
+      &_last::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 50%;
+        background: $primaryGradient25;
+      }
+      &_range {
+        background: $primaryGradient25;
+      }
+    }
   }
 
   .prev-date,
@@ -135,12 +163,11 @@
       @include adaptiveValue("margin-bottom", 9, 4, 1);
       @include adaptiveValue("margin-left", 10, 7, 1);
     }
-    &__days div:hover:not(.active),
-    &__days div:focus:not(.active) {
+    &__days_select {
       width: 25px;
       height: 25px;
     }
-    &__days .active {
+    &__days_active {
       width: 25px;
       height: 25px;
     }
