@@ -60,23 +60,4 @@
     .additional-guests
       +textField('text', '3 гостя', 'dropdown-guests__example')
         span.material-icons-outlined.dropdown-guests_spoller expand_more
-      .dropdown-guests__body
-        ul.dropdown__menu 
-          li взрослые
-            .input-values
-              button(type="button").minus -
-              span 2
-              button(type="button").plus +
-          li дети
-            .input-values
-              button(type="button").minus -
-              span 1
-              button(type="button").plus +
-          li младенцы
-            .input-values
-              button(type="button" disabled).minus -
-              span 0
-              button(type="button").plus +
-          .submit-button
-            button(type="clear").submit очистить
-            button(type="submit").submit применить
+      include ./dropdown-people/dropdown-people.pug

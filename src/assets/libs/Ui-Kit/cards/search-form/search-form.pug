@@ -3,18 +3,28 @@ form(action="#change" name="search-form").search-form.form_border
     h1 Найдём номера под ваши пожелания
   .search-form__dates
     .search-form__item
-      .search-form__label
+      .search-form__start-date
         h3.search-form__item-title прибытие      
-        input(type="date" min="2019-01-01" max="2100-01-01").inputs-icon.inputs-icon__date-dropdown
+        input(type="text" placeholder="дд.мм.гггг").inputs-icon.inputs-icon__dropdown
+        button.form__dropdown-btn
+          span.material-icons-outlined expand_more
     .search-form__item
-      .search-form__label
+      .search-form__end-date
         h3.search-form__item-title выезд
-        input(type="date" min="2019-01-01" max="2100-01-01").inputs-icon.inputs-icon__date-dropdown
+        input(type="text" placeholder="дд.мм.гггг").inputs-icon.inputs-icon__dropdown
+        button.form__dropdown-btn
+          span.material-icons-outlined expand_more
+    .search-form__calendar 
+      include ../calendar/calendar.pug
   .search-form__guests
     h3.search-form__guests-title гости
-    input(type="text" placeholder="Сколько гостей").inputs-icon.inputs-icon__dropdown
+    input(type="text" placeholder="Сколько гостей").inputs-icon.inputs-icon__dropdown.dropdown
     button.form__dropdown-btn
       span.material-icons-outlined expand_more
-  button.search-form__btn.button_painted 
-    span подобрать номер
-    span.material-icons arrow_forward
+    .search-form__dropdown
+      include ../../form-elements/dropdown/dropdown-people/dropdown-people.pug
+  a(href="../../../../../pages/filter/filter.pug").search-form__link 
+    button.search-form__btn.button_painted
+      span подобрать номер
+      span.material-icons arrow_forward
+//- TODO доработать плейсхолдеры в инпутах

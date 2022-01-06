@@ -20,14 +20,8 @@
   &__search-form {
     position: relative;
     @include adaptiveValue("padding-left", 0, 5, 1);
-  }
-  &__calendar {
-    //display: none;
-    position: absolute;
-    top: 191px;
-    left: 31px;
-    @include adaptiveValue("padding-left", 0, 5, 1);
-  }
+  }  
+  
   &__image {
     img {
       max-width: 100%;

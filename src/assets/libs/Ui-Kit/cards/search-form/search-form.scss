@@ -13,12 +13,39 @@
   &__dates {
     display: flex;
     justify-content: space-between;
-    margin-bottom: rem(20);
+    margin-bottom: rem(21);
   }
 
   // .search-form__item
   &__item {
     width: 150px;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__calendar {
+    position: absolute;
+    top: 191px;
+    left: 31px;
+    @include adaptiveValue("padding-left", 0, 5, 1);
+  }
+
+  &__dropdown {
+    &.active {
+      display: block;
+      border-top: 1px solid $base25;
+    }
+    display: none;
+    position: absolute;
+    top: 63px;
+    @include adaptiveValue("top", 63, 54, 1);
+    left: 0;
+    width: 100%;
+    .dropdown-guests {
+      @import "../../form-elements/dropdown/dropdown-people/dropdown-people.scss";
+    }
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
   }
 
   // .search-form__item-title
@@ -30,11 +57,19 @@
   &__guests {
     position: relative;
     margin-bottom: rem(32);
+    .inputs-icon.active {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
   }
 
   // .search-form__guests-title
   &__guests-title {
-    margin-bottom: rem(5);
+    margin-bottom: rem(6);
+  }
+
+  &__link {
+    text-decoration: none;
   }
 
   // .search-form__btn
