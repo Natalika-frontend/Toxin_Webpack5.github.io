@@ -1,4 +1,6 @@
 import '../../form-elements/dropdown/dropdown-people/dropdown-people';
+import '../calendar/calendar';
+
 // let openCalendar = document.querySelector('.search-form__item');
 
 // openCalendar.addEventListener('click', function (e) {
