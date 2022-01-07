@@ -1,20 +1,20 @@
 .dropdown-guests__body
   ul.dropdown__menu 
     li взрослые
-      .input-values
-        button(type="button").minus -
-        span 2
-        button(type="button").plus +
+      .counter
+        button(data-direction="minus").counter__btn.minus -
+        input(type="text" value="2").counter__value
+        button(data-direction="plus").counter__btn +
     li дети
-      .input-values
-        button(type="button").minus -
-        span 1
-        button(type="button").plus +
+      .counter
+        button(data-direction="minus").counter__btn.minus -
+        input(type="text" value="1").counter__value
+        button(data-direction="plus").counter__btn +
     li младенцы
-      .input-values
-        button(type="button" disabled).minus -
-        span 0
-        button(type="button").plus +
+      .counter
+        button(data-direction="minus").counter__btn.minus -
+        input(type="text" value="0").counter__value
+        button(data-direction="plus").counter__btn +
     .submit-button
       button(type="clear").submit очистить
       button(type="submit").submit применить

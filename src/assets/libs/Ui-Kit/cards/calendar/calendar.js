@@ -1,3 +1,4 @@
+/*
 (function (selector) {
 
   initCalendar(document.querySelector(selector));// TODO доработать календарь
@@ -189,3 +190,4 @@
     // }
   }
 }('.calendar'));
+*/

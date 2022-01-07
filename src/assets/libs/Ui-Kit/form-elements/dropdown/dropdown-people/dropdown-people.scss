@@ -32,23 +32,27 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 6px 7px 14px;
-    .input-values {
+    .counter {
       width: 92px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-    button {
-      width: 30px;
-      height: 30px;
-      border: 1px solid $base25;
-      background: $background;
-      border-radius: 50%;
-      color: $base50;
-      cursor: pointer;
-      &:disabled {
-        opacity: 0.5;
-        cursor: default;
+      &__btn {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $base25;
+        background: $background;
+        border-radius: 50%;
+        color: $base50;
+        cursor: pointer;
+        &:disabled {
+          opacity: 0.5;
+          cursor: default;
+        }
+      }
+      &__value {
+        max-width: 32px;
+        text-align: center;
       }
     }
   }

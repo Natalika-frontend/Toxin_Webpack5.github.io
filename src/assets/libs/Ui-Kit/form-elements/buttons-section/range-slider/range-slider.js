@@ -1,9 +1,11 @@
-import marginSlider from 'nouislider';
+// import marginSlider from 'nouislider';
+
+/*
 import noUiSlider from 'nouislider';
 import wNumb from '../../../../wNumb.min';
 
 
-var priceSlider = document.querySelector('.price-filter');
+let priceSlider = document.querySelector('.price-filter');
 
 noUiSlider.create(priceSlider, {
   start: [5000, 10000],
@@ -20,8 +22,10 @@ noUiSlider.create(priceSlider, {
   })
 });
 
+*/
+
 // показывает и меняет цену номера
-// var marginMin = document.querySelector('.value-price-min'),
+// let marginMin = document.querySelector('.value-price-min'),
 //   marginMax = document.querySelector('.value-price-max');
 
 // marginSlider.noUiSlider.on('update', function (values, handle) {
