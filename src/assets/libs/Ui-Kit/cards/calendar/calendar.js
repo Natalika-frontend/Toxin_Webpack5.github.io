@@ -1,10 +1,14 @@
+const date = new Date();
+
 const renderCalendar = () => {
 
   let calendar = document.querySelector('.calendar');
   let dates = calendar.querySelector('.calendar__days');
   const info = calendar.querySelector('.calendar__info');
 
-  const date = new Date();
+
+
+  date.setDate(1);
 
   const month = date.getMonth();
   const year = date.getFullYear();
@@ -65,7 +69,14 @@ const renderCalendar = () => {
 const prev = document.querySelector('.calendar__prev');
 const next = document.querySelector('.calendar__next');
 
+prev.addEventListener('click', () => {
+  date.setMonth(date.getMonth() - 1);
+  renderCalendar();
+});
+
+next.addEventListener('click', () => {
+  date.setMonth(date.getMonth() + 1);
+  renderCalendar();
+});
+
 renderCalendar();
-
-
-// TODO дописать функционал стрелочек!

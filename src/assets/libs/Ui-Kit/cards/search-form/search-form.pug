@@ -3,24 +3,25 @@ form(action="#change" name="search-form").search-form.form_border
     h1 Найдём номера под ваши пожелания
   .search-form__dates
     .search-form__item
-      .search-form__start-date
-        h3.search-form__item-title прибытие      
+      h3.search-form__item-title прибытие
+      .search-form__start-date.start-date
         input(type="text" placeholder="дд.мм.гггг").inputs-icon.inputs-icon__dropdown
         button.form__dropdown-btn
           span.material-icons-outlined expand_more
     .search-form__item
-      .search-form__end-date
-        h3.search-form__item-title выезд
+      h3.search-form__item-title выезд
+      .search-form__end-date.end-date
         input(type="text" placeholder="дд.мм.гггг").inputs-icon.inputs-icon__dropdown
         button.form__dropdown-btn
           span.material-icons-outlined expand_more
-  .search-form__calendar 
+  .search-form__calendar
     include ../calendar/calendar.pug
   .search-form__guests
     h3.search-form__guests-title гости
-    input(type="text" placeholder="Сколько гостей").inputs-icon.inputs-icon__dropdown.dropdown
-    button.form__dropdown-btn
-      span.material-icons-outlined expand_more
+    .show-dropdown
+      input(type="text" placeholder="Сколько гостей").inputs-icon.inputs-icon__dropdown.dropdown
+      button.form__dropdown-btn.dropdown
+        span.material-icons-outlined expand_more
     .search-form__dropdown
       include ../../form-elements/dropdown/dropdown-people/dropdown-people.pug
   a(href="../../../../../pages/filter/filter.pug").search-form__link 

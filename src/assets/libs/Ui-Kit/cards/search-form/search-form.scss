@@ -14,6 +14,18 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: rem(21);
+    ::-webkit-input-placeholder {
+      text-transform: uppercase;
+    }
+    ::-moz-placeholder {
+      text-transform: uppercase;
+    } /* Firefox 19+ */
+    :-moz-placeholder {
+      text-transform: uppercase;
+    } /* Firefox 18- */
+    :-ms-input-placeholder {
+      text-transform: uppercase;
+    }
   }
 
   // .search-form__item

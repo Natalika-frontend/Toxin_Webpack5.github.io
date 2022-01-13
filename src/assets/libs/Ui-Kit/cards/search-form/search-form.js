@@ -1,18 +1,26 @@
 import '../../form-elements/dropdown/dropdown-people/dropdown-people';
 import '../calendar/calendar';
 
-// let openCalendar = document.querySelector('.search-form__item');
+let startDate = document.querySelector('.start-date');
 
-// openCalendar.addEventListener('click', function (e) {
-//   let calendar = document.querySelector('.calendar');
-//   calendar.style.display = calendar.style.display === "none" ? "flex" : "none";
-//   console.log(calendar);
-// });
+startDate.addEventListener('click', function () {
+  let calendar = document.querySelector('.calendar');
+  calendar.style.display = calendar.style.display === "none" ? "flex" : "none";
+});
 
-let openDropdown = document.querySelector('.dropdown');
+let endDate = document.querySelector('.end-date');
+
+endDate.addEventListener('click', function () {
+  let calendar = document.querySelector('.calendar');
+  calendar.style.display = calendar.style.display === "none" ? "flex" : "none";
+});
+
+
+
+let openDropdown = document.querySelector('.show-dropdown');
 
 openDropdown.addEventListener('click', function () {
   let dropdown = document.querySelector('.search-form__dropdown');
-  dropdown.classList.add('active');
-  openDropdown.classList.add('active');
-})
+  dropdown.classList.toggle('active');
+  openDropdown.classList.toggle('active');
+});
