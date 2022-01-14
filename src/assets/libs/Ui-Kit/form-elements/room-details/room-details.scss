@@ -3,6 +3,15 @@
   top: 1305px;
   left: 431px;
   @import "checkbox-list/checkbox-list";
-  @import "rich-checkbox-buttons/rich-checkbox-buttons";
+  .rich-checkbox-buttons {
+    position: absolute;
+    top: 6px;
+    left: 447px;
+    width: 255px;
+    &__title {
+      margin-bottom: 16px;
+    }
+    @import "rich-checkbox-buttons/rich-checkbox-buttons";
+  }
   @import "bullet-list/bullet-list";
 }

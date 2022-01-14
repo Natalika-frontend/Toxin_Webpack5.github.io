@@ -1,3 +1,7 @@
+@import "../../assets/libs/Ui-Kit/form-elements/switches/checkboxes/checkboxes.scss";
+@import "../../assets/libs/Ui-Kit/form-elements/room-details/rich-checkbox-buttons/rich-checkbox-buttons";
+@import "../../assets/libs/Ui-Kit/cards/room-cards/room-card";
+
 .search {
   margin-top: 29px;
   &__container {
@@ -38,7 +42,15 @@
       }
     }
 
-    @import "../../assets/libs/Ui-Kit/form-elements/switches/checkboxes/checkboxes.scss";
+    &__content-header {
+      margin: 0px 0px 22px 0px;
+    }
+
+    &__rooms {
+      display: flex;
+      padding-left: 1px;
+      width: 847px;
+    }
 
     &__text-field {
       width: 266px;
@@ -47,7 +59,7 @@
 
     &__content {
       flex: 1 1 auto;
-      padding: 0px 0px 0px 55px;
+      padding: 0px 0px 0px 59px;
     }
   }
 
@@ -71,6 +83,7 @@
   }
 
   .filter-house-rules {
+    width: 225px;
     .filter__title {
       margin-bottom: 17px;
     }
@@ -82,37 +95,28 @@
   }
 
   .additional {
-    margin-top: 48px;
+    margin-top: 32px;
+    width: 260px;
+    .filter__title {
+      margin-bottom: 16px;
+    }
+    margin-bottom: 25px;
   }
 
   .additional-room {
-    margin-top: 63px;
-  }
-
-  .filter-additional {
     position: relative;
-    top: 7px;
-    left: -35px;
-  }
-
-  .filter-facilities {
-    position: relative;
-    top: -24px;
-    left: 233px;
+    margin-bottom: 30px;
   }
 
   .facilities {
-    margin-top: 10px;
-  }
-
-  .filter__content-header {
-    margin: 0px 0px 20px 0px;
-  }
-
-  .filter__rooms {
-    display: flex;
-    padding-left: 1px;
-    width: 847px;
+    position: relative;
+    .dropdown-btn {
+      position: absolute;
+      top: -5px;
+      left: 226px;
+      background: transparent;
+      cursor: pointer;
+    }
   }
 
   .rooms-slider {
@@ -126,6 +130,9 @@
     &__column {
       flex-wrap: wrap;
       display: flex;
+    }
+    .room-card {
+      margin: 0px 12px 19px 0px;
     }
   }
 

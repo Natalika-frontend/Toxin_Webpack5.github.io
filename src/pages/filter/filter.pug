@@ -24,34 +24,16 @@ section.search.search__container
         include ../../assets/libs/Ui-Kit/form-elements/switches/checkboxes/checkboxes.pug
     form.additional
       h3.filter__title доступность
-      label.label.option
-        input(type="checkbox")
-        span
-          p.text.title
-            b Широкий коридор
-        br
-        p.text.description
-          | Ширина коридоров в номере
-          br
-          | не менее 91 см.
-        br
-      label.label
-        input(type="checkbox")
-        span
-        p.text.title
-          b Помощник для инвалидов
-        br
-        p.text.description
-          | На 1 этаже вас встретит специалист
-          br
-          | и проводит до номера.
-    form.additional-room
-      h3 удобства номера
-      input.filter__text-field(type="dropdown")
-      span.material-icons-outlined.filter-additional expand_more
+      include ../../assets/libs/Ui-Kit/form-elements/room-details/rich-checkbox-buttons/rich-checkbox-buttons.pug
+    h3.filter__title удобства номера
+    form.additional-room      
+      input(type="text").inputs-icon.inputs-icon__dropdown
+      button.form__dropdown-btn
+        span.material-icons-outlined expand_more
     .facilities
-      h3 дополнительные удобства
-      span.material-icons-outlined.filter-facilities expand_more
+      h3.filter__title дополнительные удобства
+      button.dropdown-btn
+        span.material-icons-outlined expand_more
   .filter__content
     .filter__content-header
       h1 Номера, которые мы для вас подобрали
@@ -60,5 +42,16 @@ section.search.search__container
         .products-slider__slide
           .rooms-slider__items.items-rooms
             .items-rooms__column
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card_lux/room-card_lux.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card/room-card.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card_lux/room-card_lux.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card/room-card.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card_lux/room-card_lux.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card/room-card.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card_lux/room-card_lux.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card/room-card.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card_lux/room-card_lux.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card/room-card.pug
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card_lux/room-card_lux.pug
               include ../../assets/libs/Ui-Kit/cards/room-cards/room-card/room-card.pug
           .products-slider__item._swiper

@@ -35,11 +35,11 @@
     }
 
     .swiper-button-next {
-      right: -2px;
+      right: 8px;
       top: 78px;
     }
     .swiper-button-prev {
-      left: 19px;
+      left: 9px;
       top: 78px;
     }
 
@@ -51,6 +51,7 @@
     .swiper-pagination {
       left: 97px;
       bottom: 11px;
+      cursor: pointer;
       .swiper-pagination-bullet {
         margin: 0 auto;
         width: 7px;
