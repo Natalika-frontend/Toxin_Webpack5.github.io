@@ -3,7 +3,17 @@
   top: 469px;
   left: 1259px;
   width: 350px;
-  @import "range-slider/range-slider.scss";
+  .range-slider {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    text-transform: uppercase;
+    width: 265px;
+    @import "range-slider/range-slider.scss";
+    p {
+      width: 101px;
+    }
+  }
   .buttons {
     position: relative;
     top: 93px;

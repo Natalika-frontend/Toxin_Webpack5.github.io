@@ -1,6 +1,6 @@
 // import marginSlider from 'nouislider';
 
-/*
+
 import noUiSlider from 'nouislider';
 import wNumb from '../../../../wNumb.min';
 
@@ -22,7 +22,6 @@ noUiSlider.create(priceSlider, {
   })
 });
 
-*/
 
 // показывает и меняет цену номера
 // let marginMin = document.querySelector('.value-price-min'),

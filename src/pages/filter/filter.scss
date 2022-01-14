@@ -1,130 +1,135 @@
-._container {
-  display: flex;
-}
-
-aside {
-  position: relative;
-  color: $darc_shade_50;
-}
-
-.filter {
-  @import "../../../blocks/form_elements/__text-field/__text-field";
-  &__side {
-    flex: 0 0 270px;
-  }
-
-  &__form-guests {
-    margin-bottom: 10px;
-  }
-
-  &__text-field {
-    width: 266px;
-    margin-bottom: 20px;
-  }
-  &__dates {
-    position: absolute;
-    top: 31px;
-    left: 233px;
-  }
-
-  &__guests {
-    position: absolute;
-    top: 114px;
-    left: 233px;
-  }
-
-  &__content {
-    flex: 1 1 auto;
-    padding: 0px 0px 0px 55px;
-  }
-}
-
-.filter-price {
-  padding-right: 4px;
-
-  & .thousand {
-    padding-right: 4px;
-  }
-
-  & .hyphen {
-    padding-right: 3px;
-    padding-left: 2px;
-  }
-}
-
-h3 {
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-
-
-
-.filter-price-day {
-  font-size: 12px;
-  line-height: 14px;
-  padding-top: 24px;
-}
-
-@import "../../../blocks/form_elements/__checkbox/__checkbox";
-
-.filter-house-rules {
-  margin-top: 30px;
-}
-
-b {
-  color: $darc_shade_75;
-}
-
-.additional {
-  margin-top: 48px;
-}
-
-.additional-room {
-  margin-top: 63px;
-}
-
-.filter-additional {
-  position: relative;
-  top: 7px;
-  left: -35px;
-}
-
-.filter-facilities {
-  position: relative;
-  top: -24px;
-  left: 233px;
-}
-
-.facilities {
-  margin-top: 10px;
-}
-
-@import "../../../blocks/cards/rooms/rooms.scss";
-
-.filter__content-header {
-  margin: 0px 0px 20px 0px;
-}
-
-.filter__rooms {
-  display: flex;
-  padding-left: 1px;
-  width: 847px;
-}
-
-.rooms-slider {
-  flex: 1 1 auto;
-}
-
-.items-rooms {
-  display: flex;
-  color: $darc_shade_50;
-  // .items-rooms__column
-  &__column {
-    flex-wrap: wrap;
+.search {
+  margin-top: 29px;
+  &__container {
     display: flex;
   }
-}
 
-.footer-item__number {
-  padding-left: 17px;
+  aside {
+    position: relative;
+    color: $base50;
+  }
+
+  .filter {
+    &__side {
+      flex: 0 0 265px;
+    }
+
+    &__title {
+      margin-bottom: 5px;
+    }
+
+    &__form-dates {
+      position: relative;
+      margin-bottom: 21px;
+    }
+
+    &__form-guests {
+      position: relative;
+      margin-bottom: 31px;
+    }
+
+    &__range {
+      @import "../../assets/libs/Ui-Kit/form-elements/buttons-section/range-slider/range-slider";
+      h3 {
+        margin-right: 40px;
+      }
+      .filter-price-range {
+        margin-bottom: 8px;
+      }
+    }
+
+    @import "../../assets/libs/Ui-Kit/form-elements/switches/checkboxes/checkboxes.scss";
+
+    &__text-field {
+      width: 266px;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      flex: 1 1 auto;
+      padding: 0px 0px 0px 55px;
+    }
+  }
+
+  .filter-price {
+    padding-right: 4px;
+
+    & .thousand {
+      padding-right: 4px;
+    }
+
+    & .hyphen {
+      padding-right: 3px;
+      padding-left: 2px;
+    }
+  }
+
+  .filter-price-day {
+    font-size: 12px;
+    line-height: 14px;
+    padding-top: 24px;
+  }
+
+  .filter-house-rules {
+    .filter__title {
+      margin-bottom: 17px;
+    }
+    margin-top: 30px;
+  }
+
+  b {
+    color: $base75;
+  }
+
+  .additional {
+    margin-top: 48px;
+  }
+
+  .additional-room {
+    margin-top: 63px;
+  }
+
+  .filter-additional {
+    position: relative;
+    top: 7px;
+    left: -35px;
+  }
+
+  .filter-facilities {
+    position: relative;
+    top: -24px;
+    left: 233px;
+  }
+
+  .facilities {
+    margin-top: 10px;
+  }
+
+  .filter__content-header {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .filter__rooms {
+    display: flex;
+    padding-left: 1px;
+    width: 847px;
+  }
+
+  .rooms-slider {
+    flex: 1 1 auto;
+  }
+
+  .items-rooms {
+    display: flex;
+    color: $base50;
+    // .items-rooms__column
+    &__column {
+      flex-wrap: wrap;
+      display: flex;
+    }
+  }
+
+  .footer-item__number {
+    padding-left: 17px;
+  }
 }

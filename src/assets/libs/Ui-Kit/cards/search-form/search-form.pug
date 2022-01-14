@@ -1,4 +1,4 @@
-form(action="#change" name="search-form").search-form.form_border
+form(action="./search.html" name="search-form").search-form.form_border
   .search-form__title
     h1 Найдём номера под ваши пожелания
   .search-form__dates
@@ -24,8 +24,7 @@ form(action="#change" name="search-form").search-form.form_border
         span.material-icons-outlined expand_more
     .search-form__dropdown
       include ../../form-elements/dropdown/dropdown-people/dropdown-people.pug
-  a(href="../../../../../pages/filter/filter.pug").search-form__link 
-    button.search-form__btn.button_painted
-      span подобрать номер
-      span.material-icons arrow_forward
+  button.search-form__btn.button_painted
+    span подобрать номер
+    span.material-icons arrow_forward
 //- TODO доработать плейсхолдеры в инпутах

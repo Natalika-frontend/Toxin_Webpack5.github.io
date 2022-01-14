@@ -66,6 +66,12 @@
     margin-bottom: rem(5);
   }
 
+  &__start-date,
+  &__end-date,
+  .show-dropdown {
+    position: relative;
+  }
+
   // .search-form__guests
   &__guests {
     position: relative;

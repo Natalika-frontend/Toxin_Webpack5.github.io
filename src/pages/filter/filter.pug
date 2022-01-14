@@ -1,62 +1,64 @@
-aside.filter__side
-  h3 даты пребывания в отеле
-  form.filter__form-dates
-    input.filter__text-field(type="text")
-    span.material-icons-outlined.filter__dates expand_more
-  h3 гости
-  form.filter__form-guests
-    input.filter__text-field(type="text")
-    span.material-icons-outlined.filter__guests expand_more
-  //- здесь был ползунок диапазона цен
-  p.filter-price-day Стоимость за сутки пребывания в номере
-  form.filter-house-rules
-    h3 правила дома
-    //- здесь были чекбоксы
-  form.additional
-    h3 доступность
-    label.label.option
-      input(type="checkbox")
-      span
+section.search.search__container
+  aside.filter__side
+    h3.filter__title даты пребывания в отеле
+    form.filter__form-dates
+      input(type="text").inputs-icon.inputs-icon__dropdown
+      button.form__dropdown-btn
+        span.material-icons-outlined.filter__dates expand_more
+    h3.filter__title гости
+    form.filter__form-guests
+      input(type="text").inputs-icon.inputs-icon__dropdown
+      button.form__dropdown-btn
+        span.material-icons-outlined expand_more
+    form.filter__range
+      .filter-price-range
+        h3.filter__title диапазон цены
+        span.value-price-min.rub 5 000
+        | -
+        span.value-price-max.rub 10 000
+      .price-filter
+    p.filter-price-day Стоимость за сутки пребывания в номере
+    form.filter-house-rules
+      h3.filter__title правила дома
+      .filter__checkbox
+        include ../../assets/libs/Ui-Kit/form-elements/switches/checkboxes/checkboxes.pug
+    form.additional
+      h3.filter__title доступность
+      label.label.option
+        input(type="checkbox")
+        span
+          p.text.title
+            b Широкий коридор
+        br
+        p.text.description
+          | Ширина коридоров в номере
+          br
+          | не менее 91 см.
+        br
+      label.label
+        input(type="checkbox")
+        span
         p.text.title
-          b Широкий коридор
-      br
-      p.text.description
-        | Ширина коридоров в номере
+          b Помощник для инвалидов
         br
-        | не менее 91 см.
-      br
-    label.label
-      input(type="checkbox")
-      span
-      p.text.title
-        b Помощник для инвалидов
-      br
-      p.text.description
-        | На 1 этаже вас встретит специалист
-        br
-        | и проводит до номера.
-  form.additional-room
-    h3 удобства номера
-    input.filter__text-field(type="dropdown")
-    span.material-icons-outlined.filter-additional expand_more
-  .facilities
-    h3 дополнительные удобства
-    span.material-icons-outlined.filter-facilities expand_more
-.filter__content
-  .filter__content-header
-    h1 Номера, которые мы для вас подобрали
-  .filter__rooms.rooms-slider
-    .rooms-slider__item._swiper 
-      .products-slider__slide
-        .rooms-slider__items.items-rooms
-          .items-rooms__column
-            include ../../../blocks/cards/rooms/rooms
-            include ../../../blocks/cards/rooms/rooms
-            include ../../../blocks/cards/rooms/rooms
-            include ../../../blocks/cards/rooms/rooms
-            include ../../../blocks/cards/rooms/rooms
-            include ../../../blocks/cards/rooms/rooms
-            include ../../../blocks/cards/rooms/rooms
-            include ../../../blocks/cards/rooms/rooms
-            include ../../../blocks/cards/rooms/rooms
-        .products-slider__item._swiper
+        p.text.description
+          | На 1 этаже вас встретит специалист
+          br
+          | и проводит до номера.
+    form.additional-room
+      h3 удобства номера
+      input.filter__text-field(type="dropdown")
+      span.material-icons-outlined.filter-additional expand_more
+    .facilities
+      h3 дополнительные удобства
+      span.material-icons-outlined.filter-facilities expand_more
+  .filter__content
+    .filter__content-header
+      h1 Номера, которые мы для вас подобрали
+    .filter__rooms.rooms-slider
+      .rooms-slider__item._swiper 
+        .products-slider__slide
+          .rooms-slider__items.items-rooms
+            .items-rooms__column
+              include ../../assets/libs/Ui-Kit/cards/room-cards/room-card/room-card.pug
+          .products-slider__item._swiper

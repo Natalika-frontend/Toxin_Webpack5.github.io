@@ -50,7 +50,18 @@ module.exports = {
       filename: '[name].[contenthash].css',
     }),
     new HTMLWebpackPlugin({
-      template: './src/index.pug',
+      filename: 'index.html',
+      template: './src/pug/index.pug',
+      inject: 'body',
+      meta: {
+        charset: { charset: 'utf-8' },
+        viewport: 'width=device-width, initial-scale=1.0'
+      },
+      title: 'TOXIN',
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'search.html',
+      template: './src/pug/search-room.pug',
       inject: 'body',
       meta: {
         charset: { charset: 'utf-8' },
