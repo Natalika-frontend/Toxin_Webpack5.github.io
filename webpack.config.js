@@ -69,6 +69,36 @@ module.exports = {
       },
       title: 'TOXIN',
     }),
+    new HTMLWebpackPlugin({
+      filename: 'login.html',
+      template: './src/pug/login.pug',
+      inject: 'body',
+      meta: {
+        charset: { charset: 'utf-8' },
+        viewport: 'width=device-width, initial-scale=1.0'
+      },
+      title: 'TOXIN',
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'registration.html',
+      template: './src/pug/registration.pug',
+      inject: 'body',
+      meta: {
+        charset: { charset: 'utf-8' },
+        viewport: 'width=device-width, initial-scale=1.0'
+      },
+      title: 'TOXIN',
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'room-details.html',
+      template: './src/pug/room-details.pug',
+      inject: 'body',
+      meta: {
+        charset: { charset: 'utf-8' },
+        viewport: 'width=device-width, initial-scale=1.0'
+      },
+      title: 'TOXIN',
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {

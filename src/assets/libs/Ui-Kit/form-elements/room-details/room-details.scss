@@ -2,7 +2,24 @@
   position: relative;
   top: 1305px;
   left: 431px;
-  @import "checkbox-list/checkbox-list";
+  .checkbox-list-container {
+    width: 265px;
+    &__closed {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 8px;
+      margin-bottom: 38px;
+    }
+    &__open {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 8px;
+      margin-bottom: 12px;
+    }
+    @import "checkbox-list/checkbox-list";
+  }
   .rich-checkbox-buttons {
     position: absolute;
     top: 6px;

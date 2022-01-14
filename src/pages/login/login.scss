@@ -1,23 +1,12 @@
-.main__login {
-  display: none;
-  background-image: $backReg;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+@import "../../assets/libs/Ui-Kit/cards/login-form/login-form";
 
 .login-form-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 4px;
-  padding-right: 4px;
-  margin-bottom: 3px;
+  margin: rem(34) 0px 0px rem(390);
 }
 
-.header-btn__login {
-  -moz-appearance: button;
-  -ms-appearance: button;
-  -o-appearance: button;
-  -webkit-appearance: button;
-  appearance: button;
+@media (max-width: 1170px) {
+  .login-form-container {
+    @include adaptiveValue("margin-top", 34, 10, 1);
+    @include adaptiveValue("margin-left", 390, 0, 1);
+  }
 }

@@ -1,0 +1,18 @@
+html(lang="en")
+  head
+    link(rel="shortcut icon" href="./favicon.ico")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+  body
+    .wrapper
+      include ../assets/libs/Ui-kit/headers_footers/header-with-buttons/header
+      section.page
+        .page__content
+          .page__container
+            .page__body
+              .page__form.registration-form-container
+                include ../assets/libs/Ui-Kit/cards/registration-form/registration-form.pug
+              .page__description
+                .page__empty
+        .page__image 
+          img(src="images/login.jpg" alt="Фоновое изображение")  
+      include ../assets/libs/Ui-kit/headers_footers/footer/footer

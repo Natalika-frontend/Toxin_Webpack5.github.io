@@ -76,6 +76,7 @@
   }
   &__title {
     color: $base100;
+    text-decoration: none;
     &_no {
       font-weight: bold;
       font-size: 14px;
@@ -94,6 +95,7 @@
       font-weight: bold;
       font-size: 12px;
       line-height: 15px;
+      padding-left: 8px;
     }
   }
   &__price {

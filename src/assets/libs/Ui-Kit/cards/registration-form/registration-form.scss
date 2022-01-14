@@ -1,6 +1,7 @@
 .registration-form {
   width: 380px;
   padding: 39px 29px 30px 29px;
+  background-color: $background;
 
   // .registration-form__title
   &__title {
@@ -67,4 +68,3 @@
     }
   }
 }
-

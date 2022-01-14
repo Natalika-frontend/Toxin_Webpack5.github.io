@@ -2,7 +2,7 @@
 @import "../../assets/libs/Ui-Kit/cards/search-form/search-form";
 @import "../../assets/libs/Ui-Kit/cards/calendar/calendar";
 
-.home {
+.page {
   &__content {
     flex: 0 0 100%;
     display: flex;
@@ -17,11 +17,11 @@
     padding: rem(68) 0px 0px 0px;
     position: relative;
   }
-  &__search-form {
+  &__form {
     position: relative;
     @include adaptiveValue("padding-left", 0, 5, 1);
-  }  
-  
+  }
+
   &__image {
     img {
       max-width: 100%;
@@ -45,7 +45,7 @@
 }
 
 @media (min-width: 767px) {
-  .home {
+  .page {
     display: flex;
     &__image {
       position: relative;
@@ -74,7 +74,7 @@
 }
 
 @media (max-width: 767px) {
-  .home {
+  .page {
     display: flex;
     &__image {
       position: relative;

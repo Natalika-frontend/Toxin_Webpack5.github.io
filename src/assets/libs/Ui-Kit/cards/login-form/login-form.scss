@@ -1,23 +1,24 @@
 .login-form {
-  width: 380px;
-  padding: 39px 29px 31px 29px;
+  width: rem(380);
+  padding: rem(39) rem(29) rem(31) rem(29);
+  background: $background;
 
   &__title {
-    margin-bottom: 21px;
+    margin-bottom: rem(21);
   }
 
   &__email {
-    margin-bottom: 10px;
+    margin-bottom: rem(10);
   }
 
   &__password {
-    margin-bottom: 20px;
+    margin-bottom: rem(20);
   }
 
   &__btn {
-    width: 320px;
-    padding: 10px 10px 10px 137px;
-    margin-bottom: 30px;
+    width: rem(320);
+    padding: rem(10) rem(10) rem(10) rem(137);
+    margin-bottom: rem(30);
   }
 
   &__regispration {
@@ -27,12 +28,41 @@
   }
 
   &__regispration-btn {
-    width: 99px;
-    padding: 12px 0px 13px 0px;
+    width: rem(99);
+    padding: rem(12) 0px rem(13) 0px;
   }
 
   &__regispration-text {
     padding-bottom: 2px;
     color: $base100;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    h1 {
+      @include adaptiveValue("font-size", 21, 18, 1);
+    }
+    @include adaptiveValue("font-size", 14, 10, 1);
+    @include adaptiveValue("padding-top", 29, 20, 1);
+    @include adaptiveValue("padding-right", 29, 14, 1);
+    @include adaptiveValue("padding-bottom", 31, 15, 1);
+    @include adaptiveValue("padding-left", 29, 15, 1);
+    @include adaptiveValue("width", 380, 285, 1);
+    &__item {
+      @include adaptiveValue("width", 150, 125, 1);
+    }
+    &__btn {
+      @include adaptiveValue("padding-top", 10, 5, 1);
+      @include adaptiveValue("padding-right", 10, 5, 1);
+      @include adaptiveValue("padding-bottom", 10, 5, 1);
+      @include adaptiveValue("padding-left", 137, 102, 1);
+      @include adaptiveValue("width", 320, 256, 1);
+    }
+    &__regispration-btn {
+      @include adaptiveValue("padding-top", 12, 5, 1);
+      @include adaptiveValue("padding-bottom", 13, 5, 1);
+      @include adaptiveValue("width", 99, 70, 1);
+    }
   }
 }

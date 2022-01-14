@@ -1,21 +1,4 @@
-.checkbox-list-container {
-  width: 265px;
-  &__closed {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 8px;
-    margin-bottom: 38px;
-  }
-  &__open {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 8px;
-    margin-bottom: 12px;
-  }
-
-  .checkbox-list {
-    @import "../../switches/checkboxes/checkboxes.scss";
-  }
+.checkbox-list {
+  width: 220px;
+  @import "../../switches/checkboxes/checkboxes.scss";
 }

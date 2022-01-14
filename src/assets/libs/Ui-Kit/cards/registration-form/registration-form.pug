@@ -1,4 +1,4 @@
-form(action="#change" name="registration-form").registration-form.form_border
+.registration-form.form_border
   .registration-form__title
     h1 Регистрация аккаунта
   .registration-form__inputs
@@ -22,5 +22,6 @@ form(action="#change" name="registration-form").registration-form.form_border
       span.material-icons.material-icons-registration-form arrow_forward
   .registration-form__login.login
     p.login__text Уже есть аккаунт на Toxin
-    button.login__btn.button_unpainted 
-      span.btn-title Войти
+    form(action="./login.html")
+      button.login__btn.button_unpainted 
+        span.btn-title Войти

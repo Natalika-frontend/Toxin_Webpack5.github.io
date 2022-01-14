@@ -46,6 +46,9 @@
         z-index: -1;
       }
     }
+    &:checked + .checkbox__text_rich::after {
+      top: 0;
+    }
   }
   & > .checkbox__text {
     display: inline-flex;
