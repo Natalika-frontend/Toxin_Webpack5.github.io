@@ -56,8 +56,12 @@
                 li
                   span.shape-circle.shape-black 
                   span Разочарован
-      .details__reviews
-        h2 Отзывы посетителей номера
+      .details__reviews.reviews
+        .reviews__title
+          h2.reviews__heading Отзывы посетителей номера
+          span.reviews__counter 2 отзыва
+        +usersFeedback("./images/avatar/ava1.jpg", "1", "Мурад Сарафанов", "5 дней назад", "12", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "likes-btn_liked")
+        +usersFeedback("./images/avatar/ava2.jpg", "2", "Патрисия Стёклышкова", "Неделю назад", "2", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
       .details__aside
         .details__rules
           h2 Правила
@@ -70,3 +74,4 @@
           p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
     .details__room-card
       include ../../assets/libs/Ui-Kit/cards/reservation-form/reservation-form.pug
+  hr.details__end

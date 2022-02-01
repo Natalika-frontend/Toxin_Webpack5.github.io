@@ -3,89 +3,100 @@
   top: 1342px;
   left: 430px;
   width: 280px;
+}
 
-  .users-feedback {
-    width: 713px;
-    position: absolute;
-    top: 10px;
-    left: 448px;
+.users-feedback {
+  width: 713px;
+  position: absolute;
+  top: 10px;
+  left: 448px;
+  display: flex;
+  flex-direction: column;
+  color: $base75;
+  &__user {
+    margin-bottom: 10px;
+  }
+  .user {
     display: flex;
-    flex-direction: column;
-    color: $base75;
-    &__user {
-      margin-bottom: 10px;
+    justify-content: flex-start;
+    &__avatar {
+      .round {
+        width: 48px;
+        height: 48px;
+        border-radius: 32px;
+        box-sizing: border-box;
+        border: 2px solid $lightText;
+        box-shadow: (0px 10px 20px $base1hr);
+      }
     }
-    .user {
-      display: flex;
-      justify-content: flex-start;
-      &__avatar {
-        .round {
-          width: 48px;
-          height: 48px;
-          border-radius: 32px;
-          box-sizing: border-box;
-          border: 2px solid $lightText;
-          box-shadow: (0px 10px 20px $base1hr);
+    &__information {
+      flex-direction: column;
+      margin-left: 10px;
+    }
+    &__name {
+      font-weight: bold;
+      padding-top: 2px;
+      padding-bottom: 3px;
+    }
+  }
+  &__feedback {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .feedback {
+    &__like {
+      margin-top: 2px;
+      margin-left: 4px;
+      .likes-btn {
+        min-width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        font-size: 10px;
+        line-height: 12px;
+        border: 1px solid $base25;
+        color: $base25;
+        background-color: #fff;
+        padding: 0px 0px 1px 0px;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        .like {
+          font-size: 11px;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+          padding: 0px 0px 0px 0px;
         }
-      }
-      &__information {
-        flex-direction: column;
-        margin-left: 10px;
-      }
-      &__name {
-        font-weight: bold;
-        padding-top: 2px;
-        padding-bottom: 3px;
-      }
-    }
-    &__feedback {
-      display: flex;
-      justify-content: flex-start;
-    }
-    .feedback {
-      &__like {
-        margin-top: 2px;
-        margin-left: 4px;
-        .likes-btn {
+        &_liked {
+          display: flex;
           min-width: 40px;
           height: 20px;
           border-radius: 10px;
           font-size: 10px;
           line-height: 12px;
-          border: 1px solid $base25;
-          color: $base25;
-          background-color: #fff;
-          padding: 0px 8px 1px 18px;
-          &_liked {
-            display: flex;
-            min-width: 40px;
-            height: 20px;
-            border-radius: 10px;
-            font-size: 10px;
-            line-height: 12px;
-            border: 1px solid $purple;
-            color: $purple;
-            justify-content: flex-start;
-            align-items: center;
-            text-align: center;
-            .like {
-              @include primary-gradient;
-              background-clip: text;
-              -webkit-text-fill-color: transparent;
-              font-size: 11px;
-              padding-left: 3px;
-              padding-right: 5px;
-            }
-            .counter {
-              padding: 0;
-            }
+          border: 1px solid $purple;
+          color: $purple;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+          .like {
+            @include primary-gradient;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 11px;
+            padding-left: 3px;
+            padding-right: 5px;
+          }
+          .counter {
+            padding: 0;
           }
         }
       }
-      &__text {
-        margin-left: 14px;
-        line-height: 24px;
-      }
+    }
+    &__text {
+      margin-left: 14px;
+      line-height: 24px;
     }
   }
 }
@@ -140,3 +151,5 @@ hr {
     padding-bottom: 3px;
   }
 }
+
+// TODO поправить лайки на отзывах

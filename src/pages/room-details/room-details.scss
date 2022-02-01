@@ -29,6 +29,37 @@
       margin-bottom: 5px;
     }
   }
+
+  &__aside {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__rules {
+    flex: 0 0 50%;
+  }
+
+  &__end {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+  }
+
+  .users-feedback {
+    margin-bottom: 23px;
+  }
+
+  .reviews {
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      align-items: flex-end;
+    }
+    &__counter {
+      color: $base50;
+      padding-right: 9px;
+    }
+  }
+
   .chart-text {
     fill: $purple;
     -moz-transform: translateY(0.2em);
@@ -130,6 +161,10 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
+
+  .users-feedback {
+    position: static;
+  }
 }
 
 .rewievs {
@@ -139,3 +174,5 @@
     position: static;
   }
 }
+
+// TODO перезалить вторую аву с фигмы оригинал

@@ -1,4 +1,4 @@
-//- Миксин для добавлениясведений о номере (с иконками)
+//- Миксин для добавления сведений о номере (с иконками)
 mixin intelligence(className, nameIcon, title, text)
   block
   div(class= className)
@@ -7,3 +7,22 @@ mixin intelligence(className, nameIcon, title, text)
       p(class= className + '__title') #{title}
       p(class= className + '__paragraph') #{text}
   hr
+
+//- миксин для отзывов посетителей
+mixin usersFeedback(pathSrc, alt, name, date, counter, text, liked)
+  .users-feedback
+    .users-feedback__user.user
+      .user__avatar 
+        img(src=pathSrc alt="Фото"+alt).round
+      .user__information
+        .user__name 
+          span #{name}
+        .user__feedback-date
+          span #{date}
+    .users-feedback__feedback.feedback
+      .feedback__like 
+        .likes-btn(class=liked)
+          span.material-icons-outlined.like favorite
+          span.counter #{counter}
+      .feedback__text
+        p #{text}
