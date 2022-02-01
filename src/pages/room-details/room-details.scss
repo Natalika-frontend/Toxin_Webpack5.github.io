@@ -1,0 +1,141 @@
+@import "../../assets/libs/Ui-Kit/form-elements/rewievs/rewievs";
+@import "../../assets/libs/Ui-Kit/cards/cards.scss";
+.details {
+  &__photos {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+  }
+  &__body {
+    max-width: 720px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+  &__intelligense {
+    max-width: 291px;
+  }
+  &__impression {
+    width: 345px;
+    margin-right: 15px;
+    h2 {
+      margin-bottom: 5px;
+    }
+  }
+  .chart-text {
+    fill: $purple;
+    -moz-transform: translateY(0.2em);
+    -ms-transform: translateY(0.2em);
+    -webkit-transform: translateY(0.2em);
+    transform: translateY(0.2em);
+  }
+
+  .chart-number {
+    font-weight: bold;
+    font-size: 0.5em;
+    line-height: 1;
+    text-anchor: middle;
+    -moz-transform: translateY(-0.41em);
+    -ms-transform: translateY(-0.41em);
+    -webkit-transform: translateY(-0.41em);
+    transform: translateY(-0.41em);
+  }
+
+  .chart-label {
+    font-weight: bold;
+    font-size: 0.226em;
+    text-transform: uppercase;
+    text-anchor: middle;
+    -moz-transform: translateY(0.6em);
+    -ms-transform: translateY(0.6em);
+    -webkit-transform: translateY(0.6em);
+    transform: translateY(0.6em);
+  }
+  figure {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .figure-content,
+  .figure-key {
+    flex: 1;
+    align-self: flex-end;
+  }
+
+  .figure-content svg {
+    height: auto;
+  }
+
+  .figure-key {
+    flex: 0 0 59%;
+    padding: 0px 0px 16px 13px;
+  }
+
+  .figure-key [class*="shape-"] {
+    margin-right: 5px;
+  }
+
+  .figure-key-list {
+    text-align: left;
+  }
+
+  .figure-key-list li {
+    margin: 0 0 6px;
+    padding: 0;
+  }
+
+  .shape-circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  .shape-violet {
+    background: $primaryGradient;
+  }
+
+  .shape-green {
+    background: $secondaryGradient;
+  }
+
+  .shape-yellow {
+    background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+  }
+
+  .shape-black {
+    background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+}
+
+.rewievs {
+  display: block;
+  position: static;
+  .users-feedback {
+    position: static;
+  }
+}

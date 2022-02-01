@@ -1,29 +1,4 @@
 .rewievs 
-  .comfort
-    span.material-icons-outlined.comfort__icon mood 
-    .comfort__description
-      p.comfort__title Комфорт
-      p.comfort__paragraph Шумопоглощающие стены
-  hr
-  .convenience
-    span.material-icons-outlined.convenience__icon location_city 
-    .convenience__description
-      p.convenience__title Удобство
-      p.convenience__paragraph Окно в каждой из спален
-  hr
-  .users-feedback
-    .users-feedback__user.user
-      .user__avatar 
-        img(src="./images/avatar/ava1.jpg" alt="Фото").round
-      .user__information
-        .user__name 
-          span Мурад Сарафанов
-        .user__feedback-date
-          span 5 дней назад
-    .users-feedback__feedback.feedback
-      .feedback__like 
-        .likes-btn_liked
-          span.material-icons-outlined.like favorite
-          span.counter 12
-      .feedback__text
-        p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+  include ./rewievs__comfort/rewievs__comfort.pug
+  include ./rewievs__convenience/rewievs__convenience.pug
+  include ./rewievs__users-feedback/rewievs__users-feedback.pug

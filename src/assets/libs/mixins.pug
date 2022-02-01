@@ -1,0 +1,9 @@
+//- Миксин для добавлениясведений о номере (с иконками)
+mixin intelligence(className, nameIcon, title, text)
+  block
+  div(class= className)
+    span.material-icons-outlined(class= className + '__icon') #{nameIcon}
+    div(class= className + '__description')
+      p(class= className + '__title') #{title}
+      p(class= className + '__paragraph') #{text}
+  hr

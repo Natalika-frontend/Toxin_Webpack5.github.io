@@ -1,0 +1,72 @@
+.details
+  .details__photos
+    .details__block1 
+      img(src="./images/room-details1.jpg" alt="Фото1")
+    .details__block2
+      img(src="./images/room-details2.jpg" alt="Фото2")
+      img(src="./images/room-details3.jpg" alt="Фото3")
+  .details__container
+    .details__body
+      .details__info
+        .details__intelligense
+          h2 Сведения о номере
+          +intelligence("comfort", "mood", "Комфорт", "Шумопоглощающие стены")
+            hr
+          +intelligence("convenience", "location_city", "Удобство", "Окно в каждой из спален")
+          +intelligence("convenience", "whatshot", "Уют", "Номер оснащен камином")
+        .details__impression
+          h2 Впечатления от номера
+          figure
+            .figure-content
+              svg.impression(width="100%" heigth="100%" viewBox="0 0 42 42")
+                //- градиенты
+                defs
+                  linearGradient#GradientYellow(x2="0%" y2="100%")
+                    stop(offset="0%" stop-color="#ffe39c")
+                    stop(offset="100%" stop-color="#ffba9c")
+                  linearGradient#GradientViolet(x2="0%" y2="100%")
+                    stop(offset="0%" stop-color="#bc9cff")
+                    stop(offset="100%" stop-color="#8ba4f9")
+                  linearGradient#GradientGreen(x2="0%" y2="100%")
+                    stop(offset="0%" stop-color="#6fcf97")
+                    stop(offset="100%" stop-color="#66d2ea")
+                //- делает центр белым:
+                circle.impression-hole(cx="21" cy="21" r="15.91549430918954" fill="#fff")
+                //- фон между секторами
+                circle.impression-ring(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1")
+                //- сами сектора
+                circle.impression-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#GradientYellow)" stroke-width="1" stroke-dasharray="49 49" stroke-dashoffset="73")
+                circle.impression-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#GradientViolet)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="25")
+                circle.impression-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#GradientGreen)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="0")
+                g.chart-text
+                  text.chart-number(x="50%" y="50%") 260
+                  text.chart-label(x="50%" y="50%") голосов
+            figcaption.figure-key
+              p.sr-only какой-то текст
+              ul.figure-key-list(aria-hidden="true" role="presentation")
+                li
+                  span.shape-circle.shape-yellow 
+                  span Великолепно
+                li
+                  span.shape-circle.shape-green 
+                  span Хорошо
+                li
+                  span.shape-circle.shape-violet 
+                  span Удовлетворительно
+                li
+                  span.shape-circle.shape-black 
+                  span Разочарован
+      .details__reviews
+        h2 Отзывы посетителей номера
+      .details__aside
+        .details__rules
+          h2 Правила
+          ul
+            li Нельзя с питомцами
+            li Без вечеринок и мероприятий
+            li Время прибытия - после 13:00, а выезд до 12:00
+        .details__cancel
+          h2 Отмена
+          p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+    .details__room-card
+      include ../../assets/libs/Ui-Kit/cards/reservation-form/reservation-form.pug

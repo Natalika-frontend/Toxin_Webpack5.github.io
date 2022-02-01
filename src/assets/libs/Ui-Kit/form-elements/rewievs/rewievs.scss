@@ -3,54 +3,7 @@
   top: 1342px;
   left: 430px;
   width: 280px;
-  hr {
-    background-color: $base1hr;
-    height: 1px;
-    border: none;
-  }
-  .comfort {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 19px;
-    &__icon {
-      font-size: 48px;
-      margin-left: 1px;
-      @include primary-gradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    &__description {
-      color: $base75;
-      margin-right: 24px;
-    }
-    &__title {
-      font-weight: bold;
-      padding-bottom: 3px;
-    }
-  }
-  .convenience {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 19px;
-    margin-top: 21px;
-    &__icon {
-      font-size: 48px;
-      margin-left: 1px;
-      @include primary-gradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    &__description {
-      color: $base75;
-      margin-right: 35px;
-    }
-    &__title {
-      font-weight: bold;
-      padding-bottom: 3px;
-    }
-  }
+
   .users-feedback {
     width: 713px;
     position: absolute;
@@ -117,7 +70,7 @@
             text-align: center;
             .like {
               @include primary-gradient;
-              -webkit-background-clip: text;
+              background-clip: text;
               -webkit-text-fill-color: transparent;
               font-size: 11px;
               padding-left: 3px;
@@ -134,5 +87,56 @@
         line-height: 24px;
       }
     }
+  }
+}
+
+hr {
+  background-color: $base1hr;
+  height: 1px;
+  border: none;
+}
+.comfort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  &__icon {
+    font-size: 48px;
+    margin-left: 1px;
+    @include primary-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__description {
+    color: $base75;
+    margin-right: 24px;
+  }
+  &__title {
+    font-weight: bold;
+    padding-bottom: 3px;
+  }
+}
+
+.convenience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 19px;
+  margin-top: 21px;
+  &__icon {
+    font-size: 48px;
+    margin-left: 1px;
+    @include primary-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__description {
+    color: $base75;
+    margin-right: 35px;
+  }
+  &__title {
+    font-weight: bold;
+    padding-bottom: 3px;
   }
 }
