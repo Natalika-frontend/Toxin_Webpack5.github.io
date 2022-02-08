@@ -239,7 +239,7 @@
         @include adaptiveValue("height", 50, 30, 1);
       }
       & + .form__dropdown-btn {
-        top: 24px;
+        top: 5px;
       }
     }
 

@@ -62,6 +62,7 @@
       margin-bottom: 10px;
       list-style: none;
       line-height: 24px;
+      float: left;
       &::before {
         content: "";
         background: $base25;
@@ -70,6 +71,7 @@
         border-radius: 50%;
         display: inline-block;
         margin-right: 11px;
+        background-position: 0 0;
       }
     }
   }
@@ -103,7 +105,7 @@
     }
     &__counter {
       color: $base50;
-      padding-right: 9px;
+      padding-right: 2px;
     }
   }
 

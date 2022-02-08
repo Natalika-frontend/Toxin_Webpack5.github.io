@@ -1,16 +1,16 @@
 section.search.search__container
   aside.filter__side
     h3.filter__title даты пребывания в отеле
-    form.filter__form-dates
+    .filter__form-dates
       input(type="text").inputs-icon.inputs-icon__dropdown
       button.form__dropdown-btn
         span.material-icons-outlined.filter__dates expand_more
     h3.filter__title гости
-    form.filter__form-guests
+    .filter__form-guests
       input(type="text").inputs-icon.inputs-icon__dropdown
       button.form__dropdown-btn
         span.material-icons-outlined expand_more
-    form.filter__range
+    .filter__range
       .filter-price-range
         h3.filter__title диапазон цены
         span.value-price-min.rub 5 000
@@ -18,15 +18,15 @@ section.search.search__container
         span.value-price-max.rub 10 000
       .price-filter
     p.filter-price-day Стоимость за сутки пребывания в номере
-    form.filter-house-rules
+    .filter-house-rules
       h3.filter__title правила дома
       .filter__checkbox
         include ../../assets/libs/Ui-Kit/form-elements/switches/checkboxes/checkboxes.pug
-    form.additional
+    .additional
       h3.filter__title доступность
       include ../../assets/libs/Ui-Kit/form-elements/room-details/rich-checkbox-buttons/rich-checkbox-buttons.pug
     h3.filter__title удобства номера
-    form.additional-room      
+    .additional-room      
       input(type="text").inputs-icon.inputs-icon__dropdown
       button.form__dropdown-btn
 

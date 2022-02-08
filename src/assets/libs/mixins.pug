@@ -1,8 +1,54 @@
+//- Миксин карточки номера
+mixin roomCard()
+  .room-card
+    .swiper.room-card__slider 
+      .swiper-wrapper 
+        .swiper-slide.room-card__image
+          img(src="./images/rooms/room2.jpg" alt="Номер отеля").room-card__img
+        .swiper-slide.room-card__image
+          img(src="./images/rooms/room1.jpg" alt="Номер отеля").room-card__img
+        .swiper-slide.room-card__image
+          img(src="./images/rooms/room2.jpg" alt="Номер отеля").room-card__img
+        .swiper-slide.room-card__image
+          img(src="./images/rooms/room1.jpg" alt="Номер отеля").room-card__img
+      .swiper-button-prev.material-icons-outlined.room-card__prev
+      .swiper-button-next.material-icons-outlined.room-card__next
+      .swiper-pagination
+    .room-card__body
+      a(href="./room-details.html").room-card__title
+        span.room-card__title_no №
+        span.room-card__title_num 840
+      .room-card__price 
+        span.rub.room-card__price_sum 9 900
+        span.room-card__price_time в сутки
+    hr
+    .room-card__footer
+      .room-card__rating.rating.rating_set
+        .rating__body
+          .rating__active
+          .rating__items 
+            input(type="radio" value="1" name="rating").rating__item
+            input(type="radio" value="2" name="rating").rating__item
+            input(type="radio" value="3" name="rating").rating__item
+            input(type="radio" value="4" name="rating").rating__item
+            input(type="radio" value="5" name="rating").rating__item
+        .rating__value 4
+      .room-card__rewievs 
+        span.room-card__rewievs_sum 65
+        span.room-card__rewievs_text Отзывов
+
+//- миксин для чекбоксов
+mixin checkbox(val, title, checked)
+  label.checkbox
+    input.checkbox__input(type="checkbox" value=val checked=checked)
+    span.checkbox__text
+      span #{title}
+
 //- Миксин для добавления сведений о номере (с иконками)
-mixin intelligence(className, nameIcon, title, text)
+mixin intelligence(className, typeIcon, nameIcon, title, text)
   block
   div(class= className)
-    span.material-icons-outlined(class= className + '__icon') #{nameIcon}
+    span(class='material-icons-'+typeIcon + className+'__icon') #{nameIcon}
     div(class= className + '__description')
       p(class= className + '__title') #{title}
       p(class= className + '__paragraph') #{text}

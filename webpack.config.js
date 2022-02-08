@@ -57,7 +57,7 @@ module.exports = {
         charset: { charset: 'utf-8' },
         viewport: 'width=device-width, initial-scale=1.0'
       },
-      title: 'TOXIN',
+      title: 'TOXIN'
     }),
     new HTMLWebpackPlugin({
       filename: 'search.html',
@@ -67,7 +67,7 @@ module.exports = {
         charset: { charset: 'utf-8' },
         viewport: 'width=device-width, initial-scale=1.0'
       },
-      title: 'TOXIN',
+      title: 'TOXIN'
     }),
     new HTMLWebpackPlugin({
       filename: 'login.html',
@@ -77,7 +77,7 @@ module.exports = {
         charset: { charset: 'utf-8' },
         viewport: 'width=device-width, initial-scale=1.0'
       },
-      title: 'TOXIN',
+      title: 'TOXIN'
     }),
     new HTMLWebpackPlugin({
       filename: 'registration.html',
@@ -87,7 +87,7 @@ module.exports = {
         charset: { charset: 'utf-8' },
         viewport: 'width=device-width, initial-scale=1.0'
       },
-      title: 'TOXIN',
+      title: 'TOXIN'
     }),
     new HTMLWebpackPlugin({
       filename: 'room-details.html',
@@ -97,7 +97,7 @@ module.exports = {
         charset: { charset: 'utf-8' },
         viewport: 'width=device-width, initial-scale=1.0'
       },
-      title: 'TOXIN',
+      title: 'TOXIN'
     }),
     new CopyWebpackPlugin({
       patterns: [

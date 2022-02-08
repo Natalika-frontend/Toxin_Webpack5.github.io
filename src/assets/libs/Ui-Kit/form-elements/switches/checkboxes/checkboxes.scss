@@ -1,4 +1,4 @@
-.checkbox-buttons__checkbox {
+.checkbox {
   display: block;
   margin: 0px 0px 6px 0px;
   line-height: 18px;
@@ -6,9 +6,6 @@
   &:last-child {
     margin: 0;
   }
-}
-
-.checkbox {
   position: relative;
   // .checkbox__input
   & > .checkbox__input {
@@ -45,9 +42,6 @@
         border-radius: 22px;
         z-index: -1;
       }
-    }
-    &:checked + .checkbox__text_rich::after {
-      top: 0;
     }
   }
   & > .checkbox__text {

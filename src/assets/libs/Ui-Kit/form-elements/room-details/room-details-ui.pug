@@ -6,9 +6,18 @@
     .checkbox-list-container__open
       h3 expandable checkbox list
       span.material-icons-outlined expand_less 
-  include checkbox-list/checkbox-list.pug
+    .checkbox-list
+      .checkboxes
+        +checkbox("1", "Завтрак")
+        +checkbox("2", "Письменный стол", "checked")
+        +checkbox("3", "Стул для кормления", "checked")
+        +checkbox("4", "Кроватка", "checked")
+        +checkbox("5", "Телевизор")
+        +checkbox("6", "Шампунь")
   .rich-checkbox-buttons
     .rich-checkbox-buttons__title
       h3 rich checkbox buttons
+    .checkbox-rich
+      .checkboxes
         include rich-checkbox-buttons/rich-checkbox-buttons.pug
   include bullet-list/bullet-list.pug

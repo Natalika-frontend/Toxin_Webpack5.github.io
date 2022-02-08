@@ -5,13 +5,14 @@
 @import "../_fonts";
 
 // Подключение стилей Ui-kit
+@import "form-elements/switches/checkboxes/checkboxes.scss";
 @import "colors_types/colors/colors.scss";
 @import "colors_types/types/types.scss";
 @import "form-elements/text-fields/text-fields.scss";
 @import "form-elements/switches/switches.scss";
 @import "form-elements/buttons-section/buttons-section.scss";
 @import "form-elements/dropdown/dropdown.scss";
-@import "form-elements/room-details/room-details";
+@import "form-elements/room-details/room-details-ui.scss";
 @import "form-elements/rewievs/rewievs";
 @import "cards/cards";
 @import "headers_footers/headers_footers";

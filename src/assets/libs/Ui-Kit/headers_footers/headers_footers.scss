@@ -3,6 +3,9 @@
 
 .header-with-buttons-box {
   margin-bottom: 38px;
+  .header__inner {
+    z-index: 1000;
+  }
 }
 
 .account-header-box {
