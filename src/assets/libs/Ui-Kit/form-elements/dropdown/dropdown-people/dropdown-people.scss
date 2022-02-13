@@ -26,6 +26,9 @@
     color: $purple;
     margin: 13px 0px 9px 7px;
     cursor: pointer;
+    &:hover {
+      color: $base50;
+    }
   }
   li {
     display: flex;

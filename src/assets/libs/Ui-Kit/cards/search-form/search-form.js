@@ -1,6 +1,14 @@
 import '../../form-elements/dropdown/dropdown-people/dropdown-people';
 import '../calendar/calendar';
 
+let sendForm = document.querySelector('.search-form');
+
+sendForm.onclick = function (event) {
+  event.preventDefault();
+  console.log('work');
+
+}
+
 let startDate = document.querySelector('.start-date');
 
 startDate.addEventListener('click', function () {

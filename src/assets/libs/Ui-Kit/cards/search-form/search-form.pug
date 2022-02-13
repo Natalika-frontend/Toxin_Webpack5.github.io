@@ -1,17 +1,17 @@
-form(action="./search.html" name="search-form").search-form.form_border
+form(action="#" name="search-form" method="get").search-form.form_border
   .search-form__title
     h1 Найдём номера под ваши пожелания
   .search-form__dates
     .search-form__item
       h3.search-form__item-title прибытие
       .search-form__start-date.start-date
-        input(type="text" placeholder="дд.мм.гггг").inputs-icon.inputs-icon__dropdown
+        input(type="text" placeholder="дд.мм.гггг" name="start-date").inputs-icon.inputs-icon__dropdown
         button.form__dropdown-btn
           span.material-icons-outlined expand_more
     .search-form__item
       h3.search-form__item-title выезд
       .search-form__end-date.end-date
-        input(type="text" placeholder="дд.мм.гггг").inputs-icon.inputs-icon__dropdown
+        input(type="text" placeholder="дд.мм.гггг" name="end-date").inputs-icon.inputs-icon__dropdown
         button.form__dropdown-btn
           span.material-icons-outlined expand_more
   .search-form__calendar
@@ -19,12 +19,12 @@ form(action="./search.html" name="search-form").search-form.form_border
   .search-form__guests
     h3.search-form__guests-title гости
     .show-dropdown
-      input(type="text" placeholder="Сколько гостей").inputs-icon.inputs-icon__dropdown.dropdown
+      input(type="text" placeholder="Сколько гостей" name="guests").inputs-icon.inputs-icon__dropdown.dropdown
       button.form__dropdown-btn.dropdown
         span.material-icons-outlined expand_more
     .search-form__dropdown
       include ../../form-elements/dropdown/dropdown-people/dropdown-people.pug
-  button.search-form__btn.button_painted
+  button(type="submit").search-form__btn.button_painted
     span подобрать номер
     span.material-icons arrow_forward
-//- TODO доработать плейсхолдеры в инпутах
+// TODO доработать плейсхолдеры в инпутах
